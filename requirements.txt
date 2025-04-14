@@ -1,0 +1,3 @@
+vrchatapi
+aiohttp
+python-dotenv
