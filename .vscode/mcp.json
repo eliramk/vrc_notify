@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "vrc_notify Docs": {
+      "type": "sse",
+      "url": "https://gitmcp.io/eliramk/vrc_notify"
+    }
+  }
+}

@@ -3,9 +3,9 @@ import aiohttp
 import json
 import os
 from dotenv import load_dotenv
-from vrchatapi import VRChatAPI
-from vrchatapi.models import Configuration
-from vrchatapi.api import authentication_api, friends_api
+from vrchatapi import ApiClient
+from vrchatapi.configuration import Configuration
+from vrchatapi import AuthenticationApi, FriendsApi
 from datetime import datetime
 from pathlib import Path
 
@@ -13,6 +13,7 @@ load_dotenv()
 
 USERNAME = os.getenv("VRCHAT_USERNAME")
 PASSWORD = os.getenv("VRCHAT_PASSWORD")
+EMAIL = os.getenv("VRCHAT_EMAIL")
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 VRC_FRIEND_NAMES = os.getenv("VRC_FRIEND_NAMES")
 FRIEND_NAMES = VRC_FRIEND_NAMES.split(',')
@@ -41,16 +42,21 @@ async def main():
     last_status = load_last_status()
 
     config = Configuration(username=USERNAME, password=PASSWORD)
-    async with VRChatAPI(config) as api:
-        auth_api = authentication_api.AuthenticationApi(api.api_client)
-        friends = friends_api.FriendsApi(api.api_client)
+    contact_info = EMAIL if EMAIL else "no-contact@example.com"  # Fallback if EMAIL is missing
+    print(f"Using User-Agent: VRCNotify/1.0 {contact_info}")
+
+    api_client = ApiClient(config)  # Instantiate ApiClient directly
+    api_client.user_agent = f"VRCNotify/1.0 {contact_info}"  # Properly formatted User-Agent
+    try:
+        auth_api = AuthenticationApi(api_client)
+        friends_api_instance = FriendsApi(api_client)
 
         user = await auth_api.get_current_user()
         print(f"Logged in as: {user.display_name}")
 
         while True:
             now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            online_friends = await friends.get_friends()
+            online_friends = await friends_api_instance.get_friends()
 
             for f in online_friends:
                 name = f.display_name
@@ -76,6 +82,8 @@ async def main():
 
             save_last_status(last_status)
             await asyncio.sleep(CHECK_INTERVAL)
+    finally:
+        api_client.close()  # Ensure the client is closed properly
 
 
 if __name__ == "__main__":

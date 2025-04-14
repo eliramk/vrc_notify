@@ -8,6 +8,7 @@ Create a .env file in the repo root, with these ENV variables:
 ```
 VRCHAT_USERNAME=
 VRCHAT_PASSWORD=
+VRCHAT_EMAIL=
 DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/your_webhook_url
 DISCORD_APPLICATION_ID=
 DISCORD_PUBLIC_KEY=
