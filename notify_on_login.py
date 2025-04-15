@@ -159,7 +159,7 @@ def save_cookies(api_client: ApiClient):
             },
             f
         )
-    print("Saved auth cookie to disk.")
+    # print("Saved auth cookie to disk.")
 
 
 async def main():
@@ -207,14 +207,23 @@ async def main():
         # Initial check: send a combined message if any monitored friends are online.
         online_friends = friends_api_instance.get_friends()
         initial_online = [f.display_name for f in online_friends if f.display_name in FRIEND_NAMES]
+        initial_online = [f for f in online_friends if f.display_name in FRIEND_NAMES]
         if initial_online:
-            msg = "Initial online friends: " + ", ".join(initial_online)
+            initial_online_names = [f"{f.display_name}({f.last_platform}/{f.location})" for f in initial_online]
+            msg = "Initial online friends: " + ", ".join(initial_online_names)
             print(msg)
             await send_notification(msg)
             now_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            for name in initial_online:
-                activity_status[name] = {"online": True, "last_update": now_timestamp}
-                log_activity(name, "offline")
+            for f in initial_online:
+                name = f.display_name
+                activity_status[name] = {
+                    "online": True,
+                    "last_update": now_timestamp,
+                    "last_platform": f.last_platform,
+                    "last_location": f.location,
+                }
+                log_activity(name, "online")
+                log_activity(name, f"online. World: **{f.last_platform}** Instance: `{f.location}`")
             save_activity(activity_status)
 
         # Main loop: periodically check friend status
@@ -237,32 +246,41 @@ async def main():
                     if friend_detail:
                         location = friend_detail.location or "private"
                         # avatar_image = friend_detail.current_avatar_image_url
+                        status_description = friend_detail.status_description or ""
                         last_platform = f"({friend_detail.last_platform})" if friend_detail.last_platform else ""
                         instance_id = location if location else "unknown"
-                        msg = f"{now} [{name}] just logged in!\n" f"World: **{last_platform}**\n" f"Instance: `{instance_id}`"
+                        msg = f"{now} [{name}] just logged in!\n" f"World: **{last_platform}**\n" f"Instance: `{instance_id}` Status: {status_description}"
                         print(msg)
-                        log_activity(name, "online")
+                        log_activity(name, f"online. World: **{last_platform}** Instance: `{instance_id}` Status: {status_description}")
                         await send_notification(message=msg, image_url=avatar_image)
-                        activity_status[name] = {"online": True, "last_update": now}
+                        activity_status[name] = {
+                            "online": True,
+                            "last_update": now,
+                            "last_platform": last_platform,
+                            "last_location": location,
+                            "status_description": status_description,
+                        }
                 elif not currently_online and prev_online:
                     # Friend just went offline.
                     msg = f"{now} [{name}] went offline."
                     print(msg)
                     log_activity(name, "offline")
                     await send_notification(msg)
-                    activity_status[name] = {
-                        "online": False,
-                        "last_update": now,
-                        "last_platform": last_platform,
-                        "last_location": instance_id,
-                    }
+                    if activity_status[name]:
+                        activity_status[name]["online"]= False
+                        activity_status[name]["last_update"] = now
+                    else:
+                        activity_status[name] = {
+                            "online": False,
+                            "last_update": now,
+                        }
 
             save_activity(activity_status)
             # Optionally, save cookies periodically
             save_cookies(api_client)
+            if now[-4] == "0":
+                print(now)
             await asyncio.sleep(CHECK_INTERVAL)
-
-
 
 if __name__ == "__main__":
     asyncio.run(main())
