@@ -174,3 +174,4 @@ cython_debug/
 .pypirc
 friend_activity.json
 user_activity_log.csv
+auth_cookies.json

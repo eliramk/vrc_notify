@@ -3,9 +3,11 @@ import aiohttp
 import json
 import os
 import requests
+
 # from discord import Webhook, SyncWebhook
 # from discord_webhook import DiscordWebhook
 import csv
+from http.cookiejar import Cookie
 from dotenv import load_dotenv
 from vrchatapi import ApiClient
 from vrchatapi.configuration import Configuration
@@ -80,16 +82,28 @@ def log_activity(user_name: str, event: str):
         writer.writerow([now, user_name, event])
 
 
-async def send_discord_message(message: str):
+async def send_discord_message(message: str, image_url: str = None):
     if not WEBHOOK_URL:
         return
+    # discord.webhook = requests.post(WEBHOOK_URL, json={"content": message})
 
-    data = {"content": message}
-    resp = requests.post(WEBHOOK_URL, json=data)
+    if image_url is not None:
+        try:
+            response = requests.get(image_url)
+            image = response.content
+        except requests.RequestException as e:
+            data = {"content": message}
+            resp = requests.post(WEBHOOK_URL, json=data)
+            return
+        data = {"payload_json": (None, f'{{"content": "{message}"}}'), "media.png": image}
+        resp = requests.post(WEBHOOK_URL, files=data)
+    else:
+        data = {"content": message}
+        resp = requests.post(WEBHOOK_URL, json=data)
     print(f"Discord webhook status: {resp.content} - {resp.status_code}")
 
 
-async def send_telegram_message(message: str):
+async def send_telegram_message(message: str, image_url: str = None):
     if not (TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID):
         return
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
@@ -98,56 +112,74 @@ async def send_telegram_message(message: str):
         await session.post(url, data=payload)
 
 
-async def send_notification(message: str):
+async def send_notification(message: str, image_url: str = None):
     """Send notifications via Discord and Telegram."""
-    await send_discord_message(message)
-    await send_telegram_message(message)
+    await send_discord_message(message, image_url)
+    await send_telegram_message(message, image_url)
 
 
-def load_cookies(session: aiohttp.ClientSession):
+def make_cookie(name, value):
+    return Cookie(0, name, value,
+                  None, False,
+                  "api.vrchat.cloud", True, False,
+                  "/", False,
+                  False,
+                  173106866300,
+                  False,
+                  None,
+                  None, {})
+
+
+def load_cookies(api_client: ApiClient):
     """Load cookies from disk into the session's cookie jar."""
-    return
     if COOKIES_FILE.exists():
         try:
             with COOKIES_FILE.open("r") as f:
                 cookies = json.load(f)
-            # Update cookie jar with saved cookies (the cookie jar expects a dict)
-            session.cookie_jar.update_cookies(cookies)
-            print("Loaded auth cookies from disk.")
+                api_client.rest_client.cookie_jar.set_cookie(make_cookie("auth", cookies.get("auth", None)))
+                api_client.rest_client.cookie_jar.set_cookie(make_cookie("twoFactorAuth", cookies.get("twoFactorAuth", None)))
+
+            # cookie = cookies.get("cookie", None)
+            print("Loaded auth cookie from disk.")
+
         except Exception as e:
             print(f"Error loading cookies: {e}")
 
 
-def save_cookies(session: aiohttp.ClientSession):
-    return
+def save_cookies(api_client: ApiClient):
     """Save cookies from the session's cookie jar to disk."""
-    cookies = {}
-    # Iterate over all cookies in the jar
-    for cookie in session.cookie_jar:
-        cookies[cookie.key] = cookie.value
+    cookie_jar = api_client.rest_client.cookie_jar._cookies["api.vrchat.cloud"]["/"]
+    # print("auth: " + cookie_jar["auth"].value)
+    # print("twoFactorAuth: " + cookie_jar["twoFactorAuth"].value)
     with COOKIES_FILE.open("w") as f:
-        json.dump(cookies, f)
-    print("Saved auth cookies to disk.")
+        json.dump(
+            {
+                "auth": cookie_jar["auth"].value,
+                "twoFactorAuth": cookie_jar["twoFactorAuth"].value,
+            },
+            f
+        )
+    print("Saved auth cookie to disk.")
 
 
 async def main():
+    # await send_discord_message(message="Hello from VRCNotify!")  # , image_url="https://api.vrchat.cloud/api/1/file/file_30fcc98f-bc1a-412b-9368-ce54b10a0c8a/1")
+    # return
     activity_status = load_activity()
 
     # If an email is provided, use it for login; otherwise, use the username.
     config = Configuration(username=EMAIL if EMAIL else USERNAME, password=PASSWORD)
     print(f"Using User-Agent: VRCNotify/1.0 {contact_info}")
 
-    # Instantiate ApiClient as a context manager so that it uses an aiohttp session
+    # Instantiate ApiClient with the saved cookie if any, as a context manager
     with ApiClient(config) as api_client:
         api_client.user_agent = f"VRCNotify/1.0 {contact_info}"
-
-        # Load previously saved cookies, if any
+        # Optionally, load cookies again (redundant if already set)
         load_cookies(api_client)
 
         auth_api = AuthenticationApi(api_client)
-
         try:
-            # Step 3. Calling getCurrentUser on Authentication API logs you in if the user isn't already logged in.
+            # Calling getCurrentUser on Authentication API logs you in if the user isn't already logged in.
             current_user = auth_api.get_current_user()
             friends_api_instance = FriendsApi(api_client)
         except UnauthorizedException as e:
@@ -201,14 +233,16 @@ async def main():
                     # Friend just went online.
                     # Retrieve additional info if available.
                     friend_detail = next((f for f in online_friends if f.display_name == name), None)
+                    avatar_image = None
                     if friend_detail:
                         location = friend_detail.location or "private"
-                        world_name = friend_detail.world.name if friend_detail.world else "Unknown World"
+                        # avatar_image = friend_detail.current_avatar_image_url
+                        last_platform = f"({friend_detail.last_platform})" if friend_detail.last_platform else ""
                         instance_id = location if location else "unknown"
-                        msg = f"{now} [{name}] just logged in!\n" f"World: **{world_name}**\n" f"Instance: `{instance_id}`"
+                        msg = f"{now} [{name}] just logged in!\n" f"World: **{last_platform}**\n" f"Instance: `{instance_id}`"
                         print(msg)
                         log_activity(name, "online")
-                        await send_notification(msg)
+                        await send_notification(message=msg, image_url=avatar_image)
                         activity_status[name] = {"online": True, "last_update": now}
                 elif not currently_online and prev_online:
                     # Friend just went offline.
@@ -216,12 +250,18 @@ async def main():
                     print(msg)
                     log_activity(name, "offline")
                     await send_notification(msg)
-                    activity_status[name] = {"online": False, "last_update": now}
+                    activity_status[name] = {
+                        "online": False,
+                        "last_update": now,
+                        "last_platform": last_platform,
+                        "last_location": instance_id,
+                    }
 
             save_activity(activity_status)
             # Optionally, save cookies periodically
             save_cookies(api_client)
             await asyncio.sleep(CHECK_INTERVAL)
+
 
 
 if __name__ == "__main__":
