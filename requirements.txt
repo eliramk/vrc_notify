@@ -1,3 +1,5 @@
 vrchatapi
 aiohttp
 python-dotenv
+# discord-webhook
+# discord
