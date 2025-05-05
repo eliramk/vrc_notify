@@ -1,4 +1,6 @@
 import asyncio
+import time
+
 import aiohttp
 import json
 import os
@@ -36,6 +38,7 @@ VRC_FRIEND_NAMES = os.getenv("VRC_FRIEND_NAMES", "")
 FRIEND_NAMES = [name.strip() for name in VRC_FRIEND_NAMES.split(",") if name.strip()]
 
 CHECK_INTERVAL = 60  # seconds
+PAUSE_ON_CRITICAL_ERRROR = 3600
 
 # Files to keep activity and cookie data
 STATE_FILE = Path("friend_activity.json")
@@ -99,7 +102,13 @@ async def send_discord_message(message: str, image_url: str = None):
         resp = requests.post(WEBHOOK_URL, files=data)
     else:
         data = {"content": message}
-        resp = requests.post(WEBHOOK_URL, json=data)
+        sent = False
+        while not sent:
+            try:
+                resp = requests.post(WEBHOOK_URL, json=data)
+                sent = True
+            except Exception as ex:
+                print(f"Exception sending discord: {message} {ex}")
     print(f"Discord webhook status: {resp.content} - {resp.status_code}")
 
 
@@ -199,6 +208,9 @@ async def main():
         except ApiException as e:
             print(f"ApiException when calling API: {e}")
             return
+        except ValueError as e:
+            print(f"ValueError when calling API: {e}")
+            return
 
         print(f"Logged in as: {current_user.display_name}")
         # Save cookies after a successful login so next run reuses them
@@ -223,13 +235,20 @@ async def main():
                     "last_location": f.location,
                 }
                 log_activity(name, "online")
-                log_activity(name, f"online. World: **{f.last_platform}** Instance: `{f.location}`")
+                log_activity(name, f"online. Platform: **{f.last_platform}** Location: `{f.location}`")
             save_activity(activity_status)
 
         # Main loop: periodically check friend status
         while True:
             now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            online_friends = friends_api_instance.get_friends()
+            try:
+                online_friends = friends_api_instance.get_friends()
+            except Exception as ex:
+                # Something critical happened here. Wait an hour before retrying
+                await send_notification(message=f"Critical error: {ex}, waiting 1 hour.")
+                await asyncio.sleep(PAUSE_ON_CRITICAL_ERRROR)
+                continue
+
             # Build set of names that are online from our friend list.
             online_set = {f.display_name for f in online_friends if f.display_name in FRIEND_NAMES}
 
@@ -249,9 +268,9 @@ async def main():
                         status_description = friend_detail.status_description or ""
                         last_platform = f"({friend_detail.last_platform})" if friend_detail.last_platform else ""
                         instance_id = location if location else "unknown"
-                        msg = f"{now} [{name}] just logged in!\n" f"World: **{last_platform}**\n" f"Instance: `{instance_id}` Status: {status_description}"
+                        msg = f"{now} [{name}] just logged in!\n" f"Platform: **{last_platform}**\n" f"Instance: `{instance_id}` Status: {status_description}"
                         print(msg)
-                        log_activity(name, f"online. World: **{last_platform}** Instance: `{instance_id}` Status: {status_description}")
+                        log_activity(name, f"online. Platform: **{last_platform}** Instance: `{instance_id}` Status: {status_description}")
                         await send_notification(message=msg, image_url=avatar_image)
                         activity_status[name] = {
                             "online": True,
@@ -267,7 +286,7 @@ async def main():
                     log_activity(name, "offline")
                     await send_notification(msg)
                     if activity_status[name]:
-                        activity_status[name]["online"]= False
+                        activity_status[name]["online"] = False
                         activity_status[name]["last_update"] = now
                     else:
                         activity_status[name] = {
@@ -279,7 +298,9 @@ async def main():
             # Optionally, save cookies periodically
             save_cookies(api_client)
             if now[-4] == "0":
-                print(now)
+                print(f"{now} {','.join(online_set)}")
+            if now[-7:-3] == "8:00":
+                await send_notification(message=f"{now} Online:  {','.join(online_set)}")
             await asyncio.sleep(CHECK_INTERVAL)
 
 if __name__ == "__main__":
