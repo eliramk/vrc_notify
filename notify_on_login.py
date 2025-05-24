@@ -247,7 +247,7 @@ async def main():
                 # Something critical happened here. Wait an hour before retrying
                 await send_notification(message=f"Critical error: {ex}, waiting 1 hour.")
                 await asyncio.sleep(PAUSE_ON_CRITICAL_ERRROR)
-                continue
+                break
 
             # Build set of names that are online from our friend list.
             online_set = {f.display_name for f in online_friends if f.display_name in FRIEND_NAMES}
@@ -304,4 +304,5 @@ async def main():
             await asyncio.sleep(CHECK_INTERVAL)
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    while True:
+        asyncio.run(main())
