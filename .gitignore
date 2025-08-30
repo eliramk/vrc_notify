@@ -175,3 +175,6 @@ cython_debug/
 friend_activity.json
 user_activity_log.csv
 auth_cookies.json
+
+# local
+/avatar_images/
