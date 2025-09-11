@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-08-30T21:22:22.583520+00:00",
+  "last_scan_at": "2025-09-11T20:00:11.090207+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -172,14 +172,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-05T12:00:12.974292+00:00",
+      "removed_at": "2025-09-05T12:00:12.974292+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-05T12:00:12.974292+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -2038,14 +2042,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-05T12:00:12.974292+00:00",
+      "removed_at": "2025-09-05T12:00:12.974292+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-05T12:00:12.974292+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -2090,14 +2098,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -2116,14 +2128,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -3740,14 +3756,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -3792,14 +3812,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4000,14 +4024,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4162,14 +4190,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4240,14 +4272,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4372,14 +4408,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-04T18:32:45.401451+00:00",
+      "removed_at": "2025-09-04T18:32:45.401451+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-04T18:32:45.401451+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4504,14 +4544,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-05T12:00:12.974292+00:00",
+      "removed_at": "2025-09-05T12:00:12.974292+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-05T12:00:12.974292+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4608,14 +4652,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-04T18:32:45.401451+00:00",
+      "removed_at": "2025-09-04T18:32:45.401451+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-04T18:32:45.401451+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4714,14 +4762,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-04T18:32:45.401451+00:00",
+      "removed_at": "2025-09-04T18:32:45.401451+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-04T18:32:45.401451+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -4795,14 +4847,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-05T12:00:12.974292+00:00",
+      "removed_at": "2025-09-05T12:00:12.974292+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-05T12:00:12.974292+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -5000,14 +5056,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-05T22:00:56.413593+00:00",
+      "removed_at": "2025-09-05T22:00:56.413593+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-05T22:00:56.413593+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -5104,14 +5164,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-05T11:00:45.727922+00:00",
+      "removed_at": "2025-09-05T11:00:45.727922+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-05T11:00:45.727922+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -5575,6 +5639,760 @@
       "history": [
         {
           "at": "2025-08-30T19:00:28.454131+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_18b0040b-1615-456b-8740-c8290f5951c6": {
+      "id": "avtr_18b0040b-1615-456b-8740-c8290f5951c6",
+      "name": "LEGO DC Super Heroes",
+      "authorId": "usr_06d66f00-0b40-434e-95cd-8cac5d36c7ff",
+      "authorName": "WATCHER2",
+      "description": "Truth‚ Justice‚ and a Better Tommorrowǃ",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_543fadb8-6f99-48ff-827b-22da3a356b71/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_543fadb8-6f99-48ff-827b-22da3a356b71/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 14,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-08-31T19:00:35.834454+00:00",
+      "last_seen_in_favorites_at": "2025-08-31T19:00:35.834454+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-08-31T19:00:35.834454+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_2bac8b36-9bf7-438e-b4a2-4190e9acec5e": {
+      "id": "avtr_2bac8b36-9bf7-438e-b4a2-4190e9acec5e",
+      "name": "Angel by Zero",
+      "authorId": "usr_34f8cf91-ac41-41d5-92c6-098b6d6fa0c0",
+      "authorName": "☆Zero☆",
+      "description": "Angel by Zero",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_73064f8d-4d70-41d8-bf8d-29004367b1aa/4/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_73064f8d-4d70-41d8-bf8d-29004367b1aa/4/256",
+      "releaseStatus": "public",
+      "tags": [
+        "author_tag_zero",
+        "author_tag_angel",
+        "author_tag_sexy",
+        "author_tag_goth",
+        "author_tag_female"
+      ],
+      "version": 45,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-08-31T20:00:23.598323+00:00",
+      "last_seen_in_favorites_at": "2025-08-31T20:00:23.598323+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-08-31T20:00:23.598323+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_8b2c2a24-7f9e-4e82-9651-1dd39d3d77e9": {
+      "id": "avtr_8b2c2a24-7f9e-4e82-9651-1dd39d3d77e9",
+      "name": "［public］鸢尾-Naroris Iris（ERO）",
+      "authorId": "usr_0bb6bf82-454d-424c-84c0-bdecb253ae41",
+      "authorName": "鹿·九·橘",
+      "description": "由ナロリ Naori创建的免费公开模，包含面捕，瑟瑟专用。请勿在公共场合打开瑟瑟功能。已经标记性暗示和成人主题，需要在设置内解开此限制才可看见该模型。完全免费分享，请勿盗卖！！！",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e414c991-1e3b-43f2-a834-df97fa078604/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e414c991-1e3b-43f2-a834-df97fa078604/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult"
+      ],
+      "version": 8,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-08-31T20:00:23.598323+00:00",
+      "last_seen_in_favorites_at": "2025-08-31T20:00:23.598323+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-08-31T20:00:23.598323+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_5a95b094-3711-4be4-a93e-26ca85b195d1": {
+      "id": "avtr_5a95b094-3711-4be4-a93e-26ca85b195d1",
+      "name": "Lilith",
+      "authorId": "usr_0c5fb8eb-f1f1-4d92-a414-35d516b09993",
+      "authorName": "Amai Karai",
+      "description": "Avatar edit by Amai Karai Tags˸ demon pink cute female fantasy kawaii",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_089b1653-2b89-4818-b1a9-0510829b3ade/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_089b1653-2b89-4818-b1a9-0510829b3ade/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "author_tag_demon",
+        "author_tag_pink",
+        "author_tag_cute",
+        "author_tag_female",
+        "author_tag_fantasy",
+        "author_tag_kawaii",
+        "content_sex"
+      ],
+      "version": 47,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": false,
+      "first_added_at": "2025-08-31T21:00:59.345191+00:00",
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": "2025-09-11T19:48:56.717282+00:00",
+      "history": [
+        {
+          "at": "2025-08-31T21:00:59.345191+00:00",
+          "action": "added"
+        },
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "removed"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_a802ac96-216a-49c8-a3de-5194456d5bdf": {
+      "id": "avtr_a802ac96-216a-49c8-a3de-5194456d5bdf",
+      "name": "S E R A P H by Black_Asta",
+      "authorId": "usr_e6324fc6-9872-40ba-af80-95e9ee894d04",
+      "authorName": "DΛVID˚",
+      "description": "S E R A P H by Black_Asta",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_8e44dd0a-2e9b-468e-bd77-643561664b92/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_8e44dd0a-2e9b-468e-bd77-643561664b92/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 3,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-01T18:00:24.522722+00:00",
+      "last_seen_in_favorites_at": "2025-09-01T18:00:24.522722+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-01T18:00:24.522722+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_86d67503-6bbb-40fd-b6ac-c1cafd8dc796": {
+      "id": "avtr_86d67503-6bbb-40fd-b6ac-c1cafd8dc796",
+      "name": "Esme （VRCFT）",
+      "authorId": "usr_f6052841-3f48-4729-a3d5-52fcb2ad7d42",
+      "authorName": "~PrivatePuss~",
+      "description": "Esme （VRCFT）",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_20171e19-788e-4f63-bac9-64598c2e58b5/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_20171e19-788e-4f63-bac9-64598c2e58b5/2/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 13,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-01T18:00:24.522722+00:00",
+      "last_seen_in_favorites_at": "2025-09-01T18:00:24.522722+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-01T18:00:24.522722+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_f6d35603-1e88-449e-860b-a43915643c7e": {
+      "id": "avtr_f6d35603-1e88-449e-860b-a43915643c7e",
+      "name": "Chibi Milltina Pink（Emote）",
+      "authorId": "usr_2e2f1bd9-3468-43ea-a8e7-31af869b1d61",
+      "authorName": "CLEÖ",
+      "description": "smol",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_c3db386a-dbe1-480b-9523-ba6cebba25bb/6/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_c3db386a-dbe1-480b-9523-ba6cebba25bb/6/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 72,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T10:01:13.540113+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T10:01:13.540113+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T10:01:13.540113+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_a82280b5-7cb0-42fb-9a4d-8f31ea24f610": {
+      "id": "avtr_a82280b5-7cb0-42fb-9a4d-8f31ea24f610",
+      "name": "sepso",
+      "authorId": "usr_85dd9108-295b-4be8-bab9-3553be22ce8c",
+      "authorName": "savage_drxgs",
+      "description": "sepso",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_cb772e31-a52a-4818-8c56-c8239f397fbd/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_cb772e31-a52a-4818-8c56-c8239f397fbd/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult",
+        "content_violence",
+        "content_gore",
+        "content_horror"
+      ],
+      "version": 24,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T10:01:13.540113+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T10:01:13.540113+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T10:01:13.540113+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_8ce4f21c-f7c6-494b-b46b-dada2930579c": {
+      "id": "avtr_8ce4f21c-f7c6-494b-b46b-dada2930579c",
+      "name": "Gray Suit Speakerman Mk2",
+      "authorId": "usr_329be60b-e0ae-4f67-a924-ed5be02c3f01",
+      "authorName": "Deltale",
+      "description": "One of the elite speakermen and the guy seen helping the pov in 24 and is based off of his 66 appearance",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_14e34be1-1908-48a4-931f-fd959c9c4657/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_14e34be1-1908-48a4-931f-fd959c9c4657/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 12,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T11:00:45.727922+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T11:00:45.727922+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T11:00:45.727922+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_a5e9e08f-f0a6-4652-aa00-add264fbb674": {
+      "id": "avtr_a5e9e08f-f0a6-4652-aa00-add264fbb674",
+      "name": "split",
+      "authorId": "usr_03f7a964-4fc5-4302-b73a-91e1c0b7fdd4",
+      "authorName": "Symuha",
+      "description": "split",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5b5a242d-6dd1-40c1-ae28-e622a9ca0f0e/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5b5a242d-6dd1-40c1-ae28-e622a9ca0f0e/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex"
+      ],
+      "version": 4,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T12:00:12.974292+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T12:00:12.974292+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T12:00:12.974292+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_e6b14a50-baa7-42a8-801f-657c76f0c379": {
+      "id": "avtr_e6b14a50-baa7-42a8-801f-657c76f0c379",
+      "name": "Shinano - Rozuki - 试用版",
+      "authorId": "usr_e773e9b7-9070-4b85-b28b-e2907b6dbde3",
+      "authorName": "三角帽w",
+      "description": "闲鱼˸ 浅灰蓝贝雷帽",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_9c783f38-595d-42d7-a225-a94db4c07382/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_9c783f38-595d-42d7-a225-a94db4c07382/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult"
+      ],
+      "version": 16,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T13:00:39.955100+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T13:00:39.955100+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T13:00:39.955100+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_594363eb-c5a8-4cae-9271-5beb46171e3a": {
+      "id": "avtr_594363eb-c5a8-4cae-9271-5beb46171e3a",
+      "name": "Sweety Mint Kiggy",
+      "authorId": "usr_3a6a7f9c-b8e8-41ba-875a-da6d8260cf15",
+      "authorName": "_neffertity_",
+      "description": "Public avatar madde for the Dragon's Den․ Retexture by Neffertity․ For more information about the group this avatar was made for‚ please visit the discordǃ",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_edb0b72b-c772-4ae1-ba2a-61f61258a957/3/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_edb0b72b-c772-4ae1-ba2a-61f61258a957/3/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 24,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T21:00:29.885165+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T21:00:29.885165+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_15e7d4d2-d697-4fd0-9b24-94f4ec405b03": {
+      "id": "avtr_15e7d4d2-d697-4fd0-9b24-94f4ec405b03",
+      "name": "Marilyn",
+      "authorId": "usr_5c1e157f-3994-4f38-8f33-cc863460d4f0",
+      "authorName": "meowsterrrr",
+      "description": "Marilyn",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_eb1f2d4a-8d54-478c-94f0-a09020db85a7/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_eb1f2d4a-8d54-478c-94f0-a09020db85a7/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 3,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T21:00:29.885165+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T21:00:29.885165+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_b5d27e7a-12d5-4182-95f9-69cc28082434": {
+      "id": "avtr_b5d27e7a-12d5-4182-95f9-69cc28082434",
+      "name": "Onyx",
+      "authorId": "usr_d4afca2d-9ca6-4ded-a0cd-3aaa31c81f1b",
+      "authorName": "ItzStellaTea",
+      "description": "quest and pc",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ff37fbf8-bcb6-475c-8368-60395f0bc0f2/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ff37fbf8-bcb6-475c-8368-60395f0bc0f2/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 8,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T21:00:29.885165+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T21:00:29.885165+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_8f3dda93-5000-48d9-be36-4f20cd82ab60": {
+      "id": "avtr_8f3dda93-5000-48d9-be36-4f20cd82ab60",
+      "name": "༒Blair༒",
+      "authorId": "usr_70b9207c-ef96-44c0-8b69-9dfc2abeee83",
+      "authorName": "༒Princessvi༒",
+      "description": "Uploaded from the Karma store˸ Karmamoves․com Group˸ https˸⁄⁄vrc․group⁄KARMA․4163",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_dd081b76-2924-4dc4-8954-61eb3b8e67ab/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_dd081b76-2924-4dc4-8954-61eb3b8e67ab/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_violence",
+        "content_adult",
+        "content_sex"
+      ],
+      "version": 8,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T21:00:29.885165+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T21:00:29.885165+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_2ce654ed-0bb2-4ea4-bdb0-c09635b07f47": {
+      "id": "avtr_2ce654ed-0bb2-4ea4-bdb0-c09635b07f47",
+      "name": "tessa",
+      "authorId": "usr_93bb4364-8703-4253-ae26-f3a062ac15f9",
+      "authorName": "hex?",
+      "description": "tessa",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_7b27f387-c612-42c4-a0f4-c6e8d5353816/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_7b27f387-c612-42c4-a0f4-c6e8d5353816/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T21:00:29.885165+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T21:00:29.885165+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_ba3bc470-133f-4a34-9e09-af9007dd3030": {
+      "id": "avtr_ba3bc470-133f-4a34-9e09-af9007dd3030",
+      "name": "marilyn personal",
+      "authorId": "usr_64dbe8c3-9204-41db-91ef-05331d527e37",
+      "authorName": "everclears",
+      "description": "marilyn personal",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_903d256c-a969-4705-a7ec-5f1295dbddc9/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_903d256c-a969-4705-a7ec-5f1295dbddc9/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 4,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T21:00:29.885165+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T21:00:29.885165+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_3bb06dcb-797e-45fe-bb12-e4cf65907868": {
+      "id": "avtr_3bb06dcb-797e-45fe-bb12-e4cf65907868",
+      "name": "Aurora",
+      "authorId": "usr_4cf1dfc9-efb4-4e53-8aef-cd518fd9bc8c",
+      "authorName": "Mabya",
+      "description": "Aurora",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1d50abe4-5939-43cf-af3f-554073486152/3/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1d50abe4-5939-43cf-af3f-554073486152/3/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 41,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T22:00:56.413593+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T22:00:56.413593+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T22:00:56.413593+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_307caf1b-515b-4069-8264-cd5f3ea2b9bc": {
+      "id": "avtr_307caf1b-515b-4069-8264-cd5f3ea2b9bc",
+      "name": "Aurora",
+      "authorId": "usr_5a93d5c5-1b6d-4555-8d5a-b555a8b79125",
+      "authorName": "Coochie King",
+      "description": "Aurora",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2ac81a9b-064d-4671-83ff-58e6d3446ce3/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2ac81a9b-064d-4671-83ff-58e6d3446ce3/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 3,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T22:00:56.413593+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T22:00:56.413593+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T22:00:56.413593+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_78414cc8-982d-4d28-a7f8-a3d23763b1b5": {
+      "id": "avtr_78414cc8-982d-4d28-a7f8-a3d23763b1b5",
+      "name": "Aurora FT",
+      "authorId": "usr_1d19c83a-eeda-452b-8b1f-9fab183cab36",
+      "authorName": "Ѕabrina",
+      "description": "Aurora",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_510188da-dfd5-49aa-b349-5e347ffab3aa/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_510188da-dfd5-49aa-b349-5e347ffab3aa/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 8,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T22:00:56.413593+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T22:00:56.413593+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T22:00:56.413593+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_21613a48-33fd-4729-86cf-bab498736953": {
+      "id": "avtr_21613a48-33fd-4729-86cf-bab498736953",
+      "name": "Lil Bunny Girl Avi VRCFT by WatermelonJustice",
+      "authorId": "usr_9a2460db-17d5-4400-a43f-032347bb49c8",
+      "authorName": "WatermelonJustice",
+      "description": "Lil Bunny Girl Avi by WatermelonJustice",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b734c561-5772-40ba-8e94-378c548816e8/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b734c561-5772-40ba-8e94-378c548816e8/2/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult"
+      ],
+      "version": 14,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-05T23:00:23.114678+00:00",
+      "last_seen_in_favorites_at": "2025-09-05T23:00:23.114678+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-05T23:00:23.114678+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_11bb4058-6e10-4814-af86-a4a83bcf3e0c": {
+      "id": "avtr_11bb4058-6e10-4814-af86-a4a83bcf3e0c",
+      "name": "Jassie ［Good］",
+      "authorId": "usr_b8d73eb6-2731-49c0-ae04-abd3f7127d25",
+      "authorName": "TheDulle",
+      "description": "Jassie ［Good］",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_7297f06a-4370-48af-8b29-b5f23351e5fd/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_7297f06a-4370-48af-8b29-b5f23351e5fd/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_violence",
+        "content_adult",
+        "content_sex"
+      ],
+      "version": 25,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-06T16:00:56.133440+00:00",
+      "last_seen_in_favorites_at": "2025-09-06T16:00:56.133440+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-06T16:00:56.133440+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_33d00624-f400-4e24-8078-7849bbb5e657": {
+      "id": "avtr_33d00624-f400-4e24-8078-7849bbb5e657",
+      "name": "Leilin",
+      "authorId": "usr_7d931d57-a3d2-40b1-b728-a4b2bcd879c1",
+      "authorName": "Loaԁing",
+      "description": "Leilin",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a57e5335-4537-418c-8c46-c419dd9881c0/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a57e5335-4537-418c-8c46-c419dd9881c0/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-11T19:48:56.717282+00:00",
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_36c597ab-8fe5-45c8-a56b-010ee19b5796": {
+      "id": "avtr_36c597ab-8fe5-45c8-a56b-010ee19b5796",
+      "name": "Kross",
+      "authorId": "usr_59f830b2-1cb9-4ecb-9805-74fb1c186549",
+      "authorName": "Tsuannah",
+      "description": "Kross",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_76c98170-86a5-4f43-9e2e-6c427a160382/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_76c98170-86a5-4f43-9e2e-6c427a160382/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult"
+      ],
+      "version": 4,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-11T19:48:56.717282+00:00",
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_c0617525-9c29-4f56-9406-2e588e177b1c": {
+      "id": "avtr_c0617525-9c29-4f56-9406-2e588e177b1c",
+      "name": "Zack",
+      "authorId": "usr_c35b645f-92fb-4b07-b9a4-7f6a20863aa5",
+      "authorName": "Anarchy404",
+      "description": ";）",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0e7ea5a0-9066-4ddd-a31d-02a038b01d87/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0e7ea5a0-9066-4ddd-a31d-02a038b01d87/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 3,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-11T19:48:56.717282+00:00",
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_7f380f59-bb0d-465c-8709-388a49d8d486": {
+      "id": "avtr_7f380f59-bb0d-465c-8709-388a49d8d486",
+      "name": "Rory （Public Version） - rory․starheart․studio",
+      "authorId": "usr_c3884f93-6eec-425f-8a99-f316aa4be533",
+      "authorName": "Wishbloom",
+      "description": "by k․dance ＆ rylee",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5fd22344-da8d-462f-ba05-f0401e5c0897/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5fd22344-da8d-462f-ba05-f0401e5c0897/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 17,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-11T19:48:56.717282+00:00",
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_70f94e2f-e836-4b68-b7b2-4e10000872f7": {
+      "id": "avtr_70f94e2f-e836-4b68-b7b2-4e10000872f7",
+      "name": "ʙᴀᴛᴛʏ - ғᴛ",
+      "authorId": "usr_3ea3c87d-5153-48ba-b557-ad418312ec08",
+      "authorName": "ᴅᴏʟʟɪ",
+      "description": "Join Server For More Cute Avatarsǃ I Make https˸⁄⁄discord․gg⁄eQaPr7dBGS",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_598a577a-15af-4aea-838f-b110e71246e7/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_598a577a-15af-4aea-838f-b110e71246e7/2/256",
+      "releaseStatus": "public",
+      "tags": [
+        "author_tag_cute",
+        "author_tag_egirl",
+        "author_tag_girl",
+        "author_tag_female",
+        "author_tag_catgirl"
+      ],
+      "version": 19,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-11T19:48:56.717282+00:00",
+      "last_seen_in_favorites_at": "2025-09-11T19:48:56.717282+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-11T19:48:56.717282+00:00",
           "action": "added"
         }
       ],

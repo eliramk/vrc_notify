@@ -46,9 +46,12 @@ FAV_AVATARS_FILE = Path("favorite_avatars.json")
 FAV_AVATAR_FEATURES = [
     "gender",
     "VRCFT",
+    "quest",
     "natural",
     "fun",
+    "fly",
     "world_drop",
+    "seat",
     "notes",
 ]
 
@@ -339,20 +342,77 @@ def _derive_image_ext(url: str) -> str:
         pass
     return ".jpg"
 
+def _sanitize_avatar_name(name: str) -> str:
+    if not name:
+        return ""
+    try:
+        # drop non-ascii
+        ascii_only = name.encode("ascii", errors="ignore").decode("ascii")
+        # allow common safe filename chars; replace others with '_'
+        safe_chars = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ._-()[]{}")
+        cleaned = ''.join(c if c in safe_chars else '_' for c in ascii_only)
+        # collapse whitespace
+        cleaned = ' '.join(cleaned.split())
+        # trim to 30 chars
+        return cleaned[:30]
+    except Exception:
+        return ""
 
-def cache_avatar_image(avatar_id: str, image_url: str):
+
+def _find_existing_image_path(avatar_id: str):
+    try:
+        candidates = []
+        for p in AVATAR_IMG_DIR.glob(f"{avatar_id}*"):
+            if p.is_file() and p.suffix.lower() in {".jpg", ".jpeg", ".png", ".webp"}:
+                candidates.append(p)
+        if not candidates:
+            return None
+        # pick most recently modified
+        candidates.sort(key=lambda p: p.stat().st_mtime, reverse=True)
+        return candidates[0]
+    except Exception:
+        return None
+
+
+def cache_avatar_image(avatar_id: str, image_url: str, avatar_name: str = None):
     if not image_url:
         return
     try:
-        ext = _derive_image_ext(image_url)
-        out_path = AVATAR_IMG_DIR / f"{avatar_id}{ext}"
+        desired_name_part = _sanitize_avatar_name(avatar_name or "")
+        # First, compute the desired output path based on the URL's extension
+        url_ext = _derive_image_ext(image_url)
+        out_path = AVATAR_IMG_DIR / (
+            f"{avatar_id}_{desired_name_part}{url_ext}" if desired_name_part else f"{avatar_id}{url_ext}"
+        )
+        # Early-exit: if the exact desired file already exists, it's cached
         if out_path.exists():
-            return  # already cached
+            return
+
+        # Otherwise, look for any existing cached file by ID prefix and rename if needed
+        existing = _find_existing_image_path(avatar_id)
+        if existing is not None:
+            # Ensure filename prefix + name correctness; keep current ext
+            ext = existing.suffix
+            desired_filename = (
+                f"{avatar_id}_{desired_name_part}{ext}" if desired_name_part else f"{avatar_id}{ext}"
+            )
+            if existing.name != desired_filename:
+                target = AVATAR_IMG_DIR / desired_filename
+                try:
+                    if target.exists() and target != existing:
+                        target.unlink()
+                    existing.rename(target)
+                except Exception as re:
+                    print(f"[image-cache] rename failed for {avatar_id}: {re}")
+            return  # file already present (possibly renamed)
+
+            # Note: if rename failed and we fell through, we would download, but we return above.
+
+        # No existing file; download and save with desired filename
         resp = _HTTP.get(image_url, timeout=20, allow_redirects=True)
         if resp.status_code == 200 and resp.content:
             out_path.write_bytes(resp.content)
         else:
-            # helpful debugging when WAF/403 happens
             print(f"[image-cache] {avatar_id}: HTTP {resp.status_code} {resp.text[:160]}")
     except Exception as e:
         print(f"[image-cache] {avatar_id}: {e}")
@@ -376,7 +436,7 @@ def merge_favorites_snapshot(db, avatars):
             norm["history"].append({"at": now, "action": "added"})
             db["avatars"][aid] = norm
             # cache image on first add
-            cache_avatar_image(aid, norm.get("imageUrl"))
+            cache_avatar_image(aid, norm.get("imageUrl"), norm.get("name"))
         else:
             rec = db["avatars"][aid]
             # keep existing features/history; update metadata (do NOT touch last_seen_in_favorites_at here)
@@ -400,13 +460,9 @@ def merge_favorites_snapshot(db, avatars):
                 rec["active"] = True
                 rec["removed_at"] = None
                 rec["history"].append({"at": now, "action": "readded"})
-            # cache image if missing (don't overwrite existing cache proactively)
+            # ensure cached image exists and filename includes current name
             if rec.get("imageUrl") and rec.get("id"):
-                # If no cached file exists, fetch; otherwise leave as-is
-                ext = _derive_image_ext(rec["imageUrl"])
-                out_path = AVATAR_IMG_DIR / f"{rec['id']}{ext}"
-                if not out_path.exists():
-                    cache_avatar_image(rec["id"], rec["imageUrl"])
+                cache_avatar_image(rec["id"], rec["imageUrl"], rec.get("name"))
             # DO NOT set rec["last_seen_in_favorites_at"] here
 
     # mark removals
@@ -530,7 +586,7 @@ async def main_loop(args):
             print(f"Favorite avatar scan failed: {ex}")
 
         # Initial friend summary (unchanged)
-        online_friends = friends_api_instance.get_friends()
+        online_friends = friends_api_instance.get_friends(offline=False, offset=0)
         initial_online = [f for f in online_friends if f.display_name in FRIEND_NAMES]
         if initial_online:
             initial_online_names = [f"{f.display_name}({f.last_platform}/{f.location})" for f in initial_online]
