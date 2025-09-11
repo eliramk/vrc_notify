@@ -26,7 +26,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cat style, basic"
+      }
     },
     "avtr_8eb255d4-23bf-4b08-857a-2ee43ae85ab3": {
       "id": "avtr_8eb255d4-23bf-4b08-857a-2ee43ae85ab3",
@@ -104,7 +106,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "VRCFT": "Y"
+      }
     },
     "avtr_706facc2-d077-48be-9b9b-6134804d2a10": {
       "id": "avtr_706facc2-d077-48be-9b9b-6134804d2a10",
@@ -130,7 +134,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "notes": "Glowsticks"
+      }
     },
     "avtr_993e7013-7fdb-4d0f-9dff-25fd9ef53498": {
       "id": "avtr_993e7013-7fdb-4d0f-9dff-25fd9ef53498",
@@ -270,7 +277,14 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "natural": "-",
+        "fun": "-",
+        "fly": "-",
+        "world_drop": "-",
+        "notes": "vape"
+      }
     },
     "avtr_58f579ae-220a-4a67-9b91-c98eaf5c4227": {
       "id": "avtr_58f579ae-220a-4a67-9b91-c98eaf5c4227",
@@ -326,7 +340,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "croc"
+      }
     },
     "avtr_b4e77439-983f-43c5-b3ba-3ffb21f9ad07": {
       "id": "avtr_b4e77439-983f-43c5-b3ba-3ffb21f9ad07",
@@ -352,7 +368,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "mushroom hat; dps; crow"
+      }
     },
     "avtr_83bcdeae-1b64-4f29-bc42-fc3743d789df": {
       "id": "avtr_83bcdeae-1b64-4f29-bc42-fc3743d789df",
@@ -381,7 +399,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent gel"
+      }
     },
     "avtr_81762ffc-3013-484f-a324-b29f2dbf9a7c": {
       "id": "avtr_81762ffc-3013-484f-a324-b29f2dbf9a7c",
@@ -490,7 +510,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "sps, dil",
+        "notes": "wings, human/furry, transparent body"
+      }
     },
     "avtr_47f87b8c-4e64-4a24-9e62-4469f3af430f": {
       "id": "avtr_47f87b8c-4e64-4a24-9e62-4469f3af430f",
@@ -542,7 +566,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Golfer throw balls"
+      }
     },
     "avtr_cb183db0-5e2e-4d8c-99b9-561352615b7f": {
       "id": "avtr_cb183db0-5e2e-4d8c-99b9-561352615b7f",
@@ -713,7 +739,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "notes": "Short dress, realistic, nd"
+      }
     },
     "avtr_ff18a9f2-00c4-4842-99cb-f4d38794d221": {
       "id": "avtr_ff18a9f2-00c4-4842-99cb-f4d38794d221",
@@ -926,7 +955,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "VRCFT": "Y",
+        "notes": "summer stuff"
+      }
     },
     "avtr_d93c11dc-cf34-4085-b05a-5e2a30f573d7": {
       "id": "avtr_d93c11dc-cf34-4085-b05a-5e2a30f573d7",
@@ -955,7 +987,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "VRCFT": "Y"
+      }
     },
     "avtr_6a2e58f6-998e-4837-90d8-da7431e891c1": {
       "id": "avtr_6a2e58f6-998e-4837-90d8-da7431e891c1",
@@ -1068,7 +1102,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Rides"
+      }
     },
     "avtr_4a2bc830-e5a1-49c0-8364-ac633e878750": {
       "id": "avtr_4a2bc830-e5a1-49c0-8364-ac633e878750",
@@ -1304,7 +1340,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Cleavage"
+      }
     },
     "avtr_48abfa85-d432-425b-b0ba-928a4fb77e66": {
       "id": "avtr_48abfa85-d432-425b-b0ba-928a4fb77e66",
@@ -1515,7 +1553,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "world_drop": "castle world",
+        "notes": "castle world drop, many powers"
+      }
     },
     "avtr_8a1696dd-fc8f-4991-a0e0-5914692e20e5": {
       "id": "avtr_8a1696dd-fc8f-4991-a0e0-5914692e20e5",
@@ -1784,7 +1826,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "attack"
+      }
     },
     "avtr_2ecce6c2-8e27-4d2a-bdff-bbe87a7170f0": {
       "id": "avtr_2ecce6c2-8e27-4d2a-bdff-bbe87a7170f0",
@@ -1968,7 +2012,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "world_drop": "mushrooms",
+        "notes": "mushroom hat, veil, world drop"
+      }
     },
     "avtr_b4d1cdac-4fc9-4b69-94f9-b2ca4ce6d11e": {
       "id": "avtr_b4d1cdac-4fc9-4b69-94f9-b2ca4ce6d11e",
@@ -1994,7 +2041,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent, gummy bear pet"
+      }
     },
     "avtr_f1075184-fdea-4215-803a-047086430a6e": {
       "id": "avtr_f1075184-fdea-4215-803a-047086430a6e",
@@ -2082,7 +2131,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "world_drop": "Dog house",
+        "notes": "dog house"
+      }
     },
     "avtr_23898d24-69b7-4abb-82fd-3130f1e15e4e": {
       "id": "avtr_23898d24-69b7-4abb-82fd-3130f1e15e4e",
@@ -2112,7 +2164,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "monster can, plushie"
+      }
     },
     "avtr_a5fb500a-4860-4277-9645-6f5a9fc8206e": {
       "id": "avtr_a5fb500a-4860-4277-9645-6f5a9fc8206e",
@@ -2142,7 +2196,10 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "notes": "simple "
+      }
     },
     "avtr_394c6ffb-ab2a-43c2-8622-df8a3d09ad7a": {
       "id": "avtr_394c6ffb-ab2a-43c2-8622-df8a3d09ad7a",
@@ -2168,7 +2225,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "notes": "basic"
+      }
     },
     "avtr_894bee71-0ec9-4e25-b943-737615d76272": {
       "id": "avtr_894bee71-0ec9-4e25-b943-737615d76272",
@@ -2194,7 +2254,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "notes": "wings, portal"
+      }
     },
     "avtr_495b4223-d9be-4865-b9e5-7fb88c98def2": {
       "id": "avtr_495b4223-d9be-4865-b9e5-7fb88c98def2",
@@ -2246,7 +2309,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "amongus follower,  simple "
+      }
     },
     "avtr_26cfd857-e56f-4016-a4f7-53983a6feebd": {
       "id": "avtr_26cfd857-e56f-4016-a4f7-53983a6feebd",
@@ -2272,7 +2337,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent body, whale pet"
+      }
     },
     "avtr_214d071a-ce2c-4e75-ab5e-064cb17545e5": {
       "id": "avtr_214d071a-ce2c-4e75-ab5e-064cb17545e5",
@@ -2298,7 +2365,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "world_drop": "cat bed",
+        "notes": "cat theme "
+      }
     },
     "avtr_6b3e9056-cd2d-44c4-9269-953348d014a5": {
       "id": "avtr_6b3e9056-cd2d-44c4-9269-953348d014a5",
@@ -2324,7 +2394,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "dps",
+        "notes": "transparent body, hammer"
+      }
     },
     "avtr_2e441c8d-9251-4d64-a948-4e4bf89fc21b": {
       "id": "avtr_2e441c8d-9251-4d64-a948-4e4bf89fc21b",
@@ -2376,7 +2450,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "sps",
+        "notes": "good outfits"
+      }
     },
     "avtr_0ae42e03-5e03-442a-b5f3-20ebe9a42d28": {
       "id": "avtr_0ae42e03-5e03-442a-b5f3-20ebe9a42d28",
@@ -2402,7 +2480,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "VRCFT": "yes",
+        "notes": "ft"
+      }
     },
     "avtr_cfe2598e-fb14-412c-a25d-0513ac6130e2": {
       "id": "avtr_cfe2598e-fb14-412c-a25d-0513ac6130e2",
@@ -2457,7 +2538,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "sps",
+        "notes": "furry"
+      }
     },
     "avtr_fe5810bb-8459-4ec4-9c5a-af5909811a70": {
       "id": "avtr_fe5810bb-8459-4ec4-9c5a-af5909811a70",
@@ -2509,7 +2594,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "world_drop": "sunrise",
+        "notes": "Mermaid "
+      }
     },
     "avtr_f9f15ffc-5191-41a3-9e1e-c6fa99080669": {
       "id": "avtr_f9f15ffc-5191-41a3-9e1e-c6fa99080669",
@@ -2773,7 +2862,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "basic, among us pet"
+      }
     },
     "avtr_75bd9281-4ab8-43f6-9f7b-fc723a118e16": {
       "id": "avtr_75bd9281-4ab8-43f6-9f7b-fc723a118e16",
@@ -2879,7 +2970,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "natural": "y",
+        "fun": "sps, pp, dil",
+        "notes": "pull clothes"
+      }
     },
     "avtr_0d32ee45-6ea4-46e3-9381-3e0b46b858ce": {
       "id": "avtr_0d32ee45-6ea4-46e3-9381-3e0b46b858ce",
@@ -2934,7 +3030,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "pp",
+        "notes": "cowgirl, fire, clones "
+      }
     },
     "avtr_505b9586-721c-46b9-9077-9bd8c5f2c8db": {
       "id": "avtr_505b9586-721c-46b9-9077-9bd8c5f2c8db",
@@ -3038,7 +3138,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "world_drop": "spaceship",
+        "notes": "transparent, world drop"
+      }
     },
     "avtr_61ce09d6-4e5f-4842-8f63-d552466eb01c": {
       "id": "avtr_61ce09d6-4e5f-4842-8f63-d552466eb01c",
@@ -3128,7 +3231,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "dragon"
+      }
     },
     "avtr_c5b313cb-4aa4-43b0-b7fc-4d29064cc934": {
       "id": "avtr_c5b313cb-4aa4-43b0-b7fc-4d29064cc934",
@@ -3180,7 +3285,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "m",
+        "VRCFT": "n",
+        "natural": "n",
+        "fun": "n",
+        "notes": "default,  dragon follower"
+      }
     },
     "avtr_2ecb5a13-becc-4bb4-b1f2-3e47408341ca": {
       "id": "avtr_2ecb5a13-becc-4bb4-b1f2-3e47408341ca",
@@ -3209,7 +3320,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple, mouth mouse"
+      }
     },
     "avtr_009dee7e-a435-4119-96e6-45df6b158414": {
       "id": "avtr_009dee7e-a435-4119-96e6-45df6b158414",
@@ -3261,7 +3374,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "many accessories, telekinesis, dizzy"
+      }
     },
     "avtr_b4ab0288-b528-46f9-bde3-81b6e657a5a1": {
       "id": "avtr_b4ab0288-b528-46f9-bde3-81b6e657a5a1",
@@ -3400,7 +3515,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "fun": "sps",
+        "notes": "standard "
+      }
     },
     "avtr_8f7d7a23-d1b9-4e09-9bfb-4a2e20054769": {
       "id": "avtr_8f7d7a23-d1b9-4e09-9bfb-4a2e20054769",
@@ -3426,7 +3544,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "zelda"
+      }
     },
     "avtr_496cbd6e-09b8-4f78-90fa-e8dd36216fc0": {
       "id": "avtr_496cbd6e-09b8-4f78-90fa-e8dd36216fc0",
@@ -3452,7 +3572,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent body."
+      }
     },
     "avtr_0527cdf9-b626-4a4e-a3cc-83702d9aa54f": {
       "id": "avtr_0527cdf9-b626-4a4e-a3cc-83702d9aa54f",
@@ -3506,7 +3628,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "m",
+        "natural": "y",
+        "notes": "male avi"
+      }
     },
     "avtr_af95d01b-ea17-41a2-897c-b2d0d08d6ac6": {
       "id": "avtr_af95d01b-ea17-41a2-897c-b2d0d08d6ac6",
@@ -3532,7 +3658,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "y",
+        "notes": "tattoos "
+      }
     },
     "avtr_d1f51256-ba49-46c2-8b2c-cdc39596eef9": {
       "id": "avtr_d1f51256-ba49-46c2-8b2c-cdc39596eef9",
@@ -3558,7 +3688,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "world_drop": "globe",
+        "notes": "bee"
+      }
     },
     "avtr_de820487-063e-45b3-85bb-76b1fbf1c93d": {
       "id": "avtr_de820487-063e-45b3-85bb-76b1fbf1c93d",
@@ -3584,7 +3717,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "m",
+        "VRCFT": "y",
+        "fly": "dadh",
+        "notes": "map, light, fly dash, teleport"
+      }
     },
     "avtr_52ae6ee2-a000-4452-85d6-59f2ee4f129b": {
       "id": "avtr_52ae6ee2-a000-4452-85d6-59f2ee4f129b",
@@ -3770,7 +3908,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple, flower theme"
+      }
     },
     "avtr_a1607059-6787-4262-8452-fb0bcad81c11": {
       "id": "avtr_a1607059-6787-4262-8452-fb0bcad81c11",
@@ -3826,7 +3966,10 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "notes": "simple "
+      }
     },
     "avtr_af91a449-38ba-4ff0-bacb-62cc6080a7ec": {
       "id": "avtr_af91a449-38ba-4ff0-bacb-62cc6080a7ec",
@@ -3852,7 +3995,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "VRCFT": "y",
+        "notes": "ft, light"
+      }
     },
     "avtr_46b7ab6c-1ed8-4fd1-87f0-a8ec1bcbd8a5": {
       "id": "avtr_46b7ab6c-1ed8-4fd1-87f0-a8ec1bcbd8a5",
@@ -4008,7 +4155,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "VRCFT": "-",
+        "natural": "n",
+        "fun": "n",
+        "notes": "marker"
+      }
     },
     "avtr_9023739b-10ce-4713-85aa-ffe6042b4f9d": {
       "id": "avtr_9023739b-10ce-4713-85aa-ffe6042b4f9d",
@@ -4038,7 +4191,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple, net dress"
+      }
     },
     "avtr_8671ffb1-24d5-4146-b386-0965835d0dd8": {
       "id": "avtr_8671ffb1-24d5-4146-b386-0965835d0dd8",
@@ -4174,7 +4329,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "Animal",
+        "VRCFT": "Y",
+        "natural": "-",
+        "fun": "-",
+        "fly": "Y",
+        "world_drop": "-",
+        "notes": "Flying Tiget/Cat"
+      }
     },
     "avtr_1b32c4a7-67c0-4759-8baa-d41048c10ce6": {
       "id": "avtr_1b32c4a7-67c0-4759-8baa-d41048c10ce6",
@@ -4204,7 +4367,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cowboy"
+      }
     },
     "avtr_02fd60e4-ef1a-4671-8da0-dfaaea1006ce": {
       "id": "avtr_02fd60e4-ef1a-4671-8da0-dfaaea1006ce",
@@ -4286,7 +4451,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "just motions"
+      }
     },
     "avtr_24b4bb1f-045f-4163-a434-2cca51f00df9": {
       "id": "avtr_24b4bb1f-045f-4163-a434-2cca51f00df9",
@@ -4338,7 +4505,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "world_drop": "bed, pole, cage",
+        "notes": "dancer pole, bed"
+      }
     },
     "avtr_53dca881-a328-409c-aa0c-1935afacc3c3": {
       "id": "avtr_53dca881-a328-409c-aa0c-1935afacc3c3",
@@ -4366,7 +4536,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "chainsaw"
+      }
     },
     "avtr_2bd8b502-3cb3-4c02-9848-4cec6b2671dd": {
       "id": "avtr_2bd8b502-3cb3-4c02-9848-4cec6b2671dd",
@@ -4392,7 +4564,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "dps",
+        "notes": "angel bunny"
+      }
     },
     "avtr_124f94ff-72c5-4ef3-9d81-834b85b4693e": {
       "id": "avtr_124f94ff-72c5-4ef3-9d81-834b85b4693e",
@@ -4422,7 +4598,10 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "notes": "like alice"
+      }
     },
     "avtr_73fc939e-5412-450e-9597-a180a9ca7206": {
       "id": "avtr_73fc939e-5412-450e-9597-a180a9ca7206",
@@ -4448,7 +4627,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "F",
+        "notes": "Full body"
+      }
     },
     "avtr_d0a91466-84f0-4a9f-86a2-0f24572932b9": {
       "id": "avtr_d0a91466-84f0-4a9f-86a2-0f24572932b9",
@@ -4502,7 +4684,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "m",
+        "natural": "y",
+        "fun": "dps",
+        "notes": "muscles, pony tail, dragon follower"
+      }
     },
     "avtr_564bcc9b-7021-4f84-8e2b-edbdef772c6a": {
       "id": "avtr_564bcc9b-7021-4f84-8e2b-edbdef772c6a",
@@ -4528,7 +4715,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "dps",
+        "notes": "poses"
+      }
     },
     "avtr_516c060c-278d-4493-9b0d-f798a2153514": {
       "id": "avtr_516c060c-278d-4493-9b0d-f798a2153514",
@@ -4558,7 +4749,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "want": "maybe?"
+      }
     },
     "avtr_19d7c046-878e-41e3-a4f5-70921e86c596": {
       "id": "avtr_19d7c046-878e-41e3-a4f5-70921e86c596",
@@ -4584,7 +4777,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "angel"
+      }
     },
     "avtr_5246b4dc-2c2d-41f7-8ba9-eb52a1256f8c": {
       "id": "avtr_5246b4dc-2c2d-41f7-8ba9-eb52a1256f8c",
@@ -4610,7 +4805,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "y",
+        "notes": "full figure"
+      }
     },
     "avtr_8b32f0b2-8bf1-4ae2-866a-79c4b6d113e1": {
       "id": "avtr_8b32f0b2-8bf1-4ae2-866a-79c4b6d113e1",
@@ -4636,7 +4835,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "elemental bow"
+      }
     },
     "avtr_209179c0-a885-49a3-84b4-3dd2a1d56e63": {
       "id": "avtr_209179c0-a885-49a3-84b4-3dd2a1d56e63",
@@ -4666,7 +4867,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "nothing special "
+      }
     },
     "avtr_b89ced25-2541-440b-a15c-886805a2f437": {
       "id": "avtr_b89ced25-2541-440b-a15c-886805a2f437",
@@ -4692,7 +4895,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "weapons, sticklights, night vision"
+      }
     },
     "avtr_f4401fde-e57e-4b5e-8e65-9169fdd74e8d": {
       "id": "avtr_f4401fde-e57e-4b5e-8e65-9169fdd74e8d",
@@ -4720,7 +4925,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "VRCFT": "y",
+        "notes": "metal pipes, "
+      }
     },
     "avtr_9be63d8e-24a0-44d3-bb86-b7840ae7f969": {
       "id": "avtr_9be63d8e-24a0-44d3-bb86-b7840ae7f969",
@@ -4746,7 +4955,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent body"
+      }
     },
     "avtr_97afaf97-0ab4-4d9b-8aa0-b1871c15d259": {
       "id": "avtr_97afaf97-0ab4-4d9b-8aa0-b1871c15d259",
@@ -4776,7 +4987,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Nothing special "
+      }
     },
     "avtr_b62f71e7-1f31-4f94-adfd-8599d8a02bc6": {
       "id": "avtr_b62f71e7-1f31-4f94-adfd-8599d8a02bc6",
@@ -4805,7 +5018,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "natural": "y",
+        "notes": "whip, wings"
+      }
     },
     "avtr_dc868882-77af-44fd-a7b7-731a535b7a87": {
       "id": "avtr_dc868882-77af-44fd-a7b7-731a535b7a87",
@@ -4831,7 +5048,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "M",
+        "VRCFT": "Y",
+        "notes": "Default"
+      }
     },
     "avtr_62cd1727-6c84-4724-b378-d9d129ff8a66": {
       "id": "avtr_62cd1727-6c84-4724-b378-d9d129ff8a66",
@@ -4861,7 +5082,10 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "notes": "simple"
+      }
     },
     "avtr_987b7128-1204-405d-b105-e09922efa440": {
       "id": "avtr_987b7128-1204-405d-b105-e09922efa440",
@@ -4887,7 +5111,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "f",
+        "VRCFT": "y",
+        "natural": "y",
+        "notes": "ft"
+      }
     },
     "avtr_8f113a32-7544-4ee4-9cb1-d9235f589fa8": {
       "id": "avtr_8f113a32-7544-4ee4-9cb1-d9235f589fa8",
@@ -4913,7 +5142,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "VRCFT": "Y",
+        "notes": "ft, axe"
+      }
     },
     "avtr_50256878-2847-4f19-9b68-16c83e9ef755": {
       "id": "avtr_50256878-2847-4f19-9b68-16c83e9ef755",
@@ -4948,7 +5180,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "dragon",
+        "VRCFT": "y",
+        "fly": "y",
+        "notes": "flying"
+      }
     },
     "avtr_ba192639-3dc5-45b3-96e3-462c943e0360": {
       "id": "avtr_ba192639-3dc5-45b3-96e3-462c943e0360",
@@ -4974,7 +5211,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "M",
+        "VRCFT": "Y",
+        "fun": "-",
+        "world_drop": "-",
+        "notes": "Default"
+      }
     },
     "avtr_c948d326-d048-4d7e-bb4d-bb82bab6f97a": {
       "id": "avtr_c948d326-d048-4d7e-bb4d-bb82bab6f97a",
@@ -5009,7 +5252,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "tiger",
+        "notes": "ft"
+      }
     },
     "avtr_62435b57-2fbe-4b62-9b25-f958a34f5625": {
       "id": "avtr_62435b57-2fbe-4b62-9b25-f958a34f5625",
@@ -5035,7 +5281,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "notes": "poi balls, light, clothes"
+      }
     },
     "avtr_1fd00093-3161-46a3-9683-95e39a9c42a6": {
       "id": "avtr_1fd00093-3161-46a3-9683-95e39a9c42a6",
@@ -5070,7 +5319,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple"
+      }
     },
     "avtr_76f286fd-ca84-47ba-9c73-3c8264b6d7cd": {
       "id": "avtr_76f286fd-ca84-47ba-9c73-3c8264b6d7cd",
@@ -5096,7 +5347,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cow style"
+      }
     },
     "avtr_d9d2fa8f-90be-4258-9316-8c03538f7568": {
       "id": "avtr_d9d2fa8f-90be-4258-9316-8c03538f7568",
@@ -5122,7 +5375,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "mickey"
+      }
     },
     "avtr_ca05263f-b010-4eea-bc53-f22a5deb584f": {
       "id": "avtr_ca05263f-b010-4eea-bc53-f22a5deb584f",
@@ -5148,7 +5403,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "giant"
+      }
     },
     "avtr_50cd8cc5-c778-4c6a-ac87-3a85b1bc68e6": {
       "id": "avtr_50cd8cc5-c778-4c6a-ac87-3a85b1bc68e6",
@@ -5178,7 +5435,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Simple"
+      }
     },
     "avtr_580042dd-92a3-469f-b4f1-da7ad2fd3c9d": {
       "id": "avtr_580042dd-92a3-469f-b4f1-da7ad2fd3c9d",
@@ -5204,7 +5463,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "mirror"
+      }
     },
     "avtr_b6f22f82-c023-4144-9871-ad20f137d46c": {
       "id": "avtr_b6f22f82-c023-4144-9871-ad20f137d46c",
@@ -5230,7 +5491,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple"
+      }
     },
     "avtr_a7c9eac9-810f-4c33-b2e5-8dd523e2d747": {
       "id": "avtr_a7c9eac9-810f-4c33-b2e5-8dd523e2d747",
@@ -5256,7 +5519,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Simple"
+      }
     },
     "avtr_f9314873-ad15-4c9d-b2ed-77afdce9d5af": {
       "id": "avtr_f9314873-ad15-4c9d-b2ed-77afdce9d5af",
@@ -5282,7 +5547,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Giant"
+      }
     },
     "avtr_60acfbac-054c-4600-bc40-141f35cb2b1a": {
       "id": "avtr_60acfbac-054c-4600-bc40-141f35cb2b1a",
@@ -5312,7 +5579,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "garbage head"
+      }
     },
     "avtr_071ed1e5-626c-458c-8de4-80b3cc9a5902": {
       "id": "avtr_071ed1e5-626c-458c-8de4-80b3cc9a5902",
@@ -5338,7 +5607,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "giant"
+      }
     },
     "avtr_59d2fdd0-fd56-4587-9a7b-2876d98e7688": {
       "id": "avtr_59d2fdd0-fd56-4587-9a7b-2876d98e7688",
@@ -5364,7 +5635,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "giant"
+      }
     },
     "avtr_b49eb486-3f73-4fe1-a031-ba80079f542d": {
       "id": "avtr_b49eb486-3f73-4fe1-a031-ba80079f542d",
@@ -5446,7 +5719,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "M",
+        "notes": "Default"
+      }
     },
     "avtr_dc48b863-a526-457c-9717-de0c4c3241e7": {
       "id": "avtr_dc48b863-a526-457c-9717-de0c4c3241e7",
@@ -5474,7 +5750,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "gender": "m",
+        "VRCFT": "y",
+        "natural": "y",
+        "fun": "sps",
+        "notes": "Default, revolver"
+      }
     },
     "avtr_b09bd797-1fa9-4f24-ac6f-6dfeb6fa24cc": {
       "id": "avtr_b09bd797-1fa9-4f24-ac6f-6dfeb6fa24cc",
@@ -5564,7 +5846,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "fun": "sps",
+        "notes": "nice"
+      }
     },
     "avtr_a5fcfb30-966e-4832-957e-806f87be523a": {
       "id": "avtr_a5fcfb30-966e-4832-957e-806f87be523a",
@@ -5590,7 +5876,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "fun": "dps",
+        "notes": "big hands"
+      }
     },
     "avtr_72fe8a0a-9019-4924-9574-5693029f0837": {
       "id": "avtr_72fe8a0a-9019-4924-9574-5693029f0837",
@@ -5700,7 +5989,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "natural": "y",
+        "VRCFT": "yes",
+        "Quest": "yes",
+        "notes": "stunning, realistic"
+      }
     },
     "avtr_8b2c2a24-7f9e-4e82-9651-1dd39d3d77e9": {
       "id": "avtr_8b2c2a24-7f9e-4e82-9651-1dd39d3d77e9",

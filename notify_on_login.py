@@ -44,6 +44,8 @@ COOKIES_FILE = Path("auth_cookies.json")
 # ---------- NEW: favorites persistence ----------
 FAV_AVATARS_FILE = Path("favorite_avatars.json")
 FAV_AVATAR_FEATURES = [
+    "notes",
+    "rank",  # score 1-10
     "gender",
     "VRCFT",
     "quest",
@@ -52,7 +54,7 @@ FAV_AVATAR_FEATURES = [
     "fly",
     "world_drop",
     "seat",
-    "notes",
+    "want",
 ]
 
 # NEW: avatar image cache directory
@@ -487,7 +489,12 @@ def export_avatars_csv(db_path: Path, csv_path: Path):
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
-        for aid, rec in avatars.items():
+        # Sort by name (case-insensitive), then by id for stability
+        sorted_recs = sorted(
+            avatars.values(),
+            key=lambda r: ((r.get("name") or "").lower(), r.get("id") or "")
+        )
+        for rec in sorted_recs:
             row = {
                 "id": rec.get("id"),
                 "name": rec.get("name"),
