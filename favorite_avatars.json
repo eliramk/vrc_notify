@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-09-11T20:00:11.090207+00:00",
+  "last_scan_at": "2025-09-20T08:00:23.447452+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -27,7 +27,8 @@
         }
       ],
       "features": {
-        "notes": "cat style, basic"
+        "notes": "cat style, basic",
+        "rank": "2"
       }
     },
     "avtr_8eb255d4-23bf-4b08-857a-2ee43ae85ab3": {
@@ -54,7 +55,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "alien "
+      }
     },
     "avtr_81c1df96-10b5-4bd3-be45-9fac9dfa99ec": {
       "id": "avtr_81c1df96-10b5-4bd3-be45-9fac9dfa99ec",
@@ -279,10 +282,10 @@
       ],
       "features": {
         "gender": "f",
-        "natural": "-",
-        "fun": "-",
-        "fly": "-",
-        "world_drop": "-",
+        "natural": "",
+        "fun": "",
+        "fly": "",
+        "world_drop": "",
         "notes": "vape"
       }
     },
@@ -567,7 +570,9 @@
         }
       ],
       "features": {
-        "notes": "Golfer throw balls"
+        "notes": "Golfer throw balls",
+        "natural": "y",
+        "fun": "y"
       }
     },
     "avtr_cb183db0-5e2e-4d8c-99b9-561352615b7f": {
@@ -613,14 +618,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-12T15:00:11.519277+00:00",
+      "removed_at": "2025-09-12T15:00:11.519277+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-12T15:00:11.519277+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -652,7 +661,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "blonde",
+        "natural": "y",
+        "fun": "sps"
+      }
     },
     "avtr_15d5f14d-ebc1-4415-8a1e-d11ad12e2bfe": {
       "id": "avtr_15d5f14d-ebc1-4415-8a1e-d11ad12e2bfe",
@@ -709,7 +722,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "belly mouth tongue "
+      }
     },
     "avtr_af856de4-267a-401a-805a-5b13d8dda4c5": {
       "id": "avtr_af856de4-267a-401a-805a-5b13d8dda4c5",
@@ -988,7 +1003,8 @@
         }
       ],
       "features": {
-        "VRCFT": "Y"
+        "VRCFT": "Y",
+        "notes": "nud"
       }
     },
     "avtr_6a2e58f6-998e-4837-90d8-da7431e891c1": {
@@ -1475,7 +1491,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "invisible, marker",
+        "natural": "y"
+      }
     },
     "avtr_e8632b36-11bb-4301-8e36-732c76c2f003": {
       "id": "avtr_e8632b36-11bb-4301-8e36-732c76c2f003",
@@ -1527,7 +1546,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "stars, music, dances, big gun, light",
+        "gender": "furry",
+        "fly": "y",
+        "world_drop": "black holes"
+      }
     },
     "avtr_276ff635-0dea-4a83-b974-69fc2ded66d0": {
       "id": "avtr_276ff635-0dea-4a83-b974-69fc2ded66d0",
@@ -1638,7 +1662,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "bunny plushie",
+        "VRCFT": "y",
+        "natural": "y",
+        "fun": "sps pcs lms pp"
+      }
     },
     "avtr_a69971b5-7b0b-4ffc-98ce-71feb088eff9": {
       "id": "avtr_a69971b5-7b0b-4ffc-98ce-71feb088eff9",
@@ -2069,7 +2098,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "stars, simple "
+      }
     },
     "avtr_e3fd4ac3-512f-4edd-8037-e47d7dadc842": {
       "id": "avtr_e3fd4ac3-512f-4edd-8037-e47d7dadc842",
@@ -2105,7 +2136,10 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Bee v1",
+        "world_drop": "snow globe"
+      }
     },
     "avtr_c13b120c-6924-4fb8-acb6-9b88bf60900a": {
       "id": "avtr_c13b120c-6924-4fb8-acb6-9b88bf60900a",
@@ -2198,7 +2232,7 @@
       ],
       "features": {
         "gender": "f",
-        "notes": "simple "
+        "notes": "simple"
       }
     },
     "avtr_394c6ffb-ab2a-43c2-8622-df8a3d09ad7a": {
@@ -2283,7 +2317,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "angel, amongus follower "
+      }
     },
     "avtr_3708ce1e-adb5-4c52-8d24-6e54bb23826d": {
       "id": "avtr_3708ce1e-adb5-4c52-8d24-6e54bb23826d",
@@ -2367,7 +2403,7 @@
       ],
       "features": {
         "world_drop": "cat bed",
-        "notes": "cat theme "
+        "notes": "cat theme"
       }
     },
     "avtr_6b3e9056-cd2d-44c4-9269-953348d014a5": {
@@ -2597,7 +2633,7 @@
       "features": {
         "gender": "f",
         "world_drop": "sunrise",
-        "notes": "Mermaid "
+        "notes": "Mermaid"
       }
     },
     "avtr_f9f15ffc-5191-41a3-9e1e-c6fa99080669": {
@@ -2650,7 +2686,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "towel, megaphone ",
+        "VRCFT": "y",
+        "natural": "y",
+        "fun": "pcs, sps"
+      }
     },
     "avtr_ac3b8b8f-c26f-49ba-85f4-a16d552e3512": {
       "id": "avtr_ac3b8b8f-c26f-49ba-85f4-a16d552e3512",
@@ -2754,7 +2795,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "wolfish",
+        "natural": "y"
+      }
     },
     "avtr_7e791e50-1a77-4e72-8a0b-22ea97bd281a": {
       "id": "avtr_7e791e50-1a77-4e72-8a0b-22ea97bd281a",
@@ -2810,7 +2854,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cage",
+        "gender": "f",
+        "world_drop": "cage"
+      }
     },
     "avtr_ac320d1e-d98d-48d9-aa8c-8ffbbcb941d4": {
       "id": "avtr_ac320d1e-d98d-48d9-aa8c-8ffbbcb941d4",
@@ -2890,7 +2938,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "big"
+      }
     },
     "avtr_28d70384-b381-4bf8-ad50-16563afc5314": {
       "id": "avtr_28d70384-b381-4bf8-ad50-16563afc5314",
@@ -3290,7 +3340,8 @@
         "VRCFT": "n",
         "natural": "n",
         "fun": "n",
-        "notes": "default,  dragon follower"
+        "notes": "default,  dragon follower",
+        "rank": "9"
       }
     },
     "avtr_2ecb5a13-becc-4bb4-b1f2-3e47408341ca": {
@@ -3348,7 +3399,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "zelda, parasol"
+      }
     },
     "avtr_7120fec2-cb38-44c3-8f17-409de200c4d2": {
       "id": "avtr_7120fec2-cb38-44c3-8f17-409de200c4d2",
@@ -3517,7 +3570,7 @@
       ],
       "features": {
         "fun": "sps",
-        "notes": "standard "
+        "notes": "standard"
       }
     },
     "avtr_8f7d7a23-d1b9-4e09-9bfb-4a2e20054769": {
@@ -3545,7 +3598,8 @@
         }
       ],
       "features": {
-        "notes": "zelda"
+        "notes": "zelda",
+        "rank": "8"
       }
     },
     "avtr_496cbd6e-09b8-4f78-90fa-e8dd36216fc0": {
@@ -3661,7 +3715,7 @@
       "features": {
         "natural": "y",
         "fun": "y",
-        "notes": "tattoos "
+        "notes": "tattoos"
       }
     },
     "avtr_d1f51256-ba49-46c2-8b2c-cdc39596eef9": {
@@ -3720,8 +3774,10 @@
       "features": {
         "gender": "m",
         "VRCFT": "y",
-        "fly": "dadh",
-        "notes": "map, light, fly dash, teleport"
+        "fly": "dash",
+        "notes": "map, light, fly dash, teleport",
+        "rank": "10",
+        "seat": "1"
       }
     },
     "avtr_52ae6ee2-a000-4452-85d6-59f2ee4f129b": {
@@ -3878,7 +3934,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple"
+      }
     },
     "avtr_1234d058-793b-4c27-93b4-427603e38d30": {
       "id": "avtr_1234d058-793b-4c27-93b4-427603e38d30",
@@ -3968,7 +4026,7 @@
       ],
       "features": {
         "gender": "f",
-        "notes": "simple "
+        "notes": "simple"
       }
     },
     "avtr_af91a449-38ba-4ff0-bacb-62cc6080a7ec": {
@@ -4015,17 +4073,24 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-12T15:00:11.519277+00:00",
+      "removed_at": "2025-09-12T15:00:11.519277+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-12T15:00:11.519277+00:00",
+          "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "light, ft, del",
+        "VRCFT": "y"
+      }
     },
     "avtr_643bd9e3-c431-4432-b016-0d833e36de56": {
       "id": "avtr_643bd9e3-c431-4432-b016-0d833e36de56",
@@ -4160,7 +4225,8 @@
         "VRCFT": "-",
         "natural": "n",
         "fun": "n",
-        "notes": "marker"
+        "notes": "marker",
+        "want": ""
       }
     },
     "avtr_9023739b-10ce-4713-85aa-ffe6042b4f9d": {
@@ -4479,7 +4545,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "want": ""
+      }
     },
     "avtr_318b62b5-10f2-4cd0-ba11-86b16e1245e9": {
       "id": "avtr_318b62b5-10f2-4cd0-ba11-86b16e1245e9",
@@ -4868,7 +4936,7 @@
         }
       ],
       "features": {
-        "notes": "nothing special "
+        "notes": "nothing special"
       }
     },
     "avtr_b89ced25-2541-440b-a15c-886805a2f437": {
@@ -4988,7 +5056,7 @@
         }
       ],
       "features": {
-        "notes": "Nothing special "
+        "notes": "Nothing special"
       }
     },
     "avtr_b62f71e7-1f31-4f94-adfd-8599d8a02bc6": {
@@ -5051,7 +5119,8 @@
       "features": {
         "gender": "M",
         "VRCFT": "Y",
-        "notes": "Default"
+        "notes": "Default",
+        "rank": "10"
       }
     },
     "avtr_62cd1727-6c84-4724-b378-d9d129ff8a66": {
@@ -5184,7 +5253,8 @@
         "gender": "dragon",
         "VRCFT": "y",
         "fly": "y",
-        "notes": "flying"
+        "notes": "flying",
+        "rank": "9"
       }
     },
     "avtr_ba192639-3dc5-45b3-96e3-462c943e0360": {
@@ -5782,7 +5852,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "spider dress"
+      }
     },
     "avtr_01a5e0d3-3463-4e3d-ba52-fe2f9b9c448a": {
       "id": "avtr_01a5e0d3-3463-4e3d-ba52-fe2f9b9c448a",
@@ -5993,7 +6065,8 @@
         "natural": "y",
         "VRCFT": "yes",
         "Quest": "yes",
-        "notes": "stunning, realistic"
+        "notes": "stunning, realistic",
+        "rank": "10"
       }
     },
     "avtr_8b2c2a24-7f9e-4e82-9651-1dd39d3d77e9": {
@@ -6023,7 +6096,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "pull ribbon",
+        "natural": "y",
+        "fun": "y"
+      }
     },
     "avtr_5a95b094-3711-4be4-a93e-26ca85b195d1": {
       "id": "avtr_5a95b094-3711-4be4-a93e-26ca85b195d1",
@@ -6254,7 +6331,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "lights, fly dash, gun, birthday cake, map ",
+        "fun": "erp, dps",
+        "fly": "dash",
+        "world_drop": "birthday cake"
+      }
     },
     "avtr_594363eb-c5a8-4cae-9271-5beb46171e3a": {
       "id": "avtr_594363eb-c5a8-4cae-9271-5beb46171e3a",
@@ -6404,14 +6486,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-09-05T21:00:29.885165+00:00",
-      "last_seen_in_favorites_at": "2025-09-05T21:00:29.885165+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-16T20:00:35.227410+00:00",
+      "removed_at": "2025-09-16T20:00:35.227410+00:00",
       "history": [
         {
           "at": "2025-09-05T21:00:29.885165+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-16T20:00:35.227410+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -6551,7 +6637,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "dash, fly, seats"
+      }
     },
     "avtr_33d00624-f400-4e24-8078-7849bbb5e657": {
       "id": "avtr_33d00624-f400-4e24-8078-7849bbb5e657",
@@ -6577,7 +6665,9 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "toe control"
+      }
     },
     "avtr_36c597ab-8fe5-45c8-a56b-010ee19b5796": {
       "id": "avtr_36c597ab-8fe5-45c8-a56b-010ee19b5796",
@@ -6658,7 +6748,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "asmr, world drops",
+        "world_drop": "cave"
+      }
     },
     "avtr_70f94e2f-e836-4b68-b7b2-4e10000872f7": {
       "id": "avtr_70f94e2f-e836-4b68-b7b2-4e10000872f7",
@@ -6687,6 +6780,228 @@
       "history": [
         {
           "at": "2025-09-11T19:48:56.717282+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_981c94d7-3147-437a-9e61-d8ff9ca4b3a3": {
+      "id": "avtr_981c94d7-3147-437a-9e61-d8ff9ca4b3a3",
+      "name": "Komano GoGoǃ",
+      "authorId": "usr_4c860fe6-9b17-4987-81ba-519f0d203e9b",
+      "authorName": "ᴋᴏʀɴ",
+      "description": "First Male-Booth Modelǃ Fully PC Customizable and Quest Friendlyǃ․ Hue Shifts‚ and GOGO Loco ≺3",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1d0cb346-c56b-4648-b31b-a519b6409987/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1d0cb346-c56b-4648-b31b-a519b6409987/2/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 27,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-12T14:00:38.177420+00:00",
+      "last_seen_in_favorites_at": "2025-09-12T14:00:38.177420+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-12T14:00:38.177420+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_0c7a0f02-1943-4c14-98e2-124ab0d2040c": {
+      "id": "avtr_0c7a0f02-1943-4c14-98e2-124ab0d2040c",
+      "name": "Amir",
+      "authorId": "usr_4c860fe6-9b17-4987-81ba-519f0d203e9b",
+      "authorName": "ᴋᴏʀɴ",
+      "description": "Don't touch his girlfriend‚ Amora ≺3 - Your favorite yandere boy ;） Aurora head by Sleepy and Komano on booth ≺3",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2158173d-b230-4069-978f-570b5bef4db5/5/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2158173d-b230-4069-978f-570b5bef4db5/5/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_violence"
+      ],
+      "version": 47,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-12T14:00:38.177420+00:00",
+      "last_seen_in_favorites_at": "2025-09-12T14:00:38.177420+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-12T14:00:38.177420+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_5e34c53c-dd93-479a-a4aa-0c645b3e9b12": {
+      "id": "avtr_5e34c53c-dd93-479a-a4aa-0c645b3e9b12",
+      "name": "Soren By Thunders",
+      "authorId": "usr_b8918e19-51ca-4f2d-b61f-96e325b7fbe1",
+      "authorName": "Thunders 92",
+      "description": "Soren By Thunders",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5dfde3b0-9727-4524-87cf-ea67e7149095/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5dfde3b0-9727-4524-87cf-ea67e7149095/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 3,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-12T15:00:11.519277+00:00",
+      "last_seen_in_favorites_at": "2025-09-12T15:00:11.519277+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-12T15:00:11.519277+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_f579f2df-a282-43dd-ac5f-3235df055a11": {
+      "id": "avtr_f579f2df-a282-43dd-ac5f-3235df055a11",
+      "name": "観覧車ver․1․0",
+      "authorId": "usr_eb1690dc-95b8-41dd-a4d9-1af0b67220b5",
+      "authorName": "tellus-teruru",
+      "description": "Humanoid",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b1d64513-2251-4e9a-b5c5-10fc487d2223/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b1d64513-2251-4e9a-b5c5-10fc487d2223/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-12T17:00:07.636244+00:00",
+      "last_seen_in_favorites_at": "2025-09-12T17:00:07.636244+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-12T17:00:07.636244+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_de813d76-5dd4-482a-80b3-9a55ff4de640": {
+      "id": "avtr_de813d76-5dd4-482a-80b3-9a55ff4de640",
+      "name": "コーヒーカップver․1․0",
+      "authorId": "usr_eb1690dc-95b8-41dd-a4d9-1af0b67220b5",
+      "authorName": "tellus-teruru",
+      "description": "Humanoid",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2dbef4c9-5faf-437c-9425-2d898097a575/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2dbef4c9-5faf-437c-9425-2d898097a575/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-12T17:00:07.636244+00:00",
+      "last_seen_in_favorites_at": "2025-09-12T17:00:07.636244+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-12T17:00:07.636244+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_60e0ae96-72d0-4f4a-8011-9c8da4a9e7cc": {
+      "id": "avtr_60e0ae96-72d0-4f4a-8011-9c8da4a9e7cc",
+      "name": "Flare",
+      "authorId": "usr_d4524b05-b54f-4ba3-b58c-db9d2949a1f7",
+      "authorName": "Хочу беляшь",
+      "description": "Flare by Bambi",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_78764767-e157-4afa-9688-d1ad7b23cd2a/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_78764767-e157-4afa-9688-d1ad7b23cd2a/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult",
+        "content_gore",
+        "content_violence",
+        "content_horror"
+      ],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-13T17:01:05.327162+00:00",
+      "last_seen_in_favorites_at": "2025-09-13T17:01:05.327162+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-13T17:01:05.327162+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_e25ad3ff-12d9-4c0d-982d-fdfb6cd434c8": {
+      "id": "avtr_e25ad3ff-12d9-4c0d-982d-fdfb6cd434c8",
+      "name": "Midnight Ahri",
+      "authorId": "usr_528ae332-20e9-447e-80ee-161bda2f93f0",
+      "authorName": "Briɑr",
+      "description": "© This avatar is protected by copyright․ Unauthorized use‚ duplication‚ or distribution is strictly prohibited and may result in serious legal consequences․ https˸⁄⁄ko-fi․com⁄laylakitsune https˸⁄⁄discord․gg⁄xAeJrSAgqG",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_153b17fa-6c00-455c-bfc1-0dfcd8ee84b4/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_153b17fa-6c00-455c-bfc1-0dfcd8ee84b4/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_horror",
+        "content_violence",
+        "content_sex",
+        "content_adult",
+        "content_gore"
+      ],
+      "version": 11,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-14T22:43:32.952675+00:00",
+      "last_seen_in_favorites_at": "2025-09-14T22:43:32.952675+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-14T22:43:32.952675+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_53e3f3c4-302b-4773-a76b-f72f8d0e05c7": {
+      "id": "avtr_53e3f3c4-302b-4773-a76b-f72f8d0e05c7",
+      "name": "Tommy",
+      "authorId": "usr_8813b0b5-2a25-4c3b-bd89-76a106f878b3",
+      "authorName": "hier encore",
+      "description": "Tommy",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_d323af76-4cf3-40cf-9d1b-c076551bb354/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_d323af76-4cf3-40cf-9d1b-c076551bb354/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-16T20:00:35.227410+00:00",
+      "last_seen_in_favorites_at": "2025-09-16T20:00:35.227410+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-16T20:00:35.227410+00:00",
           "action": "added"
         }
       ],
