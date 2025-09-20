@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-09-20T08:00:23.447452+00:00",
+  "last_scan_at": "2025-09-20T12:24:51.095842+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -7002,6 +7002,141 @@
       "history": [
         {
           "at": "2025-09-16T20:00:35.227410+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_6a8bc836-a3b9-4572-8def-e58278b96779": {
+      "id": "avtr_6a8bc836-a3b9-4572-8def-e58278b96779",
+      "name": "Sad",
+      "authorId": "usr_131224e2-a443-4cbb-8dc7-89c3781fcd61",
+      "authorName": "loud_bubbles",
+      "description": "Sad",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2c1b6c8f-a198-4820-b1ba-2eed3d5337d3/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2c1b6c8f-a198-4820-b1ba-2eed3d5337d3/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 8,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-20T10:00:30.818040+00:00",
+      "last_seen_in_favorites_at": "2025-09-20T10:00:30.818040+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-20T10:00:30.818040+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_c72c9ade-e348-49a7-9c58-dcd9cea0e749": {
+      "id": "avtr_c72c9ade-e348-49a7-9c58-dcd9cea0e749",
+      "name": "Silver",
+      "authorId": "usr_a086cd4b-29dc-4b3e-a59f-31b35ce04ed7",
+      "authorName": "tstauras83",
+      "description": "Silver",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_e9be2dd7-0d23-4d4d-8f01-8504e9c20dcc/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_e9be2dd7-0d23-4d4d-8f01-8504e9c20dcc/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_adult"
+      ],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-20T11:00:53.502890+00:00",
+      "last_seen_in_favorites_at": "2025-09-20T11:00:53.502890+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-20T11:00:53.502890+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_318152e2-b56a-4f38-bdb4-d980678b27db": {
+      "id": "avtr_318152e2-b56a-4f38-bdb4-d980678b27db",
+      "name": "sry",
+      "authorId": "usr_3c0b8f38-99ab-48c4-ae31-95a549e00d9e",
+      "authorName": "ᴄᴀʀʀʏ",
+      "description": "sry",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_4f811805-bac4-40b2-92b0-c2d34ae3d9c8/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_4f811805-bac4-40b2-92b0-c2d34ae3d9c8/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-20T11:00:53.502890+00:00",
+      "last_seen_in_favorites_at": "2025-09-20T11:00:53.502890+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-20T11:00:53.502890+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_b8f4f70c-bd98-41cf-9c51-28b9ec4cc79f": {
+      "id": "avtr_b8f4f70c-bd98-41cf-9c51-28b9ec4cc79f",
+      "name": "PPG",
+      "authorId": "usr_131224e2-a443-4cbb-8dc7-89c3781fcd61",
+      "authorName": "loud_bubbles",
+      "description": "PPG",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_7665257f-290b-43b6-a2b6-859672a0855e/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_7665257f-290b-43b6-a2b6-859672a0855e/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-20T11:00:53.502890+00:00",
+      "last_seen_in_favorites_at": "2025-09-20T11:00:53.502890+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-20T11:00:53.502890+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_8fc58d70-271f-4d17-8fcf-3f1be7c5a049": {
+      "id": "avtr_8fc58d70-271f-4d17-8fcf-3f1be7c5a049",
+      "name": "Emily",
+      "authorId": "usr_ccb7b712-810e-47f1-88e6-d2b363c86f43",
+      "authorName": "Strameplay",
+      "description": "Emily",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_91e05bc9-277e-4b81-b3aa-c976f4ebeed4/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_91e05bc9-277e-4b81-b3aa-c976f4ebeed4/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex"
+      ],
+      "version": 9,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-20T11:00:53.502890+00:00",
+      "last_seen_in_favorites_at": "2025-09-20T11:00:53.502890+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-20T11:00:53.502890+00:00",
           "action": "added"
         }
       ],

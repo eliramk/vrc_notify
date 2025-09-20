@@ -63,10 +63,14 @@ AVATAR_IMG_DIR.mkdir(parents=True, exist_ok=True)
 
 # Optional typed APIs (guarded)
 try:
-    from vrchatapi import AvatarsApi, FavoritesApi
+    from vrchatapi import AvatarsApi, FavoritesApi, WorldsApi
 except Exception:
     AvatarsApi = None
     FavoritesApi = None
+    WorldsApi = None
+
+# cache resolved world names to limit API calls
+WORLD_NAME_CACHE = {}
 
 
 # ---------- Friend-activity persistence (unchanged) ----------
@@ -420,6 +424,52 @@ def cache_avatar_image(avatar_id: str, image_url: str, avatar_name: str = None):
         print(f"[image-cache] {avatar_id}: {e}")
 
 
+def _extract_world_id(location: str):
+    if not location:
+        return None
+    location = location.strip()
+    if not location.startswith("wrld_"):
+        return None
+    if ":" in location:
+        return location.split(":", 1)[0]
+    return location
+
+
+def _lookup_world_name(world_id: str, worlds_api, api_client):
+    if not world_id:
+        return None
+    if world_id in WORLD_NAME_CACHE:
+        return WORLD_NAME_CACHE[world_id]
+
+    name = None
+    try:
+        if worlds_api is not None:
+            world = worlds_api.get_world(world_id)
+            name = getattr(world, "name", None)
+            if not name and hasattr(world, "to_dict"):
+                world_dict = world.to_dict()
+                if isinstance(world_dict, dict):
+                    name = world_dict.get("name")
+    except Exception as ex:
+        print(f"World lookup failed for {world_id}: {ex}")
+
+    if name and ":" in name:
+        name = name.split(":")[0]
+    WORLD_NAME_CACHE[world_id] = name
+    return name
+
+
+def format_location(location: str, worlds_api=None, api_client=None):
+    if not location:
+        return "unknown"
+    world_id = _extract_world_id(location)
+    if not world_id:
+        return location
+
+    world_name = _lookup_world_name(world_id, worlds_api, api_client)
+    return world_name or world_id
+
+
 def merge_favorites_snapshot(db, avatars):
     now = now_iso()
     current_ids = set()
@@ -583,6 +633,14 @@ async def main_loop(args):
         print(f"Logged in as: {current_user.display_name}")
         save_cookies(api_client)
 
+        worlds_api_instance = None
+        if 'WorldsApi' in globals() and WorldsApi is not None:
+            try:
+                worlds_api_instance = WorldsApi(api_client)
+            except Exception as ex:
+                print(f"WorldsApi init failed: {ex}")
+                worlds_api_instance = None
+
         # Initial favorites scan
         try:
             current_favs = await fetch_current_favorite_avatars(api_client, fav_db, force_read=args.force_read_avatars)
@@ -594,23 +652,32 @@ async def main_loop(args):
 
         # Initial friend summary (unchanged)
         online_friends = friends_api_instance.get_friends(offline=False, offset=0)
+        print("Initial online: " + ", ".join([f.display_name for f in online_friends]))
         initial_online = [f for f in online_friends if f.display_name in FRIEND_NAMES]
         if initial_online:
-            initial_online_names = [f"{f.display_name}({f.last_platform}/{f.location})" for f in initial_online]
+            initial_online_names = []
+            for f in initial_online:
+                raw_location = f.location or "private"
+                plat = f.last_platform or "unknown"
+                formatted_location = format_location(raw_location, worlds_api_instance, api_client)
+                initial_online_names.append(f"{f.display_name}({plat}/{formatted_location})")
             msg = "Initial online friends: " + ", ".join(initial_online_names)
             print(msg)
             await send_notification(msg)
             now_ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             for f in initial_online:
                 name = f.display_name
+                raw_location = f.location or "private"
+                plat = f.last_platform or "unknown"
+                formatted_location = format_location(raw_location, worlds_api_instance, api_client)
                 activity_status[name] = {
                     "online": True,
                     "last_update": now_ts,
                     "last_platform": f.last_platform,
-                    "last_location": f.location,
+                    "last_location": raw_location,
                 }
                 log_activity(name, "online")
-                log_activity(name, f"online. Platform: **{f.last_platform}** Location: `{f.location}`")
+                log_activity(name, f"online. Platform: **{plat}** Location: `{formatted_location}`")
             save_activity(activity_status)
 
         # Schedule hourly favorites re-scan
@@ -641,9 +708,10 @@ async def main_loop(args):
                     avatar_image = None
                     if friend_detail:
                         location = friend_detail.location or "private"
+                        formatted_location = format_location(location, worlds_api_instance, api_client)
                         status_description = friend_detail.status_description or ""
                         last_platform = f"({friend_detail.last_platform})" if friend_detail.last_platform else ""
-                        instance_id = location if location else "unknown"
+                        instance_id = formatted_location if formatted_location else (location or "unknown")
                         msg = f"{now} [{name}] just logged in!\nPlatform: **{last_platform}**\nInstance: `{instance_id}` Status: {status_description}"
                         print(msg)
                         log_activity(name, f"online. Platform: **{last_platform}** Instance: `{instance_id}` Status: {status_description}")
@@ -700,8 +768,10 @@ async def main_loop(args):
                 next_fav_scan = next_hour_epoch()
 
             if now[-4] == "0":
+                # Print names of those online
                 print(f"{now} {','.join(online_set)}")
             if now[-7:-3] == "8:00":
+                # Twice a day, print who's online
                 await send_notification(message=f"{now} Online:  {','.join(online_set)}")
 
             await asyncio.sleep(CHECK_INTERVAL)
