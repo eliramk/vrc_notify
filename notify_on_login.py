@@ -88,6 +88,30 @@ def normalize_platform_name(platform_value: str) -> str:
     return mappings.get(value.lower(), value)
 
 
+def _presence_field(presence, key):
+    if presence is None:
+        return None
+    if isinstance(presence, dict):
+        return presence.get(key)
+    return getattr(presence, key, None)
+
+
+def get_presence_location(user) -> str:
+    if not user:
+        return None
+    presence = getattr(user, "presence", None)
+    world = _presence_field(presence, "world")
+    instance = _presence_field(presence, "instance")
+    if world and instance:
+        return f"{world}:{instance}"
+    if world:
+        return world
+    if instance:
+        return instance
+    fallback = getattr(user, "location", None)
+    return fallback
+
+
 def determine_location_type(location: str) -> str:
     if not location:
         return "unknown"
@@ -226,9 +250,28 @@ def update_meet_session(record: dict, now_dt: datetime, other_friends):
 def end_meet_session(record: dict, now_dt: datetime):
     active = record.get("active_meet")
     if not active:
-        return
-    update_meet_session(record, now_dt, active.get("other_friends", []))
+        return None
+    history_index = active.get("history_index")
+    history = record.get("meet_history", [])
+    entry = None
+    if history_index is not None and 0 <= history_index < len(history):
+        entry = history[history_index]
     record["active_meet"] = None
+    if entry is None:
+        return None
+    other = entry.get("other_friends") or []
+    if isinstance(other, (set, tuple)):
+        other = list(other)
+    info = {
+        "datetime": entry.get("datetime"),
+        "location": entry.get("location"),
+        "location_type": entry.get("location_type", "unknown"),
+        "duration": entry.get("duration", "00:00:00"),
+        "other_friends": [str(o) for o in other if o],
+        "location_label": active.get("location_label") or entry.get("location"),
+        "raw_location": active.get("location"),
+    }
+    return info
 
 
 # ---------- Friend-activity persistence (unchanged) ----------
@@ -301,14 +344,23 @@ def save_activity(activity):
         json.dump(serializable, f, indent=4)
 
 
-def log_activity(user_name: str, event: str):
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def log_activity(user_name: str, event: str, *, location: str = "", platform: str = "",
+                 avatar: str = "", status: str = ""):
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     file_exists = CSV_LOG_FILE.exists()
     with CSV_LOG_FILE.open("a", newline="") as csvfile:
         writer = csv.writer(csvfile)
-        if not file_exists:
-            writer.writerow(["timestamp", "user", "event"])
-        writer.writerow([now, user_name, event])
+        if not file_exists or csvfile.tell() == 0:
+            writer.writerow(["timestamp", "user", "event", "location", "platform", "avatar", "status"])
+        writer.writerow([
+            timestamp,
+            user_name,
+            event,
+            location or "",
+            platform or "",
+            avatar or "",
+            status or "",
+        ])
 
 
 # single session with required UA for VRChat CDN
@@ -393,6 +445,28 @@ async def send_telegram_message(message: str, image_url: str = None):
 async def send_notification(message: str, image_url: str = None, image_urls=None, image_entries=None):
     await send_discord_message(message, image_url=image_url, image_urls=image_urls, image_entries=image_entries)
     await send_telegram_message(message, image_url)
+
+
+async def send_meet_end_notification(friend_name: str, meet_info: dict):
+    if not meet_info:
+        return
+    lines = [f"Meet ended with {friend_name}."]
+    start_time = meet_info.get("datetime")
+    if start_time:
+        lines.append(f"Started: {start_time}")
+    location_label = meet_info.get("location_label") or meet_info.get("location") or "unknown"
+    location_type = meet_info.get("location_type") or "unknown"
+    lines.append(f"Location: {location_label} ({location_type})")
+    duration = meet_info.get("duration") or "00:00:00"
+    lines.append(f"Duration: {duration}")
+    others = [o for o in (meet_info.get("other_friends") or []) if o and o != friend_name]
+    if others:
+        lines.append("Also present: " + ", ".join(sorted(set(others))))
+    # message = "\n".join(lines)
+    message = f"{start_time} Met {friend_name} at {location_label} ({location_type}), duration: {duration}"
+    if others:
+        message += "\nWith " + ", ".join(sorted(set(others)))
+    await send_discord_message(message)
 
 
 def make_cookie(name, value):
@@ -945,7 +1019,7 @@ async def main_loop(args):
 
         auth_api = AuthenticationApi(api_client)
         try:
-            current_user = auth_api.get_current_user()
+            current_user = auth_api.get_current_user(_request_timeout=5)
             friends_api_instance = FriendsApi(api_client)
         except UnauthorizedException as e:
             if e.status == 200:
@@ -1040,7 +1114,14 @@ async def main_loop(args):
 
                 record["active_meet"] = None
 
-                log_activity(name, f"online. Platform: **{plat}** Location: `{formatted_location}`{avatar_log_suffix}")
+                log_activity(
+                    name,
+                    "online",
+                    location=formatted_location,
+                    platform=plat,
+                    avatar=avatar_name or "",
+                    status=getattr(f, "status_description", "") or "",
+                )
             save_activity(activity_status)
 
         # Schedule hourly favorites re-scan
@@ -1072,24 +1153,14 @@ async def main_loop(args):
             for name in tracked_names:
                 ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
 
-            if current_user:
-                user_world = getattr(getattr(current_user, "presence", {}), "world", None)
-                user_instance = getattr(getattr(current_user, "presence", {}), "instance", None)
-                user_location = f"{user_world}:{user_instance}"
-            else:
-                user_world = None
-                user_instance = None
-                user_location = None
-
-            if not user_location:
-                user_location = "offline"
-            user_online = user_location.lower() != "offline"
+            user_location_raw = get_presence_location(current_user)
+            user_online = bool(user_location_raw and str(user_location_raw).lower() != "offline")
 
             shared_friend_names = set()
             if user_online:
                 for friend_name, friend in online_map.items():
                     friend_location = friend.location or "private"
-                    if friend_location == user_location:
+                    if friend_location == user_location_raw:
                         shared_friend_names.add(friend_name)
 
             online_notify_set = {name for name in online_map if activity_status[name]["notify"]}
@@ -1110,20 +1181,42 @@ async def main_loop(args):
                     platform_raw = friend_detail.last_platform or ""
                     platform_display = normalize_platform_name(platform_raw) or "unknown"
 
+                    prev_last_update_str = record.get("last_update")
+                    prev_last_update_dt = None
+                    if prev_last_update_str:
+                        try:
+                            prev_last_update_dt = datetime.strptime(prev_last_update_str, "%Y-%m-%d %H:%M:%S")
+                        except ValueError:
+                            prev_last_update_dt = None
+
+                    prev_platform = record.get("last_platform")
+                    platform_changed = platform_display != prev_platform
                     record["last_platform"] = platform_display
+
+                    location_changed = False
                     if location_raw and location_raw != "private":
+                        if location_raw != record.get("last_location"):
+                            location_changed = True
                         record["last_location"] = location_raw
+
+                    prev_status = record.get("status_description")
+                    status_changed = status_description != prev_status
                     record["status_description"] = status_description
-                    record["last_update"] = now
 
                     avatar_name = record.get("last_avatar_name")
+                    avatar_changed = False
                     fetch_avatar = avatar_name is None
                     if should_notify and not prev_online:
                         fetch_avatar = True
                     if fetch_avatar:
-                        avatar_name = get_friend_avatar_name(friend_detail, avatars_api_instance, api_client)
-                        if avatar_name:
-                            record["last_avatar_name"] = avatar_name
+                        new_avatar_name = get_friend_avatar_name(friend_detail, avatars_api_instance, api_client)
+                        if new_avatar_name:
+                            if new_avatar_name != avatar_name:
+                                avatar_changed = True
+                            avatar_name = new_avatar_name
+                            record["last_avatar_name"] = new_avatar_name
+                    else:
+                        avatar_changed = False
 
                     if should_notify and not prev_online:
                         last_platform_text = f"({platform_display})" if platform_display else "(unknown)"
@@ -1144,29 +1237,53 @@ async def main_loop(args):
                         print(msg)
                         avatar_log_suffix = f" Avatar: {avatar_name}" if avatar_name else ""
                         instance_log_suffix = f" Instance: `{instance_id}`" if not is_private_instance else ""
-                        log_activity(name, f"online. Platform: **{last_platform_text}**{instance_log_suffix}{avatar_log_suffix} Status: {status_description}")
+                        log_activity(
+                            name,
+                            "online",
+                            location=instance_id,
+                            platform=platform_display,
+                            avatar=avatar_name or "",
+                            status=status_description,
+                        )
                         image_entries = [{"name": name, "url": image_url}] if image_url else None
                         await send_notification(message=msg, image_entries=image_entries)
 
                     record["online"] = True
 
-                    if user_online and name in shared_friend_names and (friend_detail.location or "") == user_location:
+                    if should_notify and not prev_online:
+                        record["last_update"] = now
+                    elif platform_changed or location_changed or status_changed or avatar_changed:
+                        record["last_update"] = now
+
+                    if user_online and name in shared_friend_names and (friend_detail.location or "") == user_location_raw:
                         active = record.get("active_meet")
                         if active and active.get("location") != location_raw:
-                            end_meet_session(record, loop_now_dt)
+                            ended_meet = end_meet_session(record, loop_now_dt)
+                            if ended_meet:
+                                await send_meet_end_notification(name, ended_meet)
+                            active = None
+                        elif active and prev_last_update_dt and (loop_now_dt - prev_last_update_dt).total_seconds() >= 1800:
+                            ended_meet = end_meet_session(record, loop_now_dt)
+                            if ended_meet:
+                                await send_meet_end_notification(name, ended_meet)
                             active = None
                         others = sorted(other for other in shared_friend_names if other != name)
                         if not record.get("active_meet"):
                             start_meet_session(record, loop_now_dt, location_raw, location_label or location_raw, location_type, others)
+                            record["last_update"] = now
                         else:
                             update_meet_session(record, loop_now_dt, others)
                     else:
                         if record.get("active_meet"):
-                            end_meet_session(record, loop_now_dt)
+                            ended_meet = end_meet_session(record, loop_now_dt)
+                            if ended_meet:
+                                await send_meet_end_notification(name, ended_meet)
 
                 else:
                     if record.get("active_meet"):
-                        end_meet_session(record, loop_now_dt)
+                        ended_meet = end_meet_session(record, loop_now_dt)
+                        if ended_meet:
+                            await send_meet_end_notification(name, ended_meet)
                     if prev_online:
                         if should_notify:
                             event_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -1176,12 +1293,19 @@ async def main_loop(args):
                                 lines.append("Still online: " + ", ".join(other_online))
                             msg = "\n".join(lines)
                             print(msg)
-                            log_activity(name, "offline")
+                            log_activity(
+                                name,
+                                "offline",
+                                location="offline",
+                                platform=record.get("last_platform", ""),
+                                avatar=record.get("last_avatar_name", ""),
+                                status="",
+                            )
                             await send_notification(msg)
                         record["online"] = False
                         record["last_update"] = now
-                        # record["last_location"] = "offline"
-                        # record["status_description"] = ""
+                        record["last_location"] = "offline"
+                        record["status_description"] = ""
 
             save_activity(activity_status)
             save_cookies(api_client)
