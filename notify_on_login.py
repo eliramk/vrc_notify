@@ -88,25 +88,217 @@ def normalize_platform_name(platform_value: str) -> str:
     return mappings.get(value.lower(), value)
 
 
+def determine_location_type(location: str) -> str:
+    if not location:
+        return "unknown"
+    location_lower = location.lower()
+    if location_lower == "offline":
+        return "offline"
+    if location_lower == "private" or "~private" in location_lower:
+        return "private"
+    if "~friends" in location_lower:
+        return "friends"
+    if "~hidden" in location_lower:
+        return "friends+"
+    if "~group" in location_lower:
+        return "group"
+    if location_lower.startswith("wrld_") and "~" not in location_lower:
+        return "public"
+    if "~public" in location_lower:
+        return "public"
+    return "instance"
+
+
+def _format_duration_seconds(total_seconds: float) -> str:
+    seconds = max(0, int(total_seconds))
+    hours, remainder = divmod(seconds, 3600)
+    minutes, secs = divmod(remainder, 60)
+    return f"{hours:02d}:{minutes:02d}:{secs:02d}"
+
+
+def ensure_activity_record(activity: dict, name: str, notify_flag: bool):
+    record = activity.get(name)
+    if not isinstance(record, dict):
+        record = {}
+
+    record.setdefault("online", False)
+    record["notify"] = bool(notify_flag)
+    record.setdefault("last_update", None)
+    record.setdefault("last_platform", "")
+    record.setdefault("last_location", "offline")
+    record.setdefault("status_description", "")
+    record.setdefault("last_avatar_name", None)
+
+    history = record.get("meet_history")
+    if not isinstance(history, list):
+        history = []
+    else:
+        sanitized_history = []
+        for entry in history:
+            if not isinstance(entry, dict):
+                continue
+            entry_copy = dict(entry)
+            other = entry_copy.get("other_friends", [])
+            if isinstance(other, (set, tuple)):
+                other = list(other)
+            if not isinstance(other, list):
+                other = []
+            sanitized_history.append({
+                "datetime": entry_copy.get("datetime"),
+                "location": entry_copy.get("location"),
+                "location_type": entry_copy.get("location_type", "unknown"),
+                "duration": str(entry_copy.get("duration", "00:00:00")),
+                "other_friends": sorted({str(o) for o in other if o}),
+            })
+        history = sanitized_history
+    record["meet_history"] = history
+
+    active_meet = record.get("active_meet")
+    if isinstance(active_meet, dict):
+        active_copy = dict(active_meet)
+        other = active_copy.get("other_friends", [])
+        if isinstance(other, (set, tuple)):
+            other = list(other)
+        if not isinstance(other, list):
+            other = []
+        active_copy["other_friends"] = sorted({str(o) for o in other if o})
+        try:
+            active_copy["start_ts"] = float(active_copy.get("start_ts", 0))
+        except (TypeError, ValueError):
+            active_copy["start_ts"] = 0.0
+        if "history_index" in active_copy:
+            try:
+                active_copy["history_index"] = int(active_copy["history_index"])
+            except (TypeError, ValueError):
+                active_copy["history_index"] = None
+        record["active_meet"] = active_copy
+    else:
+        record["active_meet"] = None
+
+    activity[name] = record
+    return record
+
+
+def start_meet_session(record: dict, start_dt: datetime, raw_location: str,
+                       location_label: str, location_type: str, other_friends):
+    start_ts = start_dt.timestamp()
+    other_sorted = sorted({friend for friend in other_friends if friend})
+    entry = {
+        "datetime": start_dt.strftime("%Y-%m-%d %H:%M:%S"),
+        "location": location_label,
+        "location_type": location_type,
+        "duration": "00:00:00",
+        "other_friends": other_sorted,
+    }
+    history = record.setdefault("meet_history", [])
+    history.append(entry)
+    record["active_meet"] = {
+        "start_ts": start_ts,
+        "location": raw_location,
+        "location_label": location_label,
+        "location_type": location_type,
+        "other_friends": other_sorted,
+        "history_index": len(history) - 1,
+    }
+
+
+def update_meet_session(record: dict, now_dt: datetime, other_friends):
+    active = record.get("active_meet")
+    if not active:
+        return
+    other_set = set(active.get("other_friends", []))
+    for friend in other_friends:
+        if friend:
+            other_set.add(friend)
+    other_sorted = sorted(other_set)
+    active["other_friends"] = other_sorted
+
+    history_index = active.get("history_index")
+    history = record.get("meet_history", [])
+    if history_index is not None and 0 <= history_index < len(history):
+        entry = history[history_index]
+        entry["other_friends"] = other_sorted
+        start_ts = active.get("start_ts", now_dt.timestamp())
+        duration_str = _format_duration_seconds(now_dt.timestamp() - start_ts)
+        entry["duration"] = duration_str
+
+
+def end_meet_session(record: dict, now_dt: datetime):
+    active = record.get("active_meet")
+    if not active:
+        return
+    update_meet_session(record, now_dt, active.get("other_friends", []))
+    record["active_meet"] = None
+
+
 # ---------- Friend-activity persistence (unchanged) ----------
 def load_activity():
     if STATE_FILE.exists():
         try:
             with STATE_FILE.open("r") as f:
                 data = json.load(f)
+            if not isinstance(data, dict):
+                data = {}
         except Exception:
             data = {}
     else:
         data = {}
+
+    activity = {}
+    for name, record in data.items():
+        if not isinstance(name, str):
+            continue
+        activity[name] = record
+
+    for name in list(activity.keys()):
+        ensure_activity_record(activity, name, name in FRIEND_NAMES)
+
     for name in FRIEND_NAMES:
-        if name not in data:
-            data[name] = {"online": False, "last_update": None}
-    return data
+        ensure_activity_record(activity, name, True)
+
+    return activity
 
 
 def save_activity(activity):
+    serializable = {}
+    for name, record in activity.items():
+        if not isinstance(name, str):
+            continue
+        if not isinstance(record, dict):
+            continue
+        rec_copy = dict(record)
+        active_meet = rec_copy.pop("active_meet", None)
+        history = rec_copy.get("meet_history", [])
+        sanitized_history = []
+        if isinstance(history, list):
+            for entry in history:
+                if not isinstance(entry, dict):
+                    continue
+                entry_copy = dict(entry)
+                other = entry_copy.get("other_friends", [])
+                if isinstance(other, (set, tuple)):
+                    other = list(other)
+                if not isinstance(other, list):
+                    other = []
+                entry_copy["other_friends"] = sorted({str(o) for o in other if o})
+                entry_copy["duration"] = str(entry_copy.get("duration", "00:00:00"))
+                entry_copy.setdefault("location_type", "unknown")
+                sanitized_history.append(entry_copy)
+        rec_copy["meet_history"] = sanitized_history
+        if active_meet:
+            # keep minimal information for debugging reference only if needed
+            active_copy = dict(active_meet)
+            other = active_copy.get("other_friends", [])
+            if isinstance(other, (set, tuple)):
+                other = list(other)
+            if not isinstance(other, list):
+                other = []
+            active_copy["other_friends"] = sorted({str(o) for o in other if o})
+            rec_copy["active_meet"] = active_copy
+        serializable[name] = rec_copy
+
     with STATE_FILE.open("w") as f:
-        json.dump(activity, f, indent=4)
+        json.dump(serializable, f, indent=4)
 
 
 def log_activity(user_name: str, event: str):
@@ -740,7 +932,7 @@ def import_avatars_csv(csv_path: Path):
 
 
 # ---------- Main monitor with hourly favorites scan ----------
-async def main_loop(args, first_run=False):
+async def main_loop(args):
     activity_status = load_activity()
     config = Configuration(username=EMAIL if EMAIL else USERNAME, password=PASSWORD)
     print(f"Using User-Agent: {USER_AGENT}")
@@ -795,13 +987,13 @@ async def main_loop(args, first_run=False):
                 worlds_api_instance = None
 
         # Initial favorites scan
-        try:
-            current_favs = await fetch_current_favorite_avatars(api_client, fav_db, force_read=args.force_read_avatars)
-            fav_db = merge_favorites_snapshot(fav_db, current_favs)
-            save_fav_db(fav_db)
-            print(f"Favorites scan complete: {len(current_favs)} favorites. DB total avatars: {len(fav_db['avatars'])}")
-        except Exception as ex:
-            print(f"Favorite avatar scan failed: {ex}")
+        # try:
+        #     current_favs = await fetch_current_favorite_avatars(api_client, fav_db, force_read=args.force_read_avatars)
+        #     fav_db = merge_favorites_snapshot(fav_db, current_favs)
+        #     save_fav_db(fav_db)
+        #     print(f"Favorites scan complete: {len(current_favs)} favorites. DB total avatars: {len(fav_db['avatars'])}")
+        # except Exception as ex:
+        #     print(f"Favorite avatar scan failed: {ex}")
 
         # Initial friend summary (unchanged)
         online_friends = friends_api_instance.get_friends(offline=False, offset=0)
@@ -834,15 +1026,20 @@ async def main_loop(args, first_run=False):
                 formatted_location = format_location(raw_location, worlds_api_instance, api_client)
                 avatar_name = get_friend_avatar_name(f, avatars_api_instance, api_client)
                 avatar_log_suffix = f" Avatar: {avatar_name}" if avatar_name else ""
-                activity_status[name] = {
+                record = ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
+                record.update({
                     "online": True,
                     "last_update": now_ts,
-                    "last_platform": f.last_platform,
-                    "last_location": raw_location,
+                    "last_platform": plat,
                     "status_description": getattr(f, "status_description", "") or "",
-                    "last_avatar_name": avatar_name,
-                }
-                log_activity(name, "online")
+                })
+                if avatar_name:
+                    record["last_avatar_name"] = avatar_name
+                if raw_location and raw_location != "private":
+                    record["last_location"] = raw_location
+
+                record["active_meet"] = None
+
                 log_activity(name, f"online. Platform: **{plat}** Location: `{formatted_location}`{avatar_log_suffix}")
             save_activity(activity_status)
 
@@ -855,7 +1052,8 @@ async def main_loop(args, first_run=False):
 
         # Main loop (friend monitoring + hourly favorites)
         while True:
-            now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            loop_now_dt = datetime.now()
+            now = loop_now_dt.strftime("%Y-%m-%d %H:%M:%S")
             try:
                 online_friends = friends_api_instance.get_friends()
             except Exception as ex:
@@ -863,34 +1061,82 @@ async def main_loop(args, first_run=False):
                 await asyncio.sleep(PAUSE_ON_CRITICAL_ERRROR)
                 break
 
-            online_set = {f.display_name for f in online_friends if f.display_name in FRIEND_NAMES}
+            try:
+                current_user = auth_api.get_current_user()
+            except Exception as ex:
+                print(f"Failed to refresh current user: {ex}")
+                current_user = None
 
-            for name in FRIEND_NAMES:
-                prev_online = activity_status.get(name, {"online": False})["online"]
-                currently_online = name in online_set
+            online_map = {friend.display_name: friend for friend in online_friends}
+            tracked_names = set(activity_status.keys()) | set(online_map.keys()) | set(FRIEND_NAMES)
+            for name in tracked_names:
+                ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
 
-                if currently_online and not prev_online:
-                    friend_detail = next((f for f in online_friends if f.display_name == name), None)
-                    avatar_image = None
-                    if friend_detail:
-                        location = friend_detail.location or "private"
-                        formatted_location = format_location(location, worlds_api_instance, api_client)
-                        status_description = friend_detail.status_description or ""
-                        platform_raw = friend_detail.last_platform or ""
-                        platform_display = normalize_platform_name(platform_raw) or "unknown"
-                        last_platform = f"({platform_display})"
+            if current_user:
+                user_world = getattr(getattr(current_user, "presence", {}), "world", None)
+                user_instance = getattr(getattr(current_user, "presence", {}), "instance", None)
+                user_location = f"{user_world}:{user_instance}"
+            else:
+                user_world = None
+                user_instance = None
+                user_location = None
+
+            if not user_location:
+                user_location = "offline"
+            user_online = user_location.lower() != "offline"
+
+            shared_friend_names = set()
+            if user_online:
+                for friend_name, friend in online_map.items():
+                    friend_location = friend.location or "private"
+                    if friend_location == user_location:
+                        shared_friend_names.add(friend_name)
+
+            online_notify_set = {name for name in online_map if activity_status[name]["notify"]}
+            online_set = online_notify_set
+
+            for name in sorted(tracked_names):
+                record = activity_status[name]
+                prev_online = bool(record.get("online", False))
+                friend_detail = online_map.get(name)
+                currently_online = friend_detail is not None
+                should_notify = bool(record.get("notify", name in FRIEND_NAMES))
+
+                if currently_online:
+                    location_raw = friend_detail.location or "private"
+                    location_label = format_location(location_raw, worlds_api_instance, api_client)
+                    location_type = determine_location_type(location_raw)
+                    status_description = friend_detail.status_description or ""
+                    platform_raw = friend_detail.last_platform or ""
+                    platform_display = normalize_platform_name(platform_raw) or "unknown"
+
+                    record["last_platform"] = platform_display
+                    if location_raw and location_raw != "private":
+                        record["last_location"] = location_raw
+                    record["status_description"] = status_description
+                    record["last_update"] = now
+
+                    avatar_name = record.get("last_avatar_name")
+                    fetch_avatar = avatar_name is None
+                    if should_notify and not prev_online:
+                        fetch_avatar = True
+                    if fetch_avatar:
                         avatar_name = get_friend_avatar_name(friend_detail, avatars_api_instance, api_client)
-                        instance_id = formatted_location if formatted_location else (location or "unknown")
+                        if avatar_name:
+                            record["last_avatar_name"] = avatar_name
+
+                    if should_notify and not prev_online:
+                        last_platform_text = f"({platform_display})" if platform_display else "(unknown)"
+                        instance_id = location_label if location_label else (location_raw or "unknown")
                         is_private_instance = instance_id.lower() == "private"
+                        event_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                         lines = [
-                            f"{now} [{name}] just logged in!",
-                            f"Platform: **{last_platform}**",
+                            f"{event_now} [{name}] just logged in!",
+                            f"Platform: **{last_platform_text}**",
                         ]
                         if not is_private_instance:
                             lines.append(f"Instance: `{instance_id}`")
                         image_url = pick_friend_image_url(friend_detail)
-                        if image_url:
-                            avatar_image = image_url
                         if avatar_name:
                             lines.append(f"Avatar: {avatar_name}")
                         lines.append(f"Status: {status_description}")
@@ -898,31 +1144,44 @@ async def main_loop(args, first_run=False):
                         print(msg)
                         avatar_log_suffix = f" Avatar: {avatar_name}" if avatar_name else ""
                         instance_log_suffix = f" Instance: `{instance_id}`" if not is_private_instance else ""
-                        log_activity(name, f"online. Platform: **{last_platform}**{instance_log_suffix}{avatar_log_suffix} Status: {status_description}")
-                        image_entries = [{"name": name, "url": avatar_image}] if avatar_image else None
+                        log_activity(name, f"online. Platform: **{last_platform_text}**{instance_log_suffix}{avatar_log_suffix} Status: {status_description}")
+                        image_entries = [{"name": name, "url": image_url}] if image_url else None
                         await send_notification(message=msg, image_entries=image_entries)
-                        activity_status[name] = {
-                            "online": True,
-                            "last_update": now,
-                            "last_platform": platform_display,
-                            "last_location": location,
-                            "status_description": status_description,
-                            "last_avatar_name": avatar_name,
-                        }
-                elif not currently_online and prev_online:
-                    other_online = sorted(online_set)
-                    lines = [f"{now} [{name}] went offline."]
-                    if other_online:
-                        lines.append("Online: " + ", ".join(other_online))
-                    msg = "\n".join(lines)
-                    print(msg)
-                    log_activity(name, "offline")
-                    await send_notification(msg)
-                    if activity_status.get(name):
-                        activity_status[name]["online"] = False
-                        activity_status[name]["last_update"] = now
+
+                    record["online"] = True
+
+                    if user_online and name in shared_friend_names and (friend_detail.location or "") == user_location:
+                        active = record.get("active_meet")
+                        if active and active.get("location") != location_raw:
+                            end_meet_session(record, loop_now_dt)
+                            active = None
+                        others = sorted(other for other in shared_friend_names if other != name)
+                        if not record.get("active_meet"):
+                            start_meet_session(record, loop_now_dt, location_raw, location_label or location_raw, location_type, others)
+                        else:
+                            update_meet_session(record, loop_now_dt, others)
                     else:
-                        activity_status[name] = {"online": False, "last_update": now}
+                        if record.get("active_meet"):
+                            end_meet_session(record, loop_now_dt)
+
+                else:
+                    if record.get("active_meet"):
+                        end_meet_session(record, loop_now_dt)
+                    if prev_online:
+                        if should_notify:
+                            event_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                            other_online = sorted(other for other in online_notify_set if other != name)
+                            lines = [f"{event_now} [{name}] went offline."]
+                            if other_online:
+                                lines.append("Still online: " + ", ".join(other_online))
+                            msg = "\n".join(lines)
+                            print(msg)
+                            log_activity(name, "offline")
+                            await send_notification(msg)
+                        record["online"] = False
+                        record["last_update"] = now
+                        # record["last_location"] = "offline"
+                        # record["status_description"] = ""
 
             save_activity(activity_status)
             save_cookies(api_client)
@@ -960,7 +1219,7 @@ async def main_loop(args, first_run=False):
             if now[-4] == "0":
                 # Print names of those online
                 print(f"{now} {','.join(online_set)}")
-            if now[-7:-3] == "8:00" or first_run:
+            if now[-7:-3] == "8:00":
                 # Twice a day, print who's online, with world names when available
                 online_entries = []
                 others_online = []
@@ -1017,7 +1276,5 @@ if __name__ == "__main__":
     elif args.import_avatars:
         import_avatars_csv(Path(args.import_avatars))
     else:
-        first_run=True
         while True:
-            asyncio.run(main_loop(args, first_run=first_run))
-            first_run=False
+            asyncio.run(main_loop(args))
