@@ -3,6 +3,7 @@ import time
 import argparse
 import json
 import os
+import random
 import requests
 import csv
 from http.cookiejar import Cookie
@@ -69,8 +70,22 @@ except Exception:
     FavoritesApi = None
     WorldsApi = None
 
-# cache resolved world names to limit API calls
+# cache resolved world and avatar names to limit API calls
 WORLD_NAME_CACHE = {}
+AVATAR_NAME_CACHE = {}
+
+
+# Map platform identifiers to their human-friendly names.
+def normalize_platform_name(platform_value: str) -> str:
+    if not platform_value:
+        return ""
+    value = platform_value.strip()
+    if not value:
+        return ""
+    mappings = {
+        "android": "Quest",
+    }
+    return mappings.get(value.lower(), value)
 
 
 # ---------- Friend-activity persistence (unchanged) ----------
@@ -109,30 +124,69 @@ _HTTP = requests.Session()
 _HTTP.headers.update({"User-Agent": USER_AGENT})
 
 
-async def send_discord_message(message: str, image_url: str = None):
+async def send_discord_message(message: str, image_url: str = None, image_urls=None, image_entries=None):
     if not WEBHOOK_URL:
         return
-    if image_url is not None:
-        try:
-            # response = requests.get(image_url, timeout=15)
-            response = _HTTP.get(image_url, timeout=15, allow_redirects=True)
-            image = response.content
-        except requests.RequestException:
-            data = {"content": message}
-            requests.post(WEBHOOK_URL, json=data, timeout=15)
-            return
-        data = {"payload_json": (None, json.dumps({"content": message})), "media.png": image}
-        resp = requests.post(WEBHOOK_URL, files=data, timeout=30)
+    # Normalize entries preference: entries override explicit URLs
+    entries = []
+    if image_entries:
+        for entry in image_entries:
+            if not entry:
+                continue
+            url = entry.get("url") if isinstance(entry, dict) else None
+            name = entry.get("name") if isinstance(entry, dict) else None
+            if url:
+                entries.append({"name": name, "url": url})
     else:
-        data = {"content": message}
-        sent = False
-        while not sent:
-            try:
-                resp = requests.post(WEBHOOK_URL, json=data, timeout=15)
-                sent = True
-            except Exception as ex:
-                print(f"Exception sending discord: {message} {ex}")
-                await asyncio.sleep(2)
+        urls = []
+        if image_urls:
+            urls.extend([u for u in image_urls if u])
+        if image_url:
+            urls.append(image_url)
+        if urls:
+            unique_urls = []
+            seen = set()
+            for url in urls:
+                if url in seen:
+                    continue
+                seen.add(url)
+                unique_urls.append(url)
+            entries = [{"name": None, "url": url} for url in unique_urls]
+
+    embeds = []
+    if entries:
+        unique_entries = []
+        seen_urls = set()
+        for entry in entries:
+            url = entry["url"]
+            if url in seen_urls:
+                continue
+            seen_urls.add(url)
+            unique_entries.append(entry)
+        entries = unique_entries
+
+        max_embeds = 10
+        if len(entries) > max_embeds:
+            entries = random.sample(entries, max_embeds)
+
+        for entry in entries:
+            embed = {"thumbnail": {"url": entry["url"]}}
+            if entry.get("name"):
+                embed["title"] = entry["name"]
+            embeds.append(embed)
+
+    data = {"content": message}
+    if embeds:
+        data["embeds"] = embeds
+
+    sent = False
+    while not sent:
+        try:
+            resp = requests.post(WEBHOOK_URL, json=data, timeout=15)
+            sent = True
+        except Exception as ex:
+            print(f"Exception sending discord: {message} {ex}")
+            await asyncio.sleep(2)
 
 
 async def send_telegram_message(message: str, image_url: str = None):
@@ -144,8 +198,8 @@ async def send_telegram_message(message: str, image_url: str = None):
         await session.post(url, data=payload)
 
 
-async def send_notification(message: str, image_url: str = None):
-    await send_discord_message(message, image_url)
+async def send_notification(message: str, image_url: str = None, image_urls=None, image_entries=None):
+    await send_discord_message(message, image_url=image_url, image_urls=image_urls, image_entries=image_entries)
     await send_telegram_message(message, image_url)
 
 
@@ -453,8 +507,6 @@ def _lookup_world_name(world_id: str, worlds_api, api_client):
     except Exception as ex:
         print(f"World lookup failed for {world_id}: {ex}")
 
-    if name and ":" in name:
-        name = name.split(":")[0]
     WORLD_NAME_CACHE[world_id] = name
     return name
 
@@ -468,6 +520,99 @@ def format_location(location: str, worlds_api=None, api_client=None):
 
     world_name = _lookup_world_name(world_id, worlds_api, api_client)
     return world_name or world_id
+
+
+def resolve_world_name_only(location: str, worlds_api=None, api_client=None):
+    if not location:
+        return None
+    world_id = _extract_world_id(location)
+    if not world_id:
+        return None
+    return _lookup_world_name(world_id, worlds_api, api_client)
+
+
+FRIEND_IMAGE_ATTR_PREFS = [
+    ("profile_pic_override", "profilePicOverride"),
+    ("current_avatar_thumbnail_image_url", "currentAvatarThumbnailImageUrl"),
+    ("user_icon", "userIcon"),
+    ("current_avatar_image_url", "currentAvatarImageUrl"),
+]
+
+
+def _extract_friend_attr(friend, attr_names):
+    for attr in attr_names:
+        if isinstance(friend, dict):
+            val = friend.get(attr)
+        else:
+            val = getattr(friend, attr, None)
+        if val:
+            return val
+    return None
+
+
+def pick_friend_image_url(friend):
+    if friend is None:
+        return None
+    for names in FRIEND_IMAGE_ATTR_PREFS:
+        url = _extract_friend_attr(friend, names if isinstance(names, (list, tuple)) else (names,))
+        if url:
+            return url
+    return None
+
+
+def _extract_avatar_id(friend):
+    if not friend:
+        return None
+    possible_keys = [
+        "current_avatar",
+        "currentAvatar",
+        "current_avatar_id",
+        "currentAvatarId",
+        "avatar_id",
+        "avatarId",
+    ]
+    if isinstance(friend, dict):
+        for key in possible_keys:
+            val = friend.get(key)
+            if val:
+                return val
+        return None
+    for key in possible_keys:
+        val = getattr(friend, key, None)
+        if val:
+            return val
+    return None
+
+
+def _lookup_avatar_name(avatar_id: str, avatars_api, api_client):
+    if not avatar_id:
+        return None
+    if avatar_id in AVATAR_NAME_CACHE:
+        return AVATAR_NAME_CACHE[avatar_id]
+
+    name = None
+    try:
+        if avatars_api is not None:
+            avatar = avatars_api.get_avatar(avatar_id)
+            name = getattr(avatar, "name", None)
+            if not name and hasattr(avatar, "to_dict"):
+                avatar_dict = avatar.to_dict()
+                if isinstance(avatar_dict, dict):
+                    name = avatar_dict.get("name")
+    except Exception as ex:
+        print(f"Avatar lookup failed for {avatar_id}: {ex}")
+
+    AVATAR_NAME_CACHE[avatar_id] = name
+    return name
+
+
+def get_friend_avatar_name(friend, avatars_api=None, api_client=None):
+    avatar_id = None
+    if friend is not None:
+        avatar_id = _extract_avatar_id(friend)
+    if not avatar_id:
+        return None
+    return _lookup_avatar_name(avatar_id, avatars_api, api_client)
 
 
 def merge_favorites_snapshot(db, avatars):
@@ -595,7 +740,7 @@ def import_avatars_csv(csv_path: Path):
 
 
 # ---------- Main monitor with hourly favorites scan ----------
-async def main_loop(args):
+async def main_loop(args, first_run=False):
     activity_status = load_activity()
     config = Configuration(username=EMAIL if EMAIL else USERNAME, password=PASSWORD)
     print(f"Using User-Agent: {USER_AGENT}")
@@ -633,6 +778,14 @@ async def main_loop(args):
         print(f"Logged in as: {current_user.display_name}")
         save_cookies(api_client)
 
+        avatars_api_instance = None
+        if 'AvatarsApi' in globals() and AvatarsApi is not None:
+            try:
+                avatars_api_instance = AvatarsApi(api_client)
+            except Exception as ex:
+                print(f"AvatarsApi init failed: {ex}")
+                avatars_api_instance = None
+
         worlds_api_instance = None
         if 'WorldsApi' in globals() and WorldsApi is not None:
             try:
@@ -652,32 +805,45 @@ async def main_loop(args):
 
         # Initial friend summary (unchanged)
         online_friends = friends_api_instance.get_friends(offline=False, offset=0)
-        print("Initial online: " + ", ".join([f.display_name for f in online_friends]))
+        # Print unfiltered list of online friends
+        print("Unfiltered online: " + ", ".join([f.display_name for f in online_friends]))
         initial_online = [f for f in online_friends if f.display_name in FRIEND_NAMES]
         if initial_online:
             initial_online_names = []
+            initial_image_entries = []
             for f in initial_online:
                 raw_location = f.location or "private"
-                plat = f.last_platform or "unknown"
+                platform_raw = f.last_platform or "unknown"
+                plat = normalize_platform_name(platform_raw) or "unknown"
                 formatted_location = format_location(raw_location, worlds_api_instance, api_client)
-                initial_online_names.append(f"{f.display_name}({plat}/{formatted_location})")
+                avatar_name = get_friend_avatar_name(f, avatars_api_instance, api_client)
+                avatar_suffix = f" • {avatar_name}" if avatar_name else ""
+                initial_online_names.append(f"{f.display_name}({plat}/{formatted_location}{avatar_suffix})")
+                image_url = pick_friend_image_url(f)
+                if image_url:
+                    initial_image_entries.append({"name": f.display_name, "url": image_url})
             msg = "Initial online friends: " + ", ".join(initial_online_names)
             print(msg)
-            await send_notification(msg)
+            await send_notification(msg, image_entries=initial_image_entries)
             now_ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             for f in initial_online:
                 name = f.display_name
                 raw_location = f.location or "private"
-                plat = f.last_platform or "unknown"
+                platform_raw = f.last_platform or "unknown"
+                plat = normalize_platform_name(platform_raw) or "unknown"
                 formatted_location = format_location(raw_location, worlds_api_instance, api_client)
+                avatar_name = get_friend_avatar_name(f, avatars_api_instance, api_client)
+                avatar_log_suffix = f" Avatar: {avatar_name}" if avatar_name else ""
                 activity_status[name] = {
                     "online": True,
                     "last_update": now_ts,
                     "last_platform": f.last_platform,
                     "last_location": raw_location,
+                    "status_description": getattr(f, "status_description", "") or "",
+                    "last_avatar_name": avatar_name,
                 }
                 log_activity(name, "online")
-                log_activity(name, f"online. Platform: **{plat}** Location: `{formatted_location}`")
+                log_activity(name, f"online. Platform: **{plat}** Location: `{formatted_location}`{avatar_log_suffix}")
             save_activity(activity_status)
 
         # Schedule hourly favorites re-scan
@@ -710,21 +876,45 @@ async def main_loop(args):
                         location = friend_detail.location or "private"
                         formatted_location = format_location(location, worlds_api_instance, api_client)
                         status_description = friend_detail.status_description or ""
-                        last_platform = f"({friend_detail.last_platform})" if friend_detail.last_platform else ""
+                        platform_raw = friend_detail.last_platform or ""
+                        platform_display = normalize_platform_name(platform_raw) or "unknown"
+                        last_platform = f"({platform_display})"
+                        avatar_name = get_friend_avatar_name(friend_detail, avatars_api_instance, api_client)
                         instance_id = formatted_location if formatted_location else (location or "unknown")
-                        msg = f"{now} [{name}] just logged in!\nPlatform: **{last_platform}**\nInstance: `{instance_id}` Status: {status_description}"
+                        is_private_instance = instance_id.lower() == "private"
+                        lines = [
+                            f"{now} [{name}] just logged in!",
+                            f"Platform: **{last_platform}**",
+                        ]
+                        if not is_private_instance:
+                            lines.append(f"Instance: `{instance_id}`")
+                        image_url = pick_friend_image_url(friend_detail)
+                        if image_url:
+                            avatar_image = image_url
+                        if avatar_name:
+                            lines.append(f"Avatar: {avatar_name}")
+                        lines.append(f"Status: {status_description}")
+                        msg = "\n".join(lines)
                         print(msg)
-                        log_activity(name, f"online. Platform: **{last_platform}** Instance: `{instance_id}` Status: {status_description}")
-                        await send_notification(message=msg, image_url=avatar_image)
+                        avatar_log_suffix = f" Avatar: {avatar_name}" if avatar_name else ""
+                        instance_log_suffix = f" Instance: `{instance_id}`" if not is_private_instance else ""
+                        log_activity(name, f"online. Platform: **{last_platform}**{instance_log_suffix}{avatar_log_suffix} Status: {status_description}")
+                        image_entries = [{"name": name, "url": avatar_image}] if avatar_image else None
+                        await send_notification(message=msg, image_entries=image_entries)
                         activity_status[name] = {
                             "online": True,
                             "last_update": now,
-                            "last_platform": last_platform,
+                            "last_platform": platform_display,
                             "last_location": location,
                             "status_description": status_description,
+                            "last_avatar_name": avatar_name,
                         }
                 elif not currently_online and prev_online:
-                    msg = f"{now} [{name}] went offline."
+                    other_online = sorted(online_set)
+                    lines = [f"{now} [{name}] went offline."]
+                    if other_online:
+                        lines.append("Online: " + ", ".join(other_online))
+                    msg = "\n".join(lines)
                     print(msg)
                     log_activity(name, "offline")
                     await send_notification(msg)
@@ -770,9 +960,41 @@ async def main_loop(args):
             if now[-4] == "0":
                 # Print names of those online
                 print(f"{now} {','.join(online_set)}")
-            if now[-7:-3] == "8:00":
-                # Twice a day, print who's online
-                await send_notification(message=f"{now} Online:  {','.join(online_set)}")
+            if now[-7:-3] == "8:00" or first_run:
+                # Twice a day, print who's online, with world names when available
+                online_entries = []
+                others_online = []
+                digest_image_entries = []
+                for friend in online_friends:
+                    if friend.display_name not in FRIEND_NAMES:
+                        others_online.append(friend.display_name)
+                        continue
+                    name = friend.display_name
+                    location = friend.location or ""
+                    world_name = resolve_world_name_only(location, worlds_api_instance, api_client)
+                    avatar_name = get_friend_avatar_name(friend, avatars_api_instance, api_client)
+                    image_url = pick_friend_image_url(friend)
+                    if image_url:
+                        digest_image_entries.append({"name": name, "url": image_url})
+                    if world_name:
+                        if avatar_name:
+                            online_entries.append(f"{name} ({world_name} • {avatar_name})")
+                        else:
+                            online_entries.append(f"{name} ({world_name})")
+                    elif avatar_name:
+                        online_entries.append(f"{name} ({avatar_name})")
+                    else:
+                        online_entries.append(name)
+                if not online_entries:
+                    online_entries = sorted(online_set)
+                else:
+                    online_entries.sort()
+                
+                message=f"{now} Online:  {', '.join(online_entries)}"
+                if others_online:
+                    message += f"\nOthers:  {', '.join(others_online)}"
+
+                await send_notification(message=message, image_entries=digest_image_entries)
 
             await asyncio.sleep(CHECK_INTERVAL)
 
@@ -795,5 +1017,7 @@ if __name__ == "__main__":
     elif args.import_avatars:
         import_avatars_csv(Path(args.import_avatars))
     else:
+        first_run=True
         while True:
-            asyncio.run(main_loop(args))
+            asyncio.run(main_loop(args, first_run=first_run))
+            first_run=False
