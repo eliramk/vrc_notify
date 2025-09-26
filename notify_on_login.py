@@ -39,6 +39,7 @@ CHECK_INTERVAL = 60  # seconds
 PAUSE_ON_CRITICAL_ERRROR = 3600
 PAUSE_ON_AUTH_ERROR = 271
 RETRY_AFTER_BUFFER = 5  # seconds padding beyond Retry-After header
+NOTE_REFRESH_SECONDS = 3600  # one hour cooldown for friend note lookups
 
 STATE_FILE = Path("friend_activity.json")
 CSV_LOG_FILE = Path("user_activity_log.csv")
@@ -601,6 +602,7 @@ class FriendMetadataManager:
         meta = {
             "display_name": display_name,
             "note": note_value if note_value is not None else "",
+            "note_checked_at": time.time(),
         }
         self.cache[friend_id] = meta
         return meta
@@ -637,11 +639,14 @@ class FriendMetadataManager:
             if not friend_id or friend_id not in current_friend_ids:
                 continue
 
+            if not record.get("online"):
+                continue
+
             meta = self.cache.get(friend_id)
-            if meta is None and record.get("friend_note") is None:
+            refreshed = False
+            if self._note_stale(meta):
                 meta = self.get_metadata(friend_id, allow_fetch=True)
-            elif meta is None:
-                meta = self.get_metadata(friend_id, allow_fetch=False)
+                refreshed = True
 
             if meta:
                 display_name = meta.get("display_name")
@@ -659,6 +664,8 @@ class FriendMetadataManager:
                 if record.get("friend_note") != note_value:
                     record["friend_note"] = note_value
                     updated = True
+                if refreshed:
+                    meta["note_checked_at"] = time.time()
             else:
                 if record.get("friend_note") is None:
                     record["friend_note"] = ""
@@ -673,6 +680,7 @@ class FriendMetadataManager:
         friend_id_value = getattr(friend_detail, "id", None)
         friend_note_hint = getattr(friend_detail, "note", None)
         cache_entry = None
+        now_ts = time.time()
 
         if friend_id_value:
             cache_entry = self.cache.get(friend_id_value) or {}
@@ -704,8 +712,18 @@ class FriendMetadataManager:
                 cache_entry["note"] = record.get("friend_note")
             else:
                 cache_entry.setdefault("note", "")
+            cache_entry["note_checked_at"] = now_ts
             self.cache[friend_id_value] = cache_entry
         return changed
+
+    @staticmethod
+    def _note_stale(meta) -> bool:
+        if not meta:
+            return True
+        checked_at = meta.get("note_checked_at")
+        if not checked_at:
+            return True
+        return (time.time() - checked_at) >= NOTE_REFRESH_SECONDS
 
 
 def next_hour_epoch():
@@ -810,7 +828,7 @@ def log_periodic_online_set(now: str, online_set):
 
 
 async def send_online_digest(now: str, online_friends, online_set, avatars_api_instance,
-                                   worlds_api_instance, api_client):
+                             worlds_api_instance, api_client):
     online_entries = []
     others_online = []
     digest_image_entries = []
@@ -916,14 +934,17 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
         user_online = bool(user_location_raw and str(user_location_raw).lower() != "offline")
 
         shared_friend_names = set()
+
         if user_online:
             for friend_name, friend in online_map.items():
                 friend_location = friend.location or "private"
-                if friend_location == user_location_raw:
+                if friend_location == user_location_raw and friend_location not in ('offline', 'private'):
                     shared_friend_names.add(friend_name)
+                    world_instance = worlds_api_instance.get_world_instance(world_id=user_location_raw.split(':')[0], instance_id=user_location_raw.split(':')[1])
+                elif ':' in friend_location and ':' in user_location_raw and friend_location.split(':')[0] == user_location_raw.split(':')[0]:
+                    print(f"similar world: {friend_name} at {friend_location} while user at {user_location_raw}")
         else:
             await end_active_meets_for_offline_user(activity_status, loop_now_dt, now)
-
         online_notify_set = {name for name in online_map if activity_status[name]["notify"]}
         online_set = online_notify_set
 
@@ -1104,16 +1125,16 @@ async def attempt_initial_login(auth_api) -> tuple:
                 auth_api.verify2_fa(two_factor_auth_code=TwoFactorAuthCode(code))
             current_user = auth_api.get_current_user()
         elif e.status == 401:
-            send_discord_message(f"UnauthorizedException 401 encountered: {e}", print_to_console=True)
+            await send_discord_message(f"UnauthorizedException 401 encountered: {e}", print_to_console=True)
             await sleep_with_retry_after(e, PAUSE_ON_AUTH_ERROR, label="401 Unauthorized.")
             return None, None
         else:
-            send_discord_message(f"UnauthorizedException encountered: {e}", print_to_console=True)
+            await send_discord_message(f"UnauthorizedException encountered: {e}", print_to_console=True)
             await sleep_with_retry_after(e, PAUSE_ON_AUTH_ERROR, label="Unauthorized.")
             return None, None
     except ApiException as e:
         if getattr(e, "status", None) == 429:
-            send_discord_message(f"ApiException 429 (rate limit): {e}", print_to_console=True)
+            await send_discord_message(f"ApiException 429 (rate limit): {e}", print_to_console=True)
             await sleep_with_retry_after(e, PAUSE_ON_AUTH_ERROR, label="Rate limited.")
         else:
             print(f"ApiException when calling API: {e}")
