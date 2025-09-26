@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-09-25T23:00:52.554179+00:00",
+  "last_scan_at": "2025-09-26T16:01:52.797956+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -8247,6 +8247,32 @@
       "history": [
         {
           "at": "2025-09-25T21:30:44.270735+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_70b6159e-6151-42b7-b96e-59f8711cf259": {
+      "id": "avtr_70b6159e-6151-42b7-b96e-59f8711cf259",
+      "name": "Haruhi v․Casual",
+      "authorId": "usr_861a4a15-e621-40e8-9049-e675dddc41cf",
+      "authorName": "Yuki Nagato",
+      "description": "Haruhi v․Casual",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0abb1300-4df3-42a2-a992-dc5de821aef8/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0abb1300-4df3-42a2-a992-dc5de821aef8/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 24,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-26T11:45:51.409720+00:00",
+      "last_seen_in_favorites_at": "2025-09-26T11:45:51.409720+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-26T11:45:51.409720+00:00",
           "action": "added"
         }
       ],

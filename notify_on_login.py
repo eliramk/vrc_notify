@@ -67,11 +67,12 @@ AVATAR_IMG_DIR.mkdir(parents=True, exist_ok=True)
 
 # Optional typed APIs (guarded)
 try:
-    from vrchatapi import AvatarsApi, FavoritesApi, WorldsApi
+    from vrchatapi import AvatarsApi, FavoritesApi, WorldsApi, UsersApi
 except Exception:
     AvatarsApi = None
     FavoritesApi = None
     WorldsApi = None
+    UsersApi = None
 
 # cache resolved world and avatar names to limit API calls
 WORLD_NAME_CACHE = {}
@@ -169,6 +170,8 @@ def ensure_activity_record(activity: dict, name: str, notify_flag: bool):
     record.setdefault("status_description", "")
     record.setdefault("last_avatar_name", None)
     record.setdefault("online_since", None)
+    record.setdefault("friend_id", None)
+    record.setdefault("friend_note", None)
 
     history = record.get("meet_history")
     if not isinstance(history, list):
@@ -1093,6 +1096,99 @@ async def main_loop(args):
         print(f"Logged in as: {current_user.display_name}")
         save_cookies(api_client)
 
+        users_api_instance = None
+        if 'UsersApi' in globals() and UsersApi is not None:
+            try:
+                users_api_instance = UsersApi(api_client)
+            except Exception as ex:
+                print(f"UsersApi init failed: {ex}")
+                users_api_instance = None
+
+        friend_metadata_cache = {}
+
+        def get_friend_metadata(friend_id: str, allow_fetch: bool = True):
+            if not friend_id:
+                return None
+            if friend_id in friend_metadata_cache:
+                return friend_metadata_cache[friend_id]
+            if not allow_fetch or users_api_instance is None:
+                return None
+            try:
+                detail = users_api_instance.get_user(friend_id)
+            except Exception as ex:
+                print(f"Failed to fetch friend metadata for {friend_id}: {ex}")
+                friend_metadata_cache[friend_id] = None
+                return None
+            display_name = getattr(detail, "display_name", None) or getattr(detail, "username", None)
+            note_value = getattr(detail, "note", None)
+            meta = {
+                "display_name": display_name,
+                "note": note_value if note_value is not None else "",
+            }
+            friend_metadata_cache[friend_id] = meta
+            return meta
+
+        def sync_friend_records(current_user_obj):
+            updated = False
+            if current_user_obj is None:
+                return updated
+            try:
+                current_friend_ids = {fid for fid in (getattr(current_user_obj, "friends", []) or []) if fid}
+            except Exception:
+                current_friend_ids = set()
+            if not current_friend_ids:
+                return updated
+
+            known_friend_ids = {rec.get("friend_id") for rec in activity_status.values() if rec.get("friend_id")}
+            missing_ids = current_friend_ids - known_friend_ids
+            for friend_id in missing_ids:
+                meta = get_friend_metadata(friend_id, allow_fetch=True)
+                if not meta or not meta.get("display_name"):
+                    continue
+                name = meta["display_name"]
+                record = ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
+                if record.get("friend_id") != friend_id:
+                    record["friend_id"] = friend_id
+                    updated = True
+                note_value = meta.get("note", "")
+                if record.get("friend_note") != note_value:
+                    record["friend_note"] = note_value
+                    updated = True
+
+            for name, record in list(activity_status.items()):
+                friend_id = record.get("friend_id")
+                if not friend_id or friend_id not in current_friend_ids:
+                    continue
+
+                meta = friend_metadata_cache.get(friend_id)
+                if meta is None and (record.get("friend_note") is None):
+                    meta = get_friend_metadata(friend_id, allow_fetch=True)
+                elif meta is None:
+                    meta = get_friend_metadata(friend_id, allow_fetch=False)
+
+                if meta:
+                    display_name = meta.get("display_name")
+                    note_value = meta.get("note", "")
+                    if display_name and display_name != name:
+                        other = activity_status.get(display_name)
+                        if other is None:
+                            other = ensure_activity_record(activity_status, display_name, display_name in FRIEND_NAMES)
+                        if other.get("friend_id") != friend_id:
+                            other["friend_id"] = friend_id
+                            updated = True
+                        if other.get("friend_note") != note_value:
+                            other["friend_note"] = note_value
+                            updated = True
+                    if record.get("friend_note") != note_value:
+                        record["friend_note"] = note_value
+                        updated = True
+                else:
+                    if record.get("friend_note") is None:
+                        record["friend_note"] = ""
+                        updated = True
+
+            return updated
+
         avatars_api_instance = None
         if 'AvatarsApi' in globals() and AvatarsApi is not None:
             try:
@@ -1117,6 +1213,9 @@ async def main_loop(args):
         #     print(f"Favorites scan complete: {len(current_favs)} favorites. DB total avatars: {len(fav_db['avatars'])}")
         # except Exception as ex:
         #     print(f"Favorite avatar scan failed: {ex}")
+
+        if sync_friend_records(current_user):
+            save_activity(activity_status)
 
         # Initial friend summary (unchanged)
         online_friends = friends_api_instance.get_friends(offline=False, offset=0)
@@ -1163,6 +1262,32 @@ async def main_loop(args):
                     record["last_location"] = formatted_location
                 record["online_since"] = now_ts
 
+                friend_id_value = getattr(f, "id", None)
+                friend_note_hint = getattr(f, "note", None)
+                if friend_id_value:
+                    if record.get("friend_id") != friend_id_value:
+                        record["friend_id"] = friend_id_value
+                if friend_note_hint is None and friend_id_value:
+                    cached_meta = friend_metadata_cache.get(friend_id_value)
+                    if cached_meta and cached_meta.get("note") is not None:
+                        friend_note_hint = cached_meta.get("note")
+                    else:
+                        meta = get_friend_metadata(friend_id_value, allow_fetch=False)
+                        if meta and meta.get("note") is not None:
+                            friend_note_hint = meta.get("note")
+                if friend_note_hint is not None and record.get("friend_note") != friend_note_hint:
+                    record["friend_note"] = friend_note_hint
+                if friend_id_value:
+                    cache_entry = friend_metadata_cache.get(friend_id_value) or {}
+                    if cache_entry.get("display_name") != name:
+                        cache_entry["display_name"] = name
+                    note_for_cache = record.get("friend_note")
+                    if note_for_cache is not None:
+                        cache_entry["note"] = note_for_cache
+                    else:
+                        cache_entry.setdefault("note", "")
+                    friend_metadata_cache[friend_id_value] = cache_entry
+
                 record["active_meet"] = None
 
                 log_activity(
@@ -1200,6 +1325,8 @@ async def main_loop(args):
                 print(f"Failed to refresh current user: {ex}")
                 current_user = None
 
+            sync_friend_records(current_user)
+
             online_map = {friend.display_name: friend for friend in online_friends}
             tracked_names = set(activity_status.keys()) | set(online_map.keys()) | set(FRIEND_NAMES)
             for name in tracked_names:
@@ -1214,6 +1341,15 @@ async def main_loop(args):
                     friend_location = friend.location or "private"
                     if friend_location == user_location_raw:
                         shared_friend_names.add(friend_name)
+            else:
+                # If the main user is offline, end all active meet sessions.
+                for friend_name in list(activity_status.keys()):
+                    friend_record = activity_status[friend_name]
+                    if friend_record.get("active_meet"):
+                        ended_meet = end_meet_session(friend_record, loop_now_dt)
+                        if ended_meet:
+                            await send_meet_end_notification(friend_name, ended_meet)
+                        friend_record["last_update"] = now
 
             online_notify_set = {name for name in online_map if activity_status[name]["notify"]}
             online_set = online_notify_set
@@ -1226,6 +1362,46 @@ async def main_loop(args):
                 should_notify = bool(record.get("notify", name in FRIEND_NAMES))
 
                 if currently_online:
+                    friend_id_value = getattr(friend_detail, "id", None)
+                    if friend_id_value and record.get("friend_id") != friend_id_value:
+                        record["friend_id"] = friend_id_value
+                    friend_note_hint = getattr(friend_detail, "note", None)
+                    cache_entry = None
+                    if friend_id_value:
+                        cache_entry = friend_metadata_cache.get(friend_id_value)
+                        if cache_entry is None:
+                            cache_entry = {"display_name": name}
+                        else:
+                            if not cache_entry.get("display_name") or cache_entry.get("display_name") != name:
+                                cache_entry["display_name"] = name
+                        friend_metadata_cache[friend_id_value] = cache_entry
+                    if friend_note_hint is None and friend_id_value:
+                        if cache_entry and cache_entry.get("note") is not None:
+                            friend_note_hint = cache_entry.get("note")
+                        else:
+                            meta = get_friend_metadata(friend_id_value, allow_fetch=False)
+                            if meta and meta.get("note") is not None:
+                                friend_note_hint = meta.get("note")
+                    if friend_note_hint is not None and record.get("friend_note") != friend_note_hint:
+                        record["friend_note"] = friend_note_hint
+                        if friend_id_value:
+                            cache_entry = friend_metadata_cache.get(friend_id_value) or {"display_name": name}
+                            cache_entry["note"] = friend_note_hint
+                            if not cache_entry.get("display_name"):
+                                cache_entry["display_name"] = name
+                            friend_metadata_cache[friend_id_value] = cache_entry
+                    elif friend_id_value and record.get("friend_note") is None:
+                        meta = get_friend_metadata(friend_id_value, allow_fetch=True)
+                        if meta:
+                            note_value = meta.get("note", "")
+                            if record.get("friend_note") != note_value:
+                                record["friend_note"] = note_value
+                            cache_entry = friend_metadata_cache.get(friend_id_value) or {}
+                            if not cache_entry.get("display_name"):
+                                cache_entry["display_name"] = name
+                            cache_entry["note"] = note_value
+                            friend_metadata_cache[friend_id_value] = cache_entry
+
                     location_raw = friend_detail.location or "private"
                     location_label = format_location(location_raw, worlds_api_instance, api_client)
                     location_type = determine_location_type(location_raw)
