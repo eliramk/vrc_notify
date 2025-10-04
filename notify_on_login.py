@@ -114,7 +114,7 @@ def _load_world_cache() -> dict:
 def _save_world_cache(cache: dict) -> None:
     try:
         with WORLD_CACHE_FILE.open("w", encoding="utf-8") as fh:
-            json.dump(cache, fh)
+            json.dump(cache, fh, indent=2)
     except Exception as ex:
         print(f"Failed to save world cache: {ex}")
 
@@ -269,6 +269,7 @@ def ensure_activity_record(activity: dict, name: str, notify_flag: bool):
     record.setdefault("online_since", None)
     record.setdefault("friend_id", None)
     record.setdefault("friend_note", None)
+    record.setdefault("note_checked_at", None)
 
     history = record.get("meet_history")
     if not isinstance(history, list):
@@ -770,31 +771,70 @@ class FriendMetadataManager:
     def __init__(self, users_api, activity_status: dict):
         self.users_api = users_api
         self.activity_status = activity_status
-        self.cache = {}
 
-    def get_metadata(self, friend_id: str, allow_fetch: bool = True, reason: str = ""):
+    def _find_record_by_friend_id(self, friend_id: str):
+        for display_name, record in self.activity_status.items():
+            if record.get("friend_id") == friend_id:
+                return display_name, record
+        return None, None
+
+    def get_metadata(self, friend_id: str, display_name: str = None, allow_fetch: bool = True,
+                     reason: str = ""):
         if not friend_id:
             return None
-        if friend_id in self.cache:
-            return self.cache[friend_id]
-        if not allow_fetch or self.users_api is None:
+
+        record_name, record = self._find_record_by_friend_id(friend_id)
+        if record is None and display_name:
+            record = ensure_activity_record(self.activity_status, display_name, display_name in FRIEND_NAMES)
+            record["friend_id"] = friend_id
+            record_name = display_name
+        elif record is None:
             return None
+
+        if display_name and record_name != display_name:
+            record_name = display_name
+            alias = self.activity_status.get(display_name)
+            if alias is None:
+                self.activity_status[display_name] = record
+
+        note_value = record.get("friend_note")
+        last_checked = record.get("note_checked_at")
+        if note_value is not None and last_checked and not self._note_stale(last_checked):
+            return {"display_name": record_name, "note": note_value, "note_checked_at": last_checked}
+
+        if not allow_fetch or self.users_api is None:
+            if note_value is None:
+                return None
+            return {"display_name": record_name, "note": note_value, "note_checked_at": last_checked}
+
         try:
-            debug_api_call(call="UsersApi.get_user", reason=f"FriendMetadataManager.get_metadata: refresh {friend_id} {reason}")
+            debug_api_call(
+                call="UsersApi.get_user",
+                reason=f"FriendMetadataManager.get_metadata: refresh {friend_id} {reason}",
+            )
             detail = self.users_api.get_user(friend_id)
         except Exception as ex:
             print(f"Failed to fetch friend metadata for {friend_id}: {ex}")
-            self.cache[friend_id] = None
-            return None
-        display_name = getattr(detail, "display_name", None) or getattr(detail, "username", None)
-        note_value = getattr(detail, "note", None)
-        meta = {
-            "display_name": display_name,
-            "note": note_value if note_value is not None else "",
-            "note_checked_at": time.time(),
-        }
-        self.cache[friend_id] = meta
-        return meta
+            return {"display_name": record_name, "note": note_value, "note_checked_at": last_checked}
+
+        fetched_display = getattr(detail, "display_name", None) or getattr(detail, "username", None)
+        fetched_note = getattr(detail, "note", None)
+        now_ts = time.time()
+
+        if fetched_display and fetched_display != record_name:
+            record_name = fetched_display
+            record = ensure_activity_record(self.activity_status, fetched_display, fetched_display in FRIEND_NAMES)
+            if record.get("friend_id") != friend_id:
+                record["friend_id"] = friend_id
+
+        if fetched_note is None:
+            fetched_note = ""
+
+        if _note_should_update(record.get("friend_note"), fetched_note) or record.get("friend_note") is None:
+            record["friend_note"] = fetched_note
+        record["note_checked_at"] = now_ts
+
+        return {"display_name": record_name, "note": record.get("friend_note"), "note_checked_at": now_ts}
 
     def sync_from_current_user(self, current_user):
         updated = False
@@ -811,7 +851,8 @@ class FriendMetadataManager:
         known_friend_ids = {rec.get("friend_id") for rec in self.activity_status.values() if rec.get("friend_id")}
         missing_ids = current_friend_ids - known_friend_ids
         for friend_id in missing_ids:
-            meta = self.get_metadata(friend_id, allow_fetch=True, reason=f"found missing id in sync_from_current_user {friend_id}")
+            meta = self.get_metadata(friend_id, allow_fetch=True,
+                                     reason=f"found missing id in sync_from_current_user {friend_id}")
             if not meta or not meta.get("display_name"):
                 continue
             name = meta["display_name"]
@@ -827,6 +868,7 @@ class FriendMetadataManager:
             note_value = meta.get("note", "")
             if _note_should_update(record.get("friend_note"), note_value):
                 record["friend_note"] = note_value
+                record["note_checked_at"] = meta.get("note_checked_at") or time.time()
                 updated = True
 
         for name, record in list(self.activity_status.items()):
@@ -837,34 +879,29 @@ class FriendMetadataManager:
             if not record.get("online"):
                 continue
 
-            meta = self.cache.get(friend_id)
-            refreshed = False
-            if self._note_stale(meta):
-                meta = self.get_metadata(friend_id, allow_fetch=True, reason=f"going over activity status - {name}")
-                refreshed = True
-
-            if meta:
-                display_name = meta.get("display_name")
-                note_value = meta.get("note", "")
-                if display_name and display_name != name:
-                    other = self.activity_status.get(display_name)
-                    if other is None:
+            if self._note_stale(record.get("note_checked_at")):
+                meta = self.get_metadata(friend_id, display_name=name, allow_fetch=True,
+                                         reason=f"refreshing note for {name}")
+                if meta:
+                    note_value = meta.get("note", "")
+                    if _note_should_update(record.get("friend_note"), note_value):
+                        record["friend_note"] = note_value
+                        record["note_checked_at"] = meta.get("note_checked_at") or time.time()
+                        updated = True
+                    display_name = meta.get("display_name")
+                    if display_name and display_name != name:
                         other = ensure_activity_record(self.activity_status, display_name, display_name in FRIEND_NAMES)
-                    if other.get("friend_id") != friend_id:
-                        other["friend_id"] = friend_id
-                        updated = True
-                    if _note_should_update(other.get("friend_note"), note_value):
-                        other["friend_note"] = note_value
-                        updated = True
-                if _note_should_update(record.get("friend_note"), note_value):
-                    record["friend_note"] = note_value
-                    updated = True
-                if refreshed:
-                    meta["note_checked_at"] = time.time()
-            else:
-                if record.get("friend_note") is None:
-                    record["friend_note"] = ""
-                    updated = True
+                        if other.get("friend_id") != friend_id:
+                            other["friend_id"] = friend_id
+                            updated = True
+                        if _note_should_update(other.get("friend_note"), note_value):
+                            other["friend_note"] = note_value
+                            other["note_checked_at"] = meta.get("note_checked_at") or time.time()
+                            updated = True
+            elif record.get("friend_note") is None:
+                record["friend_note"] = ""
+                record["note_checked_at"] = record.get("note_checked_at") or time.time()
+                updated = True
 
         return updated, new_friends
 
@@ -874,55 +911,33 @@ class FriendMetadataManager:
         changed = False
         friend_id_value = getattr(friend_detail, "id", None)
         friend_note_hint = getattr(friend_detail, "note", None)
-        cache_entry = None
-        now_ts = time.time()
 
-        if friend_id_value:
-            cache_entry = self.cache.get(friend_id_value) or {}
-            if cache_entry.get("display_name") != name:
-                cache_entry["display_name"] = name
-            if record.get("friend_id") != friend_id_value:
-                record["friend_id"] = friend_id_value
-                changed = True
-        meta = None
+        if friend_id_value and record.get("friend_id") != friend_id_value:
+            record["friend_id"] = friend_id_value
+            changed = True
+
         if friend_note_hint is None and friend_id_value:
-            if cache_entry and cache_entry.get("note") is not None:
-                friend_note_hint = cache_entry.get("note")
-            else:
-                meta = self.get_metadata(friend_id_value, allow_fetch=False, reason="looking for note")
-                if meta and meta.get("note") is not None:
-                    friend_note_hint = meta.get("note")
+            meta = self.get_metadata(friend_id_value, display_name=name, allow_fetch=False,
+                                     reason="detail sync")
+            if meta and meta.get("note") is not None:
+                friend_note_hint = meta.get("note")
         if friend_note_hint is None and friend_id_value and record.get("friend_note") is None:
-            if meta is None:
-                meta = self.get_metadata(friend_id_value, allow_fetch=True, reason="looking again for note")
+            meta = self.get_metadata(friend_id_value, display_name=name, allow_fetch=True,
+                                     reason="detail fallback fetch")
             if meta:
                 friend_note_hint = meta.get("note", "")
         if friend_note_hint is not None and _note_should_update(record.get("friend_note"), friend_note_hint):
             record["friend_note"] = friend_note_hint
+            record["note_checked_at"] = time.time()
             changed = True
-        if friend_id_value:
-            cache_entry = self.cache.get(friend_id_value) or {}
-            cache_entry.setdefault("display_name", name)
-            if friend_note_hint is not None:
-                if _note_should_update(cache_entry.get("note"), friend_note_hint):
-                    cache_entry["note"] = friend_note_hint
-            elif record.get("friend_note") is not None:
-                if _note_should_update(cache_entry.get("note"), record.get("friend_note")):
-                    cache_entry["note"] = record.get("friend_note")
-            else:
-                cache_entry.setdefault("note", "")
-            cache_entry["note_checked_at"] = now_ts
-            self.cache[friend_id_value] = cache_entry
+
         return changed
 
     @staticmethod
-    def _note_stale(meta) -> bool:
-        if not meta:
+    def _note_stale(last_checked) -> bool:
+        if not last_checked:
             return True
-        checked_at = meta.get("note_checked_at")
-        if not checked_at:
-            return True
-        return (time.time() - checked_at) >= NOTE_REFRESH_SECONDS
+        return (time.time() - last_checked) >= NOTE_REFRESH_SECONDS
 
 
 def next_hour_epoch():
@@ -1136,6 +1151,7 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
         try:
             debug_api_call("FriendsApi.get_friends", "monitor_loop: refresh current online friends")
             online_friends = friends_api_instance.get_friends()
+            online_friends = [f for f in online_friends if not _should_ignore_online_friend(f)]
         except Exception as ex:
             print(f"Critical error: {ex}")
             await send_notification(message=f"Critical error: {ex}, waiting 1 hour.")
@@ -1433,10 +1449,11 @@ def load_fav_db():
                 db = json.load(f)
                 if "avatars" in db:
                     _prime_avatar_cache_from_dict(db.get("avatars"))
+                    db.setdefault("invalid_avatar_ids", [])
                     return db
         except Exception:
             pass
-    return {"version": 1, "last_scan_at": None, "avatars": {}}
+    return {"version": 1, "last_scan_at": None, "avatars": {}, "invalid_avatar_ids": []}
 
 
 def save_fav_db(db):
@@ -1494,6 +1511,19 @@ def normalize_avatar(raw):
     return rec
 
 
+def _is_avatar_not_found_error(exc) -> bool:
+    if getattr(exc, "status", None) == 404:
+        return True
+    body = getattr(exc, "body", "")
+    try:
+        if isinstance(body, (bytes, bytearray)):
+            body = body.decode("utf-8", errors="ignore")
+    except Exception:
+        body = str(body)
+    text = body or str(exc)
+    return "Avatar Not Found" in str(text)
+
+
 async def fetch_current_favorite_avatars(api_client: ApiClient, db: dict, force_read: bool = False):
     """
     Returns list of avatar dicts (full records if fetched; DB-cached copies for known IDs when not forced).
@@ -1527,11 +1557,62 @@ async def fetch_current_favorite_avatars(api_client: ApiClient, db: dict, force_
 
         out = []
         avatars_db = (db or {}).get("avatars", {})
+        invalid_ids_set = set((db or {}).get("invalid_avatar_ids", []))
+
+        async def mark_avatar_not_found(favorite_id, avatar_id, fd, send_alert=True):
+            nonlocal invalid_ids_set
+            ids_to_mark = {favorite_id, avatar_id}
+            ids_to_mark.discard(None)
+            newly_added = False
+            for invalid_id in ids_to_mark:
+                if invalid_id and invalid_id not in invalid_ids_set:
+                    invalid_ids_set.add(invalid_id)
+                    newly_added = True
+
+            rec = None
+            for lookup_id in ids_to_mark:
+                if lookup_id and lookup_id in avatars_db:
+                    rec = avatars_db[lookup_id]
+                    break
+
+            now_ts = now_iso()
+            if rec:
+                rec["active"] = False
+                rec["removed_at"] = rec.get("removed_at") or now_ts
+                history = rec.setdefault("history", [])
+                if not history or (history and history[-1].get("action") != "not_found"):
+                    history.append({
+                        "at": now_ts,
+                        "action": "not_found",
+                        "favorite_id": favorite_id,
+                        "avatar_id": avatar_id,
+                    })
+
+            if send_alert and newly_added:
+                combined = rec or (fd or {})
+                avatar_name = combined.get("name") or favorite_id or avatar_id or "Unknown avatar"
+                lines = [f"⚠️ Avatar not found: {avatar_name}"]
+                if favorite_id:
+                    lines.append(f"Favorite ID: {favorite_id}")
+                if avatar_id and avatar_id != favorite_id:
+                    lines.append(f"Avatar ID: {avatar_id}")
+                author = combined.get("authorName") or combined.get("author_name")
+                if author:
+                    lines.append(f"Author: {author}")
+                release = combined.get("releaseStatus") or combined.get("release_status")
+                if release:
+                    lines.append(f"Release status: {release}")
+                await send_notification("\n".join(lines))
+
         for fav in favorites:
             fd = _to_dict(fav)
             favorite_id = fd.get("target_id") or fd.get("targetId") or fd.get("favorite_id")
             avatar_id = fd.get("id")
             if not favorite_id and not avatar_id:
+                continue
+
+            if favorite_id in invalid_ids_set or avatar_id in invalid_ids_set:
+                await mark_avatar_not_found(favorite_id, avatar_id, fd, send_alert=False)
                 continue
 
             # If cached and not forcing, use DB copy (already normalized)
@@ -1543,26 +1624,52 @@ async def fetch_current_favorite_avatars(api_client: ApiClient, db: dict, force_
                 continue
 
             # Otherwise hydrate from server
+            favorite_not_found = False
+            cached_favorite_entry = None
             try:
                 debug_api_call("AvatarsApi.get_avatar", f"fetch_current_favorite_avatars: hydrate favorite_id={favorite_id}")
                 av = av_api.get_avatar(favorite_id)
                 out.append(_to_dict(av))
                 continue
             except Exception as ex:
-                cached = avatars_db.get(favorite_id)
-                if cached:
-                    out.append(cached)
+                if _is_avatar_not_found_error(ex):
+                    favorite_not_found = True
+                cached_favorite_entry = avatars_db.get(favorite_id)
+                if not favorite_not_found and cached_favorite_entry:
+                    out.append(cached_favorite_entry)
                     continue
+            avatar_not_found = False
+            cached_avatar_entry = None
             try:
                 debug_api_call("AvatarsApi.get_avatar", f"fetch_current_favorite_avatars: hydrate avatar_id={avatar_id}")
                 av = av_api.get_avatar(avatar_id)
                 out.append(_to_dict(av))
             except Exception as ex:
+                if _is_avatar_not_found_error(ex):
+                    avatar_not_found = True
                 # If server fetch fails but we have a cached copy, fall back to it
-                cached = avatars_db.get(avatar_id)
-                if cached:
-                    out.append(cached)
+                cached_avatar_entry = avatars_db.get(avatar_id)
+                if not avatar_not_found and cached_avatar_entry:
+                    out.append(cached_avatar_entry)
                     continue
+
+            should_mark_not_found = False
+            if favorite_id and avatar_id:
+                should_mark_not_found = favorite_not_found and avatar_not_found
+            elif favorite_id:
+                should_mark_not_found = favorite_not_found
+            elif avatar_id:
+                should_mark_not_found = avatar_not_found
+
+            if should_mark_not_found:
+                await mark_avatar_not_found(favorite_id, avatar_id, fd)
+                continue
+
+            fallback_entry = cached_favorite_entry or cached_avatar_entry
+            if fallback_entry and fallback_entry not in out:
+                out.append(fallback_entry)
+
+        db["invalid_avatar_ids"] = sorted(invalid_ids_set)
 
         return out
 
@@ -1734,6 +1841,25 @@ FRIEND_IMAGE_ATTR_PREFS = [
     ("user_icon", "userIcon"),
     ("current_avatar_image_url", "currentAvatarImageUrl"),
 ]
+
+
+def _friend_platform(friend) -> str:
+    return (
+        _extract_friend_attr(friend, ("last_platform", "lastPlatform", "platform")) or ""
+    ).lower()
+
+
+def _friend_location(friend) -> str:
+    location = None
+    if isinstance(friend, dict):
+        location = friend.get("location")
+    else:
+        location = getattr(friend, "location", None)
+    return (location or "").lower()
+
+
+def _should_ignore_online_friend(friend) -> bool:
+    return _friend_platform(friend) == "web" and _friend_location(friend) == "offline"
 
 
 def _extract_friend_attr(friend, attr_names):
@@ -1983,6 +2109,7 @@ async def main_loop(args):
         try:
             debug_api_call("FriendsApi.get_friends", "main_loop: fetch initial online friends list")
             online_friends = friends_api_instance.get_friends(offline=False, offset=0)
+            online_friends = [f for f in online_friends if not _should_ignore_online_friend(f)]
         except Exception as ex:
             print(f"Failed to fetch initial friends list: {ex}")
             online_friends = []
