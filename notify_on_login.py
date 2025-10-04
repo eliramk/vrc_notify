@@ -27,7 +27,7 @@ PASSWORD = os.getenv("VRCHAT_PASSWORD")
 EMAIL = os.getenv("VRCHAT_EMAIL")
 contact_info = EMAIL if EMAIL else "no-contact@example.com"
 USER_AGENT = f"VRCNotify/1.0 ({contact_info})"
-DEBUG_SHOW_API_CALLS = True
+DEBUG_SHOW_API_CALLS = False
 
 
 def debug_api_call(call: str, reason: str):
@@ -93,6 +93,7 @@ except Exception:
     WorldsApi = None
     UsersApi = None
 
+
 # cache resolved world and avatar names to limit API calls
 def _load_world_cache() -> dict:
     if not WORLD_CACHE_FILE.exists():
@@ -114,7 +115,7 @@ def _load_world_cache() -> dict:
 def _save_world_cache(cache: dict) -> None:
     try:
         with WORLD_CACHE_FILE.open("w", encoding="utf-8") as fh:
-            json.dump(cache, fh, indent=2)
+            fh.write(json.dumps(cache, indent=2, ensure_ascii=False) + "\n")
     except Exception as ex:
         print(f"Failed to save world cache: {ex}")
 
@@ -1844,13 +1845,14 @@ FRIEND_IMAGE_ATTR_PREFS = [
 
 
 def _friend_platform(friend) -> str:
-    return (
-        _extract_friend_attr(friend, ("last_platform", "lastPlatform", "platform")) or ""
-    ).lower()
+    if isinstance(friend, dict):
+        platform = friend.get("platform")
+    else:
+        platform = getattr(friend, "platform", None)
+    return (platform or "").lower()
 
 
 def _friend_location(friend) -> str:
-    location = None
     if isinstance(friend, dict):
         location = friend.get("location")
     else:
