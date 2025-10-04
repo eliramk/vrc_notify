@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-09-26T16:01:52.797956+00:00",
+  "last_scan_at": "2025-10-04T13:13:29.787819+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -5217,14 +5217,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-27T21:12:34.798711+00:00",
+      "removed_at": "2025-09-27T21:12:34.798711+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-27T21:12:34.798711+00:00",
+          "action": "removed"
         }
       ],
       "features": {
@@ -8040,14 +8044,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-09-24T00:26:54.585277+00:00",
-      "last_seen_in_favorites_at": "2025-09-24T00:26:54.585277+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-09-26T23:00:16.532889+00:00",
+      "removed_at": "2025-09-26T23:00:16.532889+00:00",
       "history": [
         {
           "at": "2025-09-24T00:26:54.585277+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-09-26T23:00:16.532889+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -8273,6 +8281,219 @@
       "history": [
         {
           "at": "2025-09-26T11:45:51.409720+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_b632bad0-1e1a-4642-a513-e3d3239a9099": {
+      "id": "avtr_b632bad0-1e1a-4642-a513-e3d3239a9099",
+      "name": "Draken",
+      "authorId": "usr_9381e065-67c4-40db-ae1b-ba4130684bae",
+      "authorName": "Wardlaster",
+      "description": "Ghostly Dragon",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ae065c2f-70e7-48ae-8699-9bcb77e4c348/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ae065c2f-70e7-48ae-8699-9bcb77e4c348/2/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex"
+      ],
+      "version": 10,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-26T20:13:07.641720+00:00",
+      "last_seen_in_favorites_at": "2025-09-26T20:13:07.641720+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-26T20:13:07.641720+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_5fd4a1f7-1979-443a-be08-cfecce151b07": {
+      "id": "avtr_5fd4a1f7-1979-443a-be08-cfecce151b07",
+      "name": "Beloved - Minki",
+      "authorId": "usr_9f09c3aa-0b56-4a02-b267-2192f43ba2af",
+      "authorName": "․minki․",
+      "description": "",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_1ad4faaa-bf86-4567-8d04-8c0c30de8147/3/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_1ad4faaa-bf86-4567-8d04-8c0c30de8147/3/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 19,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-26T20:13:07.641720+00:00",
+      "last_seen_in_favorites_at": "2025-09-26T20:13:07.641720+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-26T20:13:07.641720+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_cffdcdc8-d514-4d23-8c9d-c43c9ae765ca": {
+      "id": "avtr_cffdcdc8-d514-4d23-8c9d-c43c9ae765ca",
+      "name": "Haruhi v․bus",
+      "authorId": "usr_861a4a15-e621-40e8-9049-e675dddc41cf",
+      "authorName": "Yuki Nagato",
+      "description": "Bussin",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_31845808-c2f4-4ef7-b008-ca2fd24fc21a/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_31845808-c2f4-4ef7-b008-ca2fd24fc21a/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 2,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-27T00:26:16.071930+00:00",
+      "last_seen_in_favorites_at": "2025-09-27T00:26:16.071930+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-27T00:26:16.071930+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_0a2a812d-8ba7-469d-89a6-7ed2474f4ad1": {
+      "id": "avtr_0a2a812d-8ba7-469d-89a6-7ed2474f4ad1",
+      "name": "aDanza Cat Ginger",
+      "authorId": "usr_fe3880ee-4561-4860-acfb-84829d241121",
+      "authorName": "Ezekiel",
+      "description": "aDanza Cat Ginger",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_f4c5797d-c794-4ece-b3d8-66853ec3d97f/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_f4c5797d-c794-4ece-b3d8-66853ec3d97f/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 14,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-27T00:26:16.071930+00:00",
+      "last_seen_in_favorites_at": "2025-09-27T00:26:16.071930+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-27T00:26:16.071930+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_0880a230-feed-4485-bd6e-ba7d88117b5c": {
+      "id": "avtr_0880a230-feed-4485-bd6e-ba7d88117b5c",
+      "name": "ᴀɴɴᴇ",
+      "authorId": "usr_3ea3c87d-5153-48ba-b557-ad418312ec08",
+      "authorName": "ғᴏxɪ",
+      "description": "https˸⁄⁄discord․gg⁄softdoll",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_ff8110d7-eb2f-4ce3-b4d3-496e47e5675e/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_ff8110d7-eb2f-4ce3-b4d3-496e47e5675e/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 20,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-09-30T22:26:42.712713+00:00",
+      "last_seen_in_favorites_at": "2025-09-30T22:26:42.712713+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-09-30T22:26:42.712713+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_11e09a0d-0d25-415d-983b-29608ea8dbb3": {
+      "id": "avtr_11e09a0d-0d25-415d-983b-29608ea8dbb3",
+      "name": "Repo egirl",
+      "authorId": "usr_247302b0-e132-4fd6-b1bb-83af3b99d35a",
+      "authorName": "Kojison",
+      "description": "Repo egirl",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_a9036ec5-c3ae-43d6-9ace-b904110da397/3/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_a9036ec5-c3ae-43d6-9ace-b904110da397/3/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 23,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-03T18:31:32.350349+00:00",
+      "last_seen_in_favorites_at": "2025-10-03T18:31:32.350349+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-03T18:31:32.350349+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_088c9efc-ba65-4af3-b3d0-edd7093661fc": {
+      "id": "avtr_088c9efc-ba65-4af3-b3d0-edd7093661fc",
+      "name": "CHIYO BY DADDYSENPAI",
+      "authorId": "usr_34944d9e-c5b8-46f2-be3a-c4939b2ee616",
+      "authorName": "daddysenpai«",
+      "description": "CHIYO BY DADDYSENPAI",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_9438a753-9791-40a2-bc27-d70796a7bc31/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_9438a753-9791-40a2-bc27-d70796a7bc31/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex",
+        "content_gore"
+      ],
+      "version": 10,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-03T18:31:32.350349+00:00",
+      "last_seen_in_favorites_at": "2025-10-03T18:31:32.350349+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-03T18:31:32.350349+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_e4f4a92f-4c6b-4236-9e3a-40bb0b32f07c": {
+      "id": "avtr_e4f4a92f-4c6b-4236-9e3a-40bb0b32f07c",
+      "name": "Kiga panda",
+      "authorId": "usr_f7115b92-bc73-4116-9bf6-c4035524f8eb",
+      "authorName": "-Blueberry",
+      "description": "Kiga panda",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_6c668d46-7f72-4912-a86b-7f378df1d55f/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_6c668d46-7f72-4912-a86b-7f378df1d55f/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 5,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-03T18:31:32.350349+00:00",
+      "last_seen_in_favorites_at": "2025-10-03T18:31:32.350349+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-03T18:31:32.350349+00:00",
           "action": "added"
         }
       ],

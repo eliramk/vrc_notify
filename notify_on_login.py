@@ -95,6 +95,15 @@ def normalize_platform_name(platform_value: str) -> str:
     }
     return mappings.get(value.lower(), value)
 
+def get_platform_icon(platform_display: str) -> str:
+    if platform_display == "Quest":
+        return "🥽"
+    if platform_display == "standalonewindows":
+        return "💻"
+    if platform_display == "unknown":
+        return "❓"
+    return f"({platform_display})"
+
 
 def format_notification_timestamp(current_dt: datetime) -> str:
     global LAST_NOTIFICATION_DATE
@@ -403,8 +412,10 @@ async def send_discord_message(message: str, image_url: str = None, image_urls=N
                 continue
             url = entry.get("url") if isinstance(entry, dict) else None
             name = entry.get("name") if isinstance(entry, dict) else None
+            title = entry.get("title") if isinstance(entry, dict) else None
+            body = entry.get("body") if isinstance(entry, dict) else None
             if url:
-                entries.append({"name": name, "url": url})
+                entries.append({"name": name, "url": url, "title": title or name, "body": body})
     else:
         urls = []
         if image_urls:
@@ -439,8 +450,15 @@ async def send_discord_message(message: str, image_url: str = None, image_urls=N
 
         for entry in entries:
             embed = {"thumbnail": {"url": entry["url"]}}
-            if entry.get("name"):
-                embed["title"] = entry["name"]
+            title = entry.get("title") or entry.get("name")
+            body = entry.get("body")
+            if title and body:
+                embed["title"] = title
+                embed["description"] = body
+            elif title:
+                embed["title"] = title
+            elif body:
+                embed["title"] = body
             embeds.append(embed)
 
     data = {"content": message}
@@ -487,7 +505,7 @@ async def send_meet_end_notification(friend_name: str, meet_info: dict):
     if others:
         lines.append("Also present: " + ", ".join(sorted(set(others))))
     # message = "\n".join(lines)
-    message = f"{start_time} Met {friend_name} at {location_label} ({location_type}), duration: {duration}"
+    message = f"🥂{start_time} Met {friend_name} 📌{location_label} ({location_type}), ⏱️{duration}"
     if others:
         message += "\nWith " + ", ".join(sorted(set(others)))
     print(message)
@@ -748,10 +766,12 @@ async def handle_initial_online_snapshot(initial_online, activity_status, metada
         formatted_location = format_location(raw_location, worlds_api_instance, api_client)
         avatar_name = get_friend_avatar_name(friend, avatars_api_instance, api_client)
         avatar_suffix = f" • {avatar_name}" if avatar_name else ""
-        initial_online_names.append(f"{name}({platform_display}/{formatted_location}{avatar_suffix})")
+        platform_icon = get_platform_icon(platform_display)
+        location_str = f"📌{formatted_location}" if formatted_location and formatted_location not in {"private", "offline"} else ""
+        initial_online_names.append(f"{name} {platform_icon}{location_str}{avatar_suffix}")
         image_url = pick_friend_image_url(friend)
         if image_url:
-            initial_image_entries.append({"name": name, "url": image_url})
+            initial_image_entries.append({"name": name, "url": image_url, "title": name, "body": f"{location_str}"})
 
         record = ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
         record.update({
@@ -842,7 +862,14 @@ async def send_online_digest(now: str, online_friends, online_set, avatars_api_i
         avatar_name = get_friend_avatar_name(friend, avatars_api_instance, api_client)
         image_url = pick_friend_image_url(friend)
         if image_url:
-            digest_image_entries.append({"name": name, "url": image_url})
+            digest_image_entries.append(
+                {
+                    "name": name,
+                    "url": image_url,
+                    "title": name,
+                    "body": f"📌{world_name}" if world_name and world_name not in {"offline", "private"} else ""
+                }
+            )
         if world_name:
             if avatar_name:
                 online_entries.append(f"{name} ({world_name} • {avatar_name})")
@@ -1013,18 +1040,26 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
                     event_dt = datetime.now()
                     event_now = format_notification_timestamp(event_dt)
                     other_online = sorted(other for other in online_notify_set if other != name)
-                    lines = [f"{event_now} {name} came online."]
-                    if location_label and location_type not in {"private", "offline"}:
-                        lines.append(f"Location: {location_label}")
-                    lines.append(f"Platform: {platform_display}")
-                    if avatar_name:
+                    platform_icon = get_platform_icon(platform_display)
+                    lines = [f"✅{event_now} {name} {platform_icon}"]
+                    location_str = ""
+                    if location_label and location_type not in {"private", "offline"} and location_label not in {"private", "offline"} :
+                        location_str = f"📌{location_label}"
+                        lines.append(location_str)
+
+                    # lines.append(f"Platform: {platform_display}")
+                    image_url = pick_friend_image_url(friend_detail)
+                    if avatar_name and not image_url:
                         lines.append(f"Avatar: {avatar_name}")
+                    if avatar_name:
+                        avatar_str = f" 🤖{avatar_name}"
+                    else:
+                        avatar_str = ""
                     if other_online:
-                        lines.append("Online: " + ", ".join(other_online))
+                        lines.append("⏫ " + ", ".join(other_online))
                     msg = "\n".join(lines)
                     print(msg)
-                    image_url = pick_friend_image_url(friend_detail)
-                    image_entries = [{"name": name, "url": image_url}] if image_url else None
+                    image_entries = [{"name": name, "url": image_url, "title": f"{name}", "body": f"{avatar_str}{location_str}"}] if image_url else None
                     await send_notification(message=msg, image_entries=image_entries)
 
                     record["online"] = True
@@ -1070,17 +1105,17 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
                         event_dt = datetime.now()
                         event_now = format_notification_timestamp(event_dt)
                         other_online = sorted(other for other in online_notify_set if other != name)
-                        lines = [f"{event_now} {name} went offline."]
+                        lines = [f"📵{event_now} {name}"]
                         online_since_str = record.get("online_since")
                         if online_since_str:
                             try:
                                 online_since_dt = datetime.strptime(online_since_str, "%Y-%m-%d %H:%M:%S")
                                 duration_seconds = (event_dt - online_since_dt).total_seconds()
-                                lines.append(f"Online for: {_format_duration_seconds(duration_seconds)}")
+                                lines[0] += f" {_format_duration_seconds(duration_seconds)}"
                             except Exception:
                                 pass
                         if other_online:
-                            lines.append("Online: " + ", ".join(other_online))
+                            lines.append("⏫ " + ", ".join(other_online))
                         msg = "\n".join(lines)
                         print(msg)
                         log_activity(
@@ -1104,7 +1139,7 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
         fav_db, next_fav_scan = await handle_favorites_rescan_if_due(api_client, fav_db, args, now, next_fav_scan)
 
         log_periodic_online_set(now, online_set)
-        if now[-7:-3] != "8:00":
+        if now[-7:-3] == "8:00":
             await send_online_digest(now, online_friends, online_set, avatars_api_instance, worlds_api_instance, api_client)
 
         await asyncio.sleep(CHECK_INTERVAL)
