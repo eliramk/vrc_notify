@@ -27,6 +27,22 @@ PASSWORD = os.getenv("VRCHAT_PASSWORD")
 EMAIL = os.getenv("VRCHAT_EMAIL")
 contact_info = EMAIL if EMAIL else "no-contact@example.com"
 USER_AGENT = f"VRCNotify/1.0 ({contact_info})"
+DEBUG_SHOW_API_CALLS = True
+
+
+def debug_api_call(call: str, reason: str):
+    if DEBUG_SHOW_API_CALLS:
+        print(f"[VRCHAT API] {call} -- {reason}")
+
+
+def _note_should_update(current_value, candidate_value) -> bool:
+    if candidate_value is None:
+        return False
+    candidate_text = str(candidate_value)
+    current_text = None if current_value is None else str(current_value)
+    if current_text is None:
+        return True
+    return len(candidate_text) > len(current_text)
 
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -44,6 +60,7 @@ NOTE_REFRESH_SECONDS = 3600  # one hour cooldown for friend note lookups
 STATE_FILE = Path("friend_activity.json")
 CSV_LOG_FILE = Path("user_activity_log.csv")
 COOKIES_FILE = Path("auth_cookies.json")
+WORLD_CACHE_FILE = Path("world_cache.json")
 
 # ---------- NEW: favorites persistence ----------
 FAV_AVATARS_FILE = Path("favorite_avatars.json")
@@ -77,8 +94,77 @@ except Exception:
     UsersApi = None
 
 # cache resolved world and avatar names to limit API calls
-WORLD_NAME_CACHE = {}
-AVATAR_NAME_CACHE = {}
+def _load_world_cache() -> dict:
+    if not WORLD_CACHE_FILE.exists():
+        return {}
+    try:
+        with WORLD_CACHE_FILE.open("r", encoding="utf-8") as fh:
+            data = json.load(fh)
+            if isinstance(data, dict):
+                normalized = {}
+                for key, value in data.items():
+                    if isinstance(key, str):
+                        normalized[key] = str(value) if value is not None else ""
+                return normalized
+    except Exception as ex:
+        print(f"Failed to load world cache: {ex}")
+    return {}
+
+
+def _save_world_cache(cache: dict) -> None:
+    try:
+        with WORLD_CACHE_FILE.open("w", encoding="utf-8") as fh:
+            json.dump(cache, fh)
+    except Exception as ex:
+        print(f"Failed to save world cache: {ex}")
+
+
+def _extract_cached_avatar_name(record):
+    if not isinstance(record, dict):
+        return None
+    for key in ("name", "displayName", "display_name"):
+        value = record.get(key)
+        if value:
+            return str(value)
+    return None
+
+
+def _load_avatar_cache_from_favorites() -> dict:
+    if not FAV_AVATARS_FILE.exists():
+        return {}
+    try:
+        with FAV_AVATARS_FILE.open("r", encoding="utf-8") as fh:
+            data = json.load(fh)
+            avatars = (data or {}).get("avatars", {})
+            cache = {}
+            if isinstance(avatars, dict):
+                for avatar_id, record in avatars.items():
+                    if not isinstance(avatar_id, str):
+                        continue
+                    name = _extract_cached_avatar_name(record)
+                    if name:
+                        cache[avatar_id] = name
+            return cache
+    except Exception as ex:
+        print(f"Failed to preload avatar cache: {ex}")
+    return {}
+
+
+def _prime_avatar_cache_from_dict(avatars_dict):
+    if not isinstance(avatars_dict, dict):
+        return
+    for avatar_id, record in avatars_dict.items():
+        if not isinstance(avatar_id, str):
+            continue
+        if avatar_id in AVATAR_NAME_CACHE:
+            continue
+        name = _extract_cached_avatar_name(record)
+        if name:
+            AVATAR_NAME_CACHE[avatar_id] = name
+
+
+WORLD_NAME_CACHE = _load_world_cache()
+AVATAR_NAME_CACHE = _load_avatar_cache_from_favorites()
 
 LAST_NOTIFICATION_DATE = None
 
@@ -512,6 +598,90 @@ async def send_meet_end_notification(friend_name: str, meet_info: dict):
     await send_notification(message=message)
 
 
+async def send_meet_start_notification(friend_name: str, start_dt: datetime, location_label: str,
+                                       location_type: str, other_friends, friend_detail,
+                                       avatar_name, avatars_api_instance, api_client):
+    event_now = format_notification_timestamp(start_dt)
+    location_label = location_label or "unknown"
+    location_type = location_type or "unknown"
+    lines = [f"🎉{event_now} Meet started with {friend_name}"]
+    if location_label and location_label != "unknown":
+        if location_type and location_type != "unknown":
+            lines.append(f"📌{location_label} ({location_type})")
+        else:
+            lines.append(f"📌{location_label}")
+    others = [o for o in (other_friends or []) if o and o != friend_name]
+    if others:
+        lines.append("👥 With " + ", ".join(others))
+
+    if not avatar_name and friend_detail is not None:
+        avatar_name = get_friend_avatar_name(friend_detail, avatars_api_instance, api_client)
+    image_url = pick_friend_image_url(friend_detail) if friend_detail else None
+    location_for_entry = location_label if location_label not in {"unknown"} else None
+    image_entry = create_image_entry(name=friend_name, image_url=image_url, avatar_name=avatar_name,
+                                     location_name=location_for_entry)
+    image_entries = [image_entry] if image_entry else None
+
+    message = "\n".join(lines)
+    print(message)
+    await send_notification(message=message, image_entries=image_entries)
+
+
+async def send_new_friend_notifications(new_friends, current_user, online_map, metadata_manager,
+                                        avatars_api_instance, worlds_api_instance, api_client):
+    if not new_friends or current_user is None:
+        return
+
+    user_location_raw = get_presence_location(current_user)
+    location_label = format_location(user_location_raw, worlds_api_instance, api_client)
+    location_type = determine_location_type(user_location_raw)
+    user_world_id = _extract_world_id(user_location_raw)
+
+    for friend_info in new_friends:
+        friend_name = friend_info.get("display_name") or "Unknown friend"
+        friend_id = friend_info.get("friend_id")
+        timestamp = format_notification_timestamp(datetime.now())
+
+        lines = [f"🆕{timestamp} Added {friend_name}"]
+        if location_label and location_label != "unknown":
+            if location_type and location_type not in {"unknown"}:
+                lines.append(f"📌 {location_label} ({location_type})")
+            else:
+                lines.append(f"📌 {location_label}")
+        else:
+            lines.append("📌 Location unknown")
+
+        co_present = []
+        if user_world_id and location_type not in {"private", "offline", "unknown"}:
+            for other_name, other in online_map.items():
+                if other_name == friend_name:
+                    continue
+                other_location = getattr(other, "location", None) or ""
+                if _extract_world_id(other_location) == user_world_id:
+                    co_present.append(other_name)
+        if co_present:
+            lines.append("👥 Also there: " + ", ".join(sorted(set(co_present))))
+
+        friend_detail = online_map.get(friend_name)
+        if friend_detail is None and getattr(metadata_manager, "users_api", None) is not None and friend_id:
+            try:
+                debug_api_call("UsersApi.get_user", f"send_new_friend_notifications: hydrate {friend_id} for embed")
+                friend_detail = metadata_manager.users_api.get_user(friend_id)
+            except Exception as ex:
+                print(f"Failed to fetch detail for new friend {friend_id}: {ex}")
+                friend_detail = None
+
+        avatar_name = get_friend_avatar_name(friend_detail, avatars_api_instance, api_client) if friend_detail else None
+        image_url = pick_friend_image_url(friend_detail) if friend_detail else None
+        image_entry = create_image_entry(name=friend_name, image_url=image_url, avatar_name=avatar_name,
+                                         location_name=location_label)
+        image_entries = [image_entry] if image_entry else None
+
+        message = "\n".join(lines)
+        print(message)
+        await send_notification(message=message, image_entries=image_entries)
+
+
 def make_cookie(name, value):
     return Cookie(0, name, value, None, False, "api.vrchat.cloud", True, False, "/", False, False, 173106866300, False, None, None, {})
 
@@ -602,7 +772,7 @@ class FriendMetadataManager:
         self.activity_status = activity_status
         self.cache = {}
 
-    def get_metadata(self, friend_id: str, allow_fetch: bool = True):
+    def get_metadata(self, friend_id: str, allow_fetch: bool = True, reason: str = ""):
         if not friend_id:
             return None
         if friend_id in self.cache:
@@ -610,6 +780,7 @@ class FriendMetadataManager:
         if not allow_fetch or self.users_api is None:
             return None
         try:
+            debug_api_call(call="UsersApi.get_user", reason=f"FriendMetadataManager.get_metadata: refresh {friend_id} {reason}")
             detail = self.users_api.get_user(friend_id)
         except Exception as ex:
             print(f"Failed to fetch friend metadata for {friend_id}: {ex}")
@@ -625,30 +796,36 @@ class FriendMetadataManager:
         self.cache[friend_id] = meta
         return meta
 
-    def sync_from_current_user(self, current_user) -> bool:
+    def sync_from_current_user(self, current_user):
         updated = False
+        new_friends = []
         if current_user is None:
-            return updated
+            return updated, new_friends
         try:
             current_friend_ids = {fid for fid in (getattr(current_user, "friends", []) or []) if fid}
         except Exception:
             current_friend_ids = set()
         if not current_friend_ids:
-            return updated
+            return updated, new_friends
 
         known_friend_ids = {rec.get("friend_id") for rec in self.activity_status.values() if rec.get("friend_id")}
         missing_ids = current_friend_ids - known_friend_ids
         for friend_id in missing_ids:
-            meta = self.get_metadata(friend_id, allow_fetch=True)
+            meta = self.get_metadata(friend_id, allow_fetch=True, reason=f"found missing id in sync_from_current_user {friend_id}")
             if not meta or not meta.get("display_name"):
                 continue
             name = meta["display_name"]
             record = ensure_activity_record(self.activity_status, name, name in FRIEND_NAMES)
-            if record.get("friend_id") != friend_id:
+            prior_friend_id = record.get("friend_id")
+            if prior_friend_id != friend_id:
                 record["friend_id"] = friend_id
                 updated = True
+                new_friends.append({
+                    "friend_id": friend_id,
+                    "display_name": name,
+                })
             note_value = meta.get("note", "")
-            if record.get("friend_note") != note_value:
+            if _note_should_update(record.get("friend_note"), note_value):
                 record["friend_note"] = note_value
                 updated = True
 
@@ -663,7 +840,7 @@ class FriendMetadataManager:
             meta = self.cache.get(friend_id)
             refreshed = False
             if self._note_stale(meta):
-                meta = self.get_metadata(friend_id, allow_fetch=True)
+                meta = self.get_metadata(friend_id, allow_fetch=True, reason=f"going over activity status - {name}")
                 refreshed = True
 
             if meta:
@@ -676,10 +853,10 @@ class FriendMetadataManager:
                     if other.get("friend_id") != friend_id:
                         other["friend_id"] = friend_id
                         updated = True
-                    if other.get("friend_note") != note_value:
+                    if _note_should_update(other.get("friend_note"), note_value):
                         other["friend_note"] = note_value
                         updated = True
-                if record.get("friend_note") != note_value:
+                if _note_should_update(record.get("friend_note"), note_value):
                     record["friend_note"] = note_value
                     updated = True
                 if refreshed:
@@ -689,7 +866,7 @@ class FriendMetadataManager:
                     record["friend_note"] = ""
                     updated = True
 
-        return updated
+        return updated, new_friends
 
     def update_record_from_detail(self, name: str, friend_detail, record: dict) -> bool:
         if friend_detail is None:
@@ -707,27 +884,31 @@ class FriendMetadataManager:
             if record.get("friend_id") != friend_id_value:
                 record["friend_id"] = friend_id_value
                 changed = True
+        meta = None
         if friend_note_hint is None and friend_id_value:
             if cache_entry and cache_entry.get("note") is not None:
                 friend_note_hint = cache_entry.get("note")
             else:
-                meta = self.get_metadata(friend_id_value, allow_fetch=False)
+                meta = self.get_metadata(friend_id_value, allow_fetch=False, reason="looking for note")
                 if meta and meta.get("note") is not None:
                     friend_note_hint = meta.get("note")
         if friend_note_hint is None and friend_id_value and record.get("friend_note") is None:
-            meta = self.get_metadata(friend_id_value, allow_fetch=True)
+            if meta is None:
+                meta = self.get_metadata(friend_id_value, allow_fetch=True, reason="looking again for note")
             if meta:
                 friend_note_hint = meta.get("note", "")
-        if friend_note_hint is not None and record.get("friend_note") != friend_note_hint:
+        if friend_note_hint is not None and _note_should_update(record.get("friend_note"), friend_note_hint):
             record["friend_note"] = friend_note_hint
             changed = True
         if friend_id_value:
             cache_entry = self.cache.get(friend_id_value) or {}
             cache_entry.setdefault("display_name", name)
             if friend_note_hint is not None:
-                cache_entry["note"] = friend_note_hint
+                if _note_should_update(cache_entry.get("note"), friend_note_hint):
+                    cache_entry["note"] = friend_note_hint
             elif record.get("friend_note") is not None:
-                cache_entry["note"] = record.get("friend_note")
+                if _note_should_update(cache_entry.get("note"), record.get("friend_note")):
+                    cache_entry["note"] = record.get("friend_note")
             else:
                 cache_entry.setdefault("note", "")
             cache_entry["note_checked_at"] = now_ts
@@ -747,6 +928,25 @@ class FriendMetadataManager:
 def next_hour_epoch():
     now = datetime.now()
     return time.time() + ((60 - now.minute - 1) * 60 + (60 - now.second))
+
+
+def create_image_entry(name: str, image_url: str, avatar_name, location_name) -> dict:
+    if not image_url:
+        return None
+    
+    location_str = ""
+    if location_name and location_name not in {"private", "offline"}:
+        location_str = f" 📌{location_name}"
+
+    avatar_str = f"🤖{avatar_name}" if avatar_name else ""
+
+    image_entry = {
+        "name": name, 
+        "url": image_url,
+        "title": name,
+        "body": f"{avatar_str}{location_str}"
+    }
+    return image_entry
 
 
 async def handle_initial_online_snapshot(initial_online, activity_status, metadata_manager: FriendMetadataManager,
@@ -771,7 +971,9 @@ async def handle_initial_online_snapshot(initial_online, activity_status, metada
         initial_online_names.append(f"{name} {platform_icon}{location_str}{avatar_suffix}")
         image_url = pick_friend_image_url(friend)
         if image_url:
-            initial_image_entries.append({"name": name, "url": image_url, "title": name, "body": f"{location_str}"})
+            entry = create_image_entry(name=name, image_url=image_url, avatar_name=avatar_name, location_name=formatted_location)
+            if entry:
+                initial_image_entries.append(entry)
 
         record = ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
         record.update({
@@ -862,14 +1064,9 @@ async def send_online_digest(now: str, online_friends, online_set, avatars_api_i
         avatar_name = get_friend_avatar_name(friend, avatars_api_instance, api_client)
         image_url = pick_friend_image_url(friend)
         if image_url:
-            digest_image_entries.append(
-                {
-                    "name": name,
-                    "url": image_url,
-                    "title": name,
-                    "body": f"📌{world_name}" if world_name and world_name not in {"offline", "private"} else ""
-                }
-            )
+            entry = create_image_entry(name=name, image_url=image_url, avatar_name=avatar_name, location_name=world_name)
+            if entry:
+                digest_image_entries.append(entry)
         if world_name:
             if avatar_name:
                 online_entries.append(f"{name} ({world_name} • {avatar_name})")
@@ -929,7 +1126,7 @@ async def handle_favorites_rescan_if_due(api_client, fav_db, args, now: str, nex
 
 async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars_api_instance,
                        worlds_api_instance, metadata_manager: FriendMetadataManager,
-                       activity_status: dict, fav_db):
+                       activity_status: dict, fav_db, initial_current_user):
     next_fav_scan = next_hour_epoch()
 
     while True:
@@ -937,6 +1134,7 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
         now = loop_now_dt.strftime("%Y-%m-%d %H:%M:%S")
 
         try:
+            debug_api_call("FriendsApi.get_friends", "monitor_loop: refresh current online friends")
             online_friends = friends_api_instance.get_friends()
         except Exception as ex:
             print(f"Critical error: {ex}")
@@ -944,13 +1142,18 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
             await asyncio.sleep(PAUSE_ON_CRITICAL_ERRROR)
             break
 
-        try:
-            current_user = auth_api.get_current_user()
-        except Exception as ex:
-            print(f"Failed to refresh current user: {ex}")
-            current_user = None
+        if initial_current_user:
+            current_user = initial_current_user
+            initial_current_user = None
+        else:
+            try:
+                debug_api_call("AuthenticationApi.get_current_user", "monitor_loop: refresh authenticated user state")
+                current_user = auth_api.get_current_user()
+            except Exception as ex:
+                print(f"Failed to refresh current user: {ex}")
+                current_user = None
 
-        metadata_manager.sync_from_current_user(current_user)
+        _, new_friend_events = metadata_manager.sync_from_current_user(current_user)
 
         online_map = {friend.display_name: friend for friend in online_friends}
         tracked_names = set(activity_status.keys()) | set(online_map.keys()) | set(FRIEND_NAMES)
@@ -967,11 +1170,15 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
                 friend_location = friend.location or "private"
                 if friend_location == user_location_raw and friend_location not in ('offline', 'private'):
                     shared_friend_names.add(friend_name)
+                    debug_api_call("WorldsApi.get_world_instance", "monitor_loop: confirm shared instance for user location")
                     world_instance = worlds_api_instance.get_world_instance(world_id=user_location_raw.split(':')[0], instance_id=user_location_raw.split(':')[1])
                 elif ':' in friend_location and ':' in user_location_raw and friend_location.split(':')[0] == user_location_raw.split(':')[0]:
                     print(f"similar world: {friend_name} at {friend_location} while user at {user_location_raw}")
         else:
             await end_active_meets_for_offline_user(activity_status, loop_now_dt, now)
+
+        await send_new_friend_notifications(new_friend_events, current_user, online_map, metadata_manager,
+                                            avatars_api_instance, worlds_api_instance, api_client)
         online_notify_set = {name for name in online_map if activity_status[name]["notify"]}
         online_set = online_notify_set
 
@@ -1044,22 +1251,19 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
                     lines = [f"✅{event_now} {name} {platform_icon}"]
                     location_str = ""
                     if location_label and location_type not in {"private", "offline"} and location_label not in {"private", "offline"} :
-                        location_str = f"📌{location_label}"
+                        location_str = f" 📌{location_label}"
                         lines.append(location_str)
 
                     # lines.append(f"Platform: {platform_display}")
                     image_url = pick_friend_image_url(friend_detail)
                     if avatar_name and not image_url:
                         lines.append(f"Avatar: {avatar_name}")
-                    if avatar_name:
-                        avatar_str = f" 🤖{avatar_name}"
-                    else:
-                        avatar_str = ""
                     if other_online:
                         lines.append("⏫ " + ", ".join(other_online))
                     msg = "\n".join(lines)
                     print(msg)
-                    image_entries = [{"name": name, "url": image_url, "title": f"{name}", "body": f"{avatar_str}{location_str}"}] if image_url else None
+                    entry = create_image_entry(name=name, image_url=image_url, avatar_name=avatar_name, location_name=location_label)
+                    image_entries = [entry] if entry else None
                     await send_notification(message=msg, image_entries=image_entries)
 
                     record["online"] = True
@@ -1085,6 +1289,17 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
                     others = sorted(other for other in shared_friend_names if other != name)
                     if not record.get("active_meet"):
                         start_meet_session(record, loop_now_dt, location_raw, location_label or location_raw, location_type, others)
+                        await send_meet_start_notification(
+                            friend_name=name,
+                            start_dt=loop_now_dt,
+                            location_label=location_label or location_raw,
+                            location_type=location_type,
+                            other_friends=others,
+                            friend_detail=friend_detail,
+                            avatar_name=avatar_name,
+                            avatars_api_instance=avatars_api_instance,
+                            api_client=api_client,
+                        )
                         record["last_update"] = now
                     else:
                         update_meet_session(record, loop_now_dt, others)
@@ -1149,15 +1364,19 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
 
 async def attempt_initial_login(auth_api) -> tuple:
     try:
+        debug_api_call("AuthenticationApi.get_current_user", "attempt_initial_login: verify existing session")
         current_user = auth_api.get_current_user()
     except UnauthorizedException as e:
         if e.status == 200:
             if "Email 2 Factor Authentication" in e.reason:
                 code = input("Enter the 2FA code sent to your email: ").strip()
+                debug_api_call("AuthenticationApi.verify2_fa_email_code", "attempt_initial_login: submit email 2FA code")
                 auth_api.verify2_fa_email_code(two_factor_email_code=TwoFactorEmailCode(code))
             elif "2 Factor Authentication" in e.reason:
                 code = input("Enter 2FA Code: ").strip()
+                debug_api_call("AuthenticationApi.verify2_fa", "attempt_initial_login: submit authenticator 2FA code")
                 auth_api.verify2_fa(two_factor_auth_code=TwoFactorAuthCode(code))
+            debug_api_call("AuthenticationApi.get_current_user", "attempt_initial_login: re-fetch user after 2FA")
             current_user = auth_api.get_current_user()
         elif e.status == 401:
             await send_discord_message(f"UnauthorizedException 401 encountered: {e}", print_to_console=True)
@@ -1213,6 +1432,7 @@ def load_fav_db():
             with FAV_AVATARS_FILE.open("r", encoding="utf-8") as f:
                 db = json.load(f)
                 if "avatars" in db:
+                    _prime_avatar_cache_from_dict(db.get("avatars"))
                     return db
         except Exception:
             pass
@@ -1293,9 +1513,11 @@ async def fetch_current_favorite_avatars(api_client: ApiClient, db: dict, force_
         offset = 0
         while True:
             try:
+                debug_api_call("FavoritesApi.get_favorites", "fetch_current_favorite_avatars: page avatar favorites (limit 100)")
                 chunk = fav_api.get_favorites(n=100, offset=offset, type="avatar")
             except TypeError:
                 # older SDKs
+                debug_api_call("FavoritesApi.get_favorites", "fetch_current_favorite_avatars: legacy call without paging params")
                 chunk = fav_api.get_favorites()
                 chunk = [c for c in chunk if (_to_dict(c).get("type") or "").lower() == "avatar"]
             favorites.extend(chunk)
@@ -1322,6 +1544,7 @@ async def fetch_current_favorite_avatars(api_client: ApiClient, db: dict, force_
 
             # Otherwise hydrate from server
             try:
+                debug_api_call("AvatarsApi.get_avatar", f"fetch_current_favorite_avatars: hydrate favorite_id={favorite_id}")
                 av = av_api.get_avatar(favorite_id)
                 out.append(_to_dict(av))
                 continue
@@ -1331,6 +1554,7 @@ async def fetch_current_favorite_avatars(api_client: ApiClient, db: dict, force_
                     out.append(cached)
                     continue
             try:
+                debug_api_call("AvatarsApi.get_avatar", f"fetch_current_favorite_avatars: hydrate avatar_id={avatar_id}")
                 av = av_api.get_avatar(avatar_id)
                 out.append(_to_dict(av))
             except Exception as ex:
@@ -1463,9 +1687,12 @@ def _lookup_world_name(world_id: str, worlds_api, api_client):
         return WORLD_NAME_CACHE[world_id]
 
     name = None
+    fetched = False
     try:
         if worlds_api is not None:
+            debug_api_call("WorldsApi.get_world", f"_lookup_world_name: resolve name for {world_id}")
             world = worlds_api.get_world(world_id)
+            fetched = True
             name = getattr(world, "name", None)
             if not name and hasattr(world, "to_dict"):
                 world_dict = world.to_dict()
@@ -1474,7 +1701,10 @@ def _lookup_world_name(world_id: str, worlds_api, api_client):
     except Exception as ex:
         print(f"World lookup failed for {world_id}: {ex}")
 
-    WORLD_NAME_CACHE[world_id] = name
+    if fetched:
+        stored_value = name if isinstance(name, str) else ("" if name is None else str(name))
+        WORLD_NAME_CACHE[world_id] = stored_value
+        _save_world_cache(WORLD_NAME_CACHE)
     return name
 
 
@@ -1560,6 +1790,7 @@ def _lookup_avatar_name(avatar_id: str, avatars_api, api_client):
     name = None
     try:
         if avatars_api is not None:
+            debug_api_call("AvatarsApi.get_avatar", f"_lookup_avatar_name: resolve name for {avatar_id}")
             avatar = avatars_api.get_avatar(avatar_id)
             name = getattr(avatar, "name", None)
             if not name and hasattr(avatar, "to_dict"):
@@ -1599,6 +1830,8 @@ def merge_favorites_snapshot(db, avatars):
             norm["active"] = True
             norm["history"].append({"at": now, "action": "added"})
             db["avatars"][aid] = norm
+            if norm.get("name"):
+                AVATAR_NAME_CACHE[aid] = norm.get("name")
             # cache image on first add
             cache_avatar_image(aid, norm.get("imageUrl"), norm.get("name"))
         else:
@@ -1619,6 +1852,8 @@ def merge_favorites_snapshot(db, avatars):
                 "supports_android": norm["supports_android"],
                 "platforms": norm["platforms"],
             })
+            if rec.get("name"):
+                AVATAR_NAME_CACHE[aid] = rec.get("name")
             # resurrect logic does NOT change last_seen_in_favorites_at
             if not rec.get("active", True):
                 rec["active"] = True
@@ -1741,14 +1976,20 @@ async def main_loop(args):
         avatars_api_instance, worlds_api_instance, users_api_instance = init_optional_apis(api_client)
         metadata_manager = FriendMetadataManager(users_api_instance, activity_status)
 
-        if metadata_manager.sync_from_current_user(current_user):
+        meta_updated, startup_new_friends = metadata_manager.sync_from_current_user(current_user)
+        if meta_updated:
             save_activity(activity_status)
 
         try:
+            debug_api_call("FriendsApi.get_friends", "main_loop: fetch initial online friends list")
             online_friends = friends_api_instance.get_friends(offline=False, offset=0)
         except Exception as ex:
             print(f"Failed to fetch initial friends list: {ex}")
             online_friends = []
+
+        online_map = {f.display_name: f for f in online_friends}
+        await send_new_friend_notifications(startup_new_friends, current_user, online_map, metadata_manager,
+                                            avatars_api_instance, worlds_api_instance, api_client)
 
         print("Unfiltered online: " + ", ".join([f.display_name for f in online_friends]))
         initial_online = [f for f in online_friends if f.display_name in FRIEND_NAMES]
@@ -1771,6 +2012,7 @@ async def main_loop(args):
             metadata_manager,
             activity_status,
             fav_db,
+            initial_current_user=current_user
         )
 
 
