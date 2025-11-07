@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 from vrchatapi import ApiClient
 from vrchatapi.configuration import Configuration
 from vrchatapi import AuthenticationApi, FriendsApi
-from vrchatapi.exceptions import UnauthorizedException, ApiException
+from vrchatapi.exceptions import UnauthorizedException, ApiException, NotFoundException
 from vrchatapi.models.two_factor_auth_code import TwoFactorAuthCode
 from vrchatapi.models.two_factor_email_code import TwoFactorEmailCode
 from datetime import datetime, timezone
@@ -44,6 +44,7 @@ def _note_should_update(current_value, candidate_value) -> bool:
         return True
     return len(candidate_text) > len(current_text)
 
+
 WEBHOOK_URL = os.getenv("DISCORD_WEBHOOK_URL")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
@@ -55,7 +56,7 @@ CHECK_INTERVAL = 60  # seconds
 PAUSE_ON_CRITICAL_ERRROR = 3600
 PAUSE_ON_AUTH_ERROR = 271
 RETRY_AFTER_BUFFER = 5  # seconds padding beyond Retry-After header
-NOTE_REFRESH_SECONDS = 3600  # one hour cooldown for friend note lookups
+NOTE_REFRESH_SECONDS = 36000  # Ten hour cooldown for friend note lookups
 
 STATE_FILE = Path("friend_activity.json")
 CSV_LOG_FILE = Path("user_activity_log.csv")
@@ -86,12 +87,13 @@ AVATAR_IMG_DIR.mkdir(parents=True, exist_ok=True)
 
 # Optional typed APIs (guarded)
 try:
-    from vrchatapi import AvatarsApi, FavoritesApi, WorldsApi, UsersApi
+    from vrchatapi import AvatarsApi, FavoritesApi, WorldsApi, UsersApi, InstancesApi
 except Exception:
     AvatarsApi = None
     FavoritesApi = None
     WorldsApi = None
     UsersApi = None
+    InstancesApi = None
 
 
 # cache resolved world and avatar names to limit API calls
@@ -181,6 +183,7 @@ def normalize_platform_name(platform_value: str) -> str:
         "android": "Quest",
     }
     return mappings.get(value.lower(), value)
+
 
 def get_platform_icon(platform_display: str) -> str:
     if platform_display == "Quest":
@@ -626,7 +629,7 @@ async def send_meet_start_notification(friend_name: str, start_dt: datetime, loc
 
     message = "\n".join(lines)
     print(message)
-    await send_notification(message=message, image_entries=image_entries)
+    await send_notification(message=f"🎉{event_now} Meet started {friend_name}", image_entries=image_entries)
 
 
 async def send_new_friend_notifications(new_friends, current_user, online_map, metadata_manager,
@@ -949,7 +952,7 @@ def next_hour_epoch():
 def create_image_entry(name: str, image_url: str, avatar_name, location_name) -> dict:
     if not image_url:
         return None
-    
+
     location_str = ""
     if location_name and location_name not in {"private", "offline"}:
         location_str = f" 📌{location_name}"
@@ -957,7 +960,7 @@ def create_image_entry(name: str, image_url: str, avatar_name, location_name) ->
     avatar_str = f"🤖{avatar_name}" if avatar_name else ""
 
     image_entry = {
-        "name": name, 
+        "name": name,
         "url": image_url,
         "title": name,
         "body": f"{avatar_str}{location_str}"
@@ -1057,7 +1060,15 @@ def init_optional_apis(api_client):
             print(f"UsersApi init failed: {ex}")
             users_api_instance = None
 
-    return avatars_api_instance, worlds_api_instance, users_api_instance
+    instances_api_instance = None
+    if 'InstancesApi' in globals() and InstancesApi is not None:
+        try:
+            instances_api_instance = InstancesApi(api_client)
+        except Exception as ex:
+            print(f"InstancesApi init failed: {ex}")
+            instances_api_instance = None
+
+    return avatars_api_instance, worlds_api_instance, users_api_instance, instances_api_instance
 
 
 def log_periodic_online_set(now: str, online_set):
@@ -1141,7 +1152,7 @@ async def handle_favorites_rescan_if_due(api_client, fav_db, args, now: str, nex
 
 
 async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars_api_instance,
-                       worlds_api_instance, metadata_manager: FriendMetadataManager,
+                       worlds_api_instance, instances_api_instance, metadata_manager: FriendMetadataManager,
                        activity_status: dict, fav_db, initial_current_user):
     next_fav_scan = next_hour_epoch()
 
@@ -1178,17 +1189,45 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
             ensure_activity_record(activity_status, name, name in FRIEND_NAMES)
 
         user_location_raw = get_presence_location(current_user)
-        user_online = bool(user_location_raw and str(user_location_raw).lower() != "offline")
+        user_online = bool(user_location_raw and str(user_location_raw).lower() != "offline:offline" and str(user_location_raw).lower() != "offline")
 
         shared_friend_names = set()
 
         if user_online:
+            instance_users = []
+            instance_users_count = 0
+            world_id = user_location_raw
+            instance_id = None
+            if user_location_raw not in ('offline', 'private', 'offline:offline') and ":" in user_location_raw:
+                try:
+                    world_id, instance_id = user_location_raw.split(':', 1)
+                except ValueError:
+                    world_id = user_location_raw
+                    instance_id = None
+                if world_id and instance_id and instances_api_instance is not None:
+                    try:
+                        instance = instances_api_instance.get_instance(world_id, instance_id)
+                        if instance is not None:
+                            instance_users = getattr(instance, "users", []) or []
+                            instance_users_count = (
+                                getattr(instance, "user_count", None)
+                                or getattr(instance, "n_users", None)
+                                or 0
+                            )
+                    except NotFoundException:
+                        print(f"Instance lookup failed: {world_id}:{instance_id} not found")
+                        if world_id and (WORLD_NAME_CACHE.get(world_id) != "unknown"):
+                            WORLD_NAME_CACHE[world_id] = "unknown"
+                            _save_world_cache(WORLD_NAME_CACHE)
+                    except Exception as ex:
+                        print(f"Instance lookup error for {world_id}:{instance_id}: {ex}")
+
             for friend_name, friend in online_map.items():
                 friend_location = friend.location or "private"
                 if friend_location == user_location_raw and friend_location not in ('offline', 'private'):
                     shared_friend_names.add(friend_name)
-                    debug_api_call("WorldsApi.get_world_instance", "monitor_loop: confirm shared instance for user location")
-                    world_instance = worlds_api_instance.get_world_instance(world_id=user_location_raw.split(':')[0], instance_id=user_location_raw.split(':')[1])
+                    # debug_api_call("WorldsApi.get_world_instance", "monitor_loop: confirm shared instance for user location")
+                    # world_instance = worlds_api_instance.get_world_instance(world_id=world_id, instance_id=instance_id)
                 elif ':' in friend_location and ':' in user_location_raw and friend_location.split(':')[0] == user_location_raw.split(':')[0]:
                     print(f"similar world: {friend_name} at {friend_location} while user at {user_location_raw}")
         else:
@@ -1267,7 +1306,7 @@ async def monitor_loop(args, api_client, auth_api, friends_api_instance, avatars
                     platform_icon = get_platform_icon(platform_display)
                     lines = [f"✅{event_now} {name} {platform_icon}"]
                     location_str = ""
-                    if location_label and location_type not in {"private", "offline"} and location_label not in {"private", "offline"} :
+                    if location_label and location_type not in {"private", "offline"} and location_label not in {"private", "offline"}:
                         location_str = f" 📌{location_label}"
                         lines.append(location_str)
 
@@ -2101,7 +2140,7 @@ async def main_loop(args):
         print(f"Logged in as: {current_user.display_name}")
         save_cookies(api_client)
 
-        avatars_api_instance, worlds_api_instance, users_api_instance = init_optional_apis(api_client)
+        avatars_api_instance, worlds_api_instance, users_api_instance, instances_api_instance = init_optional_apis(api_client)
         metadata_manager = FriendMetadataManager(users_api_instance, activity_status)
 
         meta_updated, startup_new_friends = metadata_manager.sync_from_current_user(current_user)
@@ -2138,6 +2177,7 @@ async def main_loop(args):
             friends_api_instance,
             avatars_api_instance,
             worlds_api_instance,
+            instances_api_instance,
             metadata_manager,
             activity_status,
             fav_db,

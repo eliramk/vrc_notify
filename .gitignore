@@ -172,7 +172,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
-friend_activity.json
+# friend_activity.json
 user_activity_log.csv
 auth_cookies.json
 

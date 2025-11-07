@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-10-04T13:13:29.787819+00:00",
+  "last_scan_at": "2025-11-07T21:35:16.440866+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -8498,6 +8498,504 @@
         }
       ],
       "features": {}
+    },
+    "avtr_393de129-0251-4d80-8900-5ebc990f3f6a": {
+      "id": "avtr_393de129-0251-4d80-8900-5ebc990f3f6a",
+      "name": "斑霞-Hanka-3P-Sample",
+      "authorId": "usr_e6d6a38f-ba40-43f3-9fa1-b5d53e9bf66e",
+      "authorName": "_YONO_",
+      "description": "オリジナル3Dモデル斑霞の3PColorサンプルです",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_3ee6d890-9df1-4935-81df-0e2fda84418b/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_3ee6d890-9df1-4935-81df-0e2fda84418b/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 15,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-04T23:00:43.527659+00:00",
+      "last_seen_in_favorites_at": "2025-10-04T23:00:43.527659+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-04T23:00:43.527659+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_89fc7356-0ff1-46b3-bb69-1fc412625741": {
+      "id": "avtr_89fc7356-0ff1-46b3-bb69-1fc412625741",
+      "name": "patrick",
+      "authorId": "usr_85676644-c7e9-4829-a0df-15613ebddea9",
+      "authorName": "emashabe",
+      "description": "patrick",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_dafc0059-36ae-430c-9de8-d8121c864b7b/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_dafc0059-36ae-430c-9de8-d8121c864b7b/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-06T05:00:20.890188+00:00",
+      "last_seen_in_favorites_at": "2025-10-06T05:00:20.890188+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-06T05:00:20.890188+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_53a54cb3-c744-4f49-98c1-3c3054c15f8e": {
+      "id": "avtr_53a54cb3-c744-4f49-98c1-3c3054c15f8e",
+      "name": "GodMagi FT",
+      "authorId": "usr_51900ca0-bc5d-4c47-8198-dbf8d5d64e26",
+      "authorName": "ɢʀɨʍʍ",
+      "description": "GodMagi FT",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_5f8263fb-2278-4226-81dc-31b2e2ee249a/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_5f8263fb-2278-4226-81dc-31b2e2ee249a/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-06T05:00:20.890188+00:00",
+      "last_seen_in_favorites_at": "2025-10-06T05:00:20.890188+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-06T05:00:20.890188+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_d8d8ab23-ae55-4e8c-ae19-b8a367ccebde": {
+      "id": "avtr_d8d8ab23-ae55-4e8c-ae19-b8a367ccebde",
+      "name": "KERMIT",
+      "authorId": "usr_f8156c67-039d-4871-98ac-4afbcff10d10",
+      "authorName": "ЯΛYY",
+      "description": "KERMIT",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_710150ce-7717-4824-b618-86cf2e6b2d26/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_710150ce-7717-4824-b618-86cf2e6b2d26/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 8,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-06T05:00:20.890188+00:00",
+      "last_seen_in_favorites_at": "2025-10-06T05:00:20.890188+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-06T05:00:20.890188+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_e5940a9e-8085-474f-88c4-c40fe59c08fe": {
+      "id": "avtr_e5940a9e-8085-474f-88c4-c40fe59c08fe",
+      "name": "DeadPool",
+      "authorId": "usr_1c4e6c38-23a6-4270-87ce-8493e006045a",
+      "authorName": "JealousAshAsh",
+      "description": "DeadPool",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_bfd737fc-27b1-4669-91b2-edaaf662d91d/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_bfd737fc-27b1-4669-91b2-edaaf662d91d/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 12,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-06T05:00:20.890188+00:00",
+      "last_seen_in_favorites_at": "2025-10-06T05:00:20.890188+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-06T05:00:20.890188+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_2a3ec096-e9ec-4518-a6b2-731a32f58263": {
+      "id": "avtr_2a3ec096-e9ec-4518-a6b2-731a32f58263",
+      "name": "Pool Party Itto",
+      "authorId": "usr_054cbb8f-ef81-401b-bc24-750b4efd9c32",
+      "authorName": "Valentine?",
+      "description": "FBXs by LittleLink ＆ Hoyoverse‚ edited by me⁄Pool noodle by The Lair Shop⁄Water gun by 972oTeV‚ ported from Rusty Blower 3D⁄Floaties by Fezz on Sketchfab‚ ported from Steamworkshop⁄Kiddie Poo by Sequor",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_54a0b207-91d5-49d1-90d8-053ccff7e83d/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_54a0b207-91d5-49d1-90d8-053ccff7e83d/2/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 18,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-07T20:28:42.279221+00:00",
+      "last_seen_in_favorites_at": "2025-10-07T20:28:42.279221+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-07T20:28:42.279221+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_30899ff2-f946-49f1-bc28-930a5b44efbd": {
+      "id": "avtr_30899ff2-f946-49f1-bc28-930a5b44efbd",
+      "name": "ǃ c 3D mirror working",
+      "authorId": "usr_fb5d1a7d-b94c-4e3d-9d26-a59384a1b4e7",
+      "authorName": "Hens",
+      "description": "mirror v2",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_353155f2-3e1e-4a37-8431-395f881f6c70/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_353155f2-3e1e-4a37-8431-395f881f6c70/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 9,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-07T20:28:42.279221+00:00",
+      "last_seen_in_favorites_at": "2025-10-07T20:28:42.279221+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-07T20:28:42.279221+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_cbd7a217-ff6d-42db-b7ad-32dfcab5e1d5": {
+      "id": "avtr_cbd7a217-ff6d-42db-b7ad-32dfcab5e1d5",
+      "name": "Ash Public",
+      "authorId": "usr_a199b07c-8129-4f26-93e5-c85fb0bb2c37",
+      "authorName": "New Eden",
+      "description": "NewEdenInt‚ No longer available․",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_09a39e25-7fa0-4828-935d-f15a06f602b7/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_09a39e25-7fa0-4828-935d-f15a06f602b7/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 10,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-12T00:27:31.235685+00:00",
+      "last_seen_in_favorites_at": "2025-10-12T00:27:31.235685+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-12T00:27:31.235685+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_9b0c22d3-3b95-4a5a-a56e-88bcd9c2d0fb": {
+      "id": "avtr_9b0c22d3-3b95-4a5a-a56e-88bcd9c2d0fb",
+      "name": "MANUKA Vampire （ANIMATIONS）",
+      "authorId": "usr_528ae332-20e9-447e-80ee-161bda2f93f0",
+      "authorName": "Briɑr",
+      "description": "MANUKA_Vampire （ANIMATIONS）",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_81755493-57f7-4b66-a4ee-7718250c7951/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_81755493-57f7-4b66-a4ee-7718250c7951/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_Vampire",
+        "content_ Manuka",
+        "content_ Blood",
+        "content_gore",
+        "content_horror",
+        "content_Kawaii Studio",
+        "content_adult",
+        "content_violence",
+        "content_sex",
+        "content_Briar",
+        "content_Layla Kitsune",
+        "content_League of Legend",
+        "content_LOL",
+        "content_Toxic",
+        "content_Animations",
+        "content_Wendigo",
+        "content_Aqua"
+      ],
+      "version": 23,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-25T20:14:33.455748+00:00",
+      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-25T20:14:33.455748+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_4a778522-36dc-4a04-9f12-51f77c40a667": {
+      "id": "avtr_4a778522-36dc-4a04-9f12-51f77c40a667",
+      "name": "Manuka Wendigo",
+      "authorId": "usr_528ae332-20e9-447e-80ee-161bda2f93f0",
+      "authorName": "Briɑr",
+      "description": "© This avatar is protected by copyright․ Unauthorized use‚ duplication‚ or distribution is strictly prohibited and may result in serious legal consequences․",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_fe44d068-b6eb-4b64-ba83-06b03a7b5b3a/4/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_fe44d068-b6eb-4b64-ba83-06b03a7b5b3a/4/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_Vampire",
+        "content_ Manuka",
+        "content_ Blood",
+        "content_gore",
+        "content_horror",
+        "content_Kawaii Studio",
+        "content_adult",
+        "content_violence",
+        "content_sex",
+        "content_Briar",
+        "content_Layla Kitsune",
+        "content_League of Legend",
+        "content_LOL",
+        "content_Toxic",
+        "content_Animations",
+        "content_Wendigo",
+        "content_Aqua"
+      ],
+      "version": 38,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-25T20:14:33.455748+00:00",
+      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-25T20:14:33.455748+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_cc94606b-255e-43c9-9402-60487f0b3439": {
+      "id": "avtr_cc94606b-255e-43c9-9402-60487f0b3439",
+      "name": "V By Layla Kitsune V3",
+      "authorId": "usr_528ae332-20e9-447e-80ee-161bda2f93f0",
+      "authorName": "Briɑr",
+      "description": "V By Layla Kitsune V3",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_7719196e-db02-43b1-95d9-b55d21762f5d/2/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_7719196e-db02-43b1-95d9-b55d21762f5d/2/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_Vampire",
+        "content_ Manuka",
+        "content_ Blood",
+        "content_gore",
+        "content_horror",
+        "content_Kawaii Studio",
+        "content_adult",
+        "content_violence",
+        "content_sex",
+        "content_Briar",
+        "content_Layla Kitsune",
+        "content_League of Legend",
+        "content_LOL",
+        "content_Toxic",
+        "content_Animations",
+        "content_Wendigo",
+        "content_Aqua"
+      ],
+      "version": 9,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-25T20:14:33.455748+00:00",
+      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-25T20:14:33.455748+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_e840cc94-5e29-4f2b-b206-55877542f3bf": {
+      "id": "avtr_e840cc94-5e29-4f2b-b206-55877542f3bf",
+      "name": "Aqua Miko",
+      "authorId": "usr_528ae332-20e9-447e-80ee-161bda2f93f0",
+      "authorName": "Briɑr",
+      "description": "Aqua Miko",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_98e8e36f-78b2-46d5-942f-2fdc74ac1dce/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_98e8e36f-78b2-46d5-942f-2fdc74ac1dce/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_Vampire",
+        "content_ Manuka",
+        "content_ Blood",
+        "content_gore",
+        "content_horror",
+        "content_Kawaii Studio",
+        "content_adult",
+        "content_violence",
+        "content_sex",
+        "content_Briar",
+        "content_Layla Kitsune",
+        "content_League of Legend",
+        "content_LOL",
+        "content_Toxic",
+        "content_Animations",
+        "content_Wendigo",
+        "content_Aqua"
+      ],
+      "version": 11,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-25T20:14:33.455748+00:00",
+      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-25T20:14:33.455748+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_7110a9c2-0da6-41f1-bf56-df8789c65b87": {
+      "id": "avtr_7110a9c2-0da6-41f1-bf56-df8789c65b87",
+      "name": "Nefer Vampire",
+      "authorId": "usr_528ae332-20e9-447e-80ee-161bda2f93f0",
+      "authorName": "Briɑr",
+      "description": "© This avatar is protected by copyright․ Unauthorized use‚ duplication‚ or distribution is strictly prohibited and may result in serious legal consequences․",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_2831e412-dee0-4763-bf4f-0d466d2a4856/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_2831e412-dee0-4763-bf4f-0d466d2a4856/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_Vampire",
+        "content_ Manuka",
+        "content_ Blood",
+        "content_gore",
+        "content_horror",
+        "content_Kawaii Studio",
+        "content_adult",
+        "content_violence",
+        "content_sex",
+        "content_Briar",
+        "content_Layla Kitsune",
+        "content_League of Legend",
+        "content_LOL",
+        "content_Toxic",
+        "content_Animations",
+        "content_Wendigo",
+        "content_Aqua"
+      ],
+      "version": 10,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-25T20:14:33.455748+00:00",
+      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-25T20:14:33.455748+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_f73b81bf-9764-4046-9704-a8f75c0af46d": {
+      "id": "avtr_f73b81bf-9764-4046-9704-a8f75c0af46d",
+      "name": "Bloody Count",
+      "authorId": "usr_c79355be-8f6f-49ca-868d-7bcbd1af99d0",
+      "authorName": "EverestOkami",
+      "description": "Uploaded by EverestOkami‚ Created originally by Lil Miss Pasta",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_49a9dfbb-2775-40e1-b6a0-a3fa20245e67/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_49a9dfbb-2775-40e1-b6a0-a3fa20245e67/1/256",
+      "releaseStatus": "public",
+      "tags": [
+        "content_sex"
+      ],
+      "version": 5,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-10-25T20:14:33.455748+00:00",
+      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-10-25T20:14:33.455748+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_b2d88166-fb0b-420f-a1fc-c8ea38a2a1eb": {
+      "id": "avtr_b2d88166-fb0b-420f-a1fc-c8ea38a2a1eb",
+      "name": "Nisha",
+      "authorId": "usr_9b2e5d6e-25dd-4ee9-9c00-da8528601eb2",
+      "authorName": "Cyber_K1tty",
+      "description": "Nisha",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_b6dd8287-8a89-4ce5-9975-cb3aa143d3c7/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_b6dd8287-8a89-4ce5-9975-cb3aa143d3c7/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-11-07T18:46:05.750241+00:00",
+      "last_seen_in_favorites_at": "2025-11-07T18:46:05.750241+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-11-07T18:46:05.750241+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
     }
-  }
+  },
+  "invalid_avatar_ids": [
+    "avtr_2bcb45e8-b9b4-4589-af41-7c2ba7af058b",
+    "avtr_30a8f1ee-6b36-4c5b-93cf-99cd9acbff78",
+    "avtr_46875f19-ef8e-4154-ba9f-49abcf560f03",
+    "avtr_65e54ced-0d53-4862-a6df-202c10157264",
+    "avtr_6dcef508-bbac-4da8-a378-5a98c4d9cbac",
+    "avtr_a2bc93de-ce4e-42c2-b34b-4e5007d6aa3b",
+    "avtr_fddd90d5-75c4-4d25-b1ff-86f1bd9cc877",
+    "fvrt_04961c6b-489a-46fe-8f9c-69fd21d90a62",
+    "fvrt_0c16899e-46c2-46c6-9b30-e7a66eeeee43",
+    "fvrt_16204673-59bf-4e3e-9a54-b33034f6d542",
+    "fvrt_5a1f2af7-ef25-4443-97ac-c44dbe0c1e58",
+    "fvrt_5b6f2e26-61e0-4680-9e2d-88a0a0e52390",
+    "fvrt_64b77b6d-2ad9-4214-8eef-359ba8a3026f",
+    "fvrt_e133522e-8e26-443d-b7ba-d05157300b6b"
+  ]
 }
