@@ -16,3 +16,12 @@ VRC_FRIEND_NAMES=
 ```
 
 Note that VRC_FRIEND_NAMES should have a comma-delimited list of usernames
+
+# To update avatars
+
+* Download csv from online spreadsheet
+* Save as avatars_import3.csv or something
+* `python3 notify_on_login.py --force-read-avatars`
+* `python3 notify_on_login.py --import-avatars avatars_import4.csv`
+* `python3 notify_on_login.py --export-avatars avatars.csv`
+* Import csv to spreadsheet, replace current sheet

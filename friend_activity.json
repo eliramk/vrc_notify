@@ -1,18 +1,18 @@
 {
     "Horizon2002": {
-        "online": true,
-        "last_update": "2025-11-07 22:26:52",
+        "online": false,
+        "last_update": "2026-01-12 02:52:21",
         "last_platform": "standalonewindows",
-        "last_location": "Point Taken - The Atrium",
-        "status_description": "I don't know \u201aI don't care\u201a\u201a\u201a\u201a",
+        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
+        "status_description": "",
         "last_avatar_name": null,
         "notify": true,
         "meet_history": [],
-        "current_location": "private",
-        "online_since": "2025-11-07 22:26:52",
+        "current_location": "offline",
+        "online_since": null,
         "friend_id": "usr_47ffc488-cc37-4764-9b47-0f8e5998921d",
         "friend_note": "",
-        "note_checked_at": 1762547273.498008
+        "note_checked_at": 1768169175.15424
     },
     "-H-A-T-S-U-N-E": {
         "online": false,
@@ -46,9 +46,9 @@
     },
     "NottSky": {
         "online": false,
-        "last_update": "2025-10-28 15:17:40",
+        "last_update": "2025-12-06 19:37:52",
         "last_platform": "standalonewindows",
-        "last_location": "offline",
+        "last_location": "The Black Cat",
         "status_description": "",
         "notify": true,
         "last_avatar_name": null,
@@ -57,14 +57,14 @@
         "online_since": null,
         "friend_id": "usr_2f65e608-75cd-4fed-9fe6-f56fd7ea1543",
         "friend_note": "D club",
-        "note_checked_at": 1761652144.07136
+        "note_checked_at": 1765022686.4003909
     },
     "zeldaisagirlxx": {
         "online": false,
-        "last_update": "2025-07-18 09:12:29",
-        "last_platform": "(android)",
-        "last_location": "private",
-        "status_description": "crash out",
+        "last_update": "2026-02-14 18:39:04",
+        "last_platform": "Quest",
+        "last_location": "Audience Anarchy",
+        "status_description": "",
         "notify": true,
         "last_avatar_name": null,
         "meet_history": [],
@@ -72,7 +72,7 @@
         "online_since": null,
         "friend_id": "usr_fac0b211-573f-4222-abe0-01e5d4bffecf",
         "friend_note": "",
-        "note_checked_at": null
+        "note_checked_at": 1771086357.7832232
     },
     "LaSouthernBelle": {
         "online": false,
@@ -91,7 +91,7 @@
     },
     "belugax": {
         "online": false,
-        "last_update": "2025-10-28 13:48:01",
+        "last_update": "2026-01-06 08:48:16",
         "last_platform": "Quest",
         "last_location": "YTS 2\u20241 - YouTube Search\u201a Subtitles\u201a Quest",
         "notify": true,
@@ -117,28 +117,52 @@
         "online_since": null,
         "friend_id": "usr_3d18197e-6aa1-41ac-97fd-2a266ad4826d",
         "friend_note": "",
-        "note_checked_at": 1761637407.22336
+        "note_checked_at": 1767677343.714411
     },
     "Jambi33": {
         "online": false,
-        "last_update": "2025-09-27 07:19:00",
+        "last_update": "2025-12-29 04:43:06",
         "last_platform": "standalonewindows",
-        "last_location": "offline",
+        "last_location": "thallow",
         "status_description": "",
         "notify": true,
         "last_avatar_name": null,
-        "meet_history": [],
+        "meet_history": [
+            {
+                "datetime": "2025-12-06 22:27:22",
+                "location": "Furry Karaoke",
+                "location_type": "group",
+                "duration": "00:06:07",
+                "other_friends": []
+            },
+            {
+                "datetime": "2025-12-07 23:41:08",
+                "location": "Karaoke in Sync\u01c3",
+                "location_type": "group",
+                "duration": "00:00:00",
+                "other_friends": []
+            },
+            {
+                "datetime": "2025-12-08 00:42:29",
+                "location": "Karaoke in Sync\u01c3",
+                "location_type": "group",
+                "duration": "00:27:25",
+                "other_friends": [
+                    "CrystalJelly"
+                ]
+            }
+        ],
         "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_a3358720-a4ce-4daf-a39e-c754d1de5fcf",
         "friend_note": "",
-        "note_checked_at": null
+        "note_checked_at": 1766961142.015189
     },
     "NotUrMama5150": {
         "online": false,
-        "last_update": "2025-11-07 23:42:21",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "Quest",
-        "last_location": "Soccer",
+        "last_location": "Cougar Circuit Drift CVS2",
         "status_description": "",
         "last_avatar_name": null,
         "notify": true,
@@ -147,7 +171,7 @@
         "online_since": null,
         "friend_id": "usr_9cb70dcb-2a13-4ce6-a0c3-4b6353379fa0",
         "friend_note": "has kids",
-        "note_checked_at": 1762541350.6980128
+        "note_checked_at": 1771086357.947883
     },
     "Cece.Xx": {
         "online": false,
@@ -166,9 +190,9 @@
     },
     "Celicea": {
         "online": false,
-        "last_update": "2025-11-01 05:59:36",
+        "last_update": "2026-01-11 05:58:10",
         "last_platform": "standalonewindows",
-        "last_location": "Smashed - Party \uff06 Drinking Games Hub",
+        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
         "status_description": "",
         "last_avatar_name": null,
         "notify": true,
@@ -177,7 +201,7 @@
         "online_since": null,
         "friend_id": "usr_d96b0a51-8abd-438a-a1cb-69994de02635",
         "friend_note": "Beach party room exploring",
-        "note_checked_at": 1761960213.477431
+        "note_checked_at": 1768092941.960216
     },
     "yjen": {
         "online": false,
@@ -277,9 +301,9 @@
     },
     "MorganaLaveau": {
         "online": false,
-        "last_update": "2025-10-26 12:22:58",
+        "last_update": "2026-01-13 08:29:06",
         "last_platform": "standalonewindows",
-        "last_location": "1's Optimized Box",
+        "last_location": "Cards Against Humanity",
         "status_description": "",
         "last_avatar_name": null,
         "notify": true,
@@ -288,13 +312,13 @@
         "online_since": null,
         "friend_id": "usr_b9f8478b-8366-4ea3-b908-49969d92b719",
         "friend_note": "",
-        "note_checked_at": 1761453636.685396
+        "note_checked_at": 1768275498.048565
     },
     "\u02da\u029aShroomi\u025e\u02da": {
         "online": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-01-13 05:37:15",
         "last_platform": "Quest",
-        "last_location": "Cloud Loft",
+        "last_location": "Dreams Bus",
         "status_description": "",
         "notify": true,
         "last_avatar_name": null,
@@ -303,11 +327,11 @@
         "online_since": null,
         "friend_id": "usr_669aad0c-1626-4dbf-ab8f-70ea8eebc3df",
         "friend_note": "24\u201a brasilian",
-        "note_checked_at": 1762536020.6430001
+        "note_checked_at": 1768255613.9104042
     },
     "\u0126\u00f8\u0142\u0142\u00f8wsm\u0268\u0142\u0247": {
         "online": false,
-        "last_update": "2025-10-31 12:06:45",
+        "last_update": "2026-01-13 07:04:32",
         "last_platform": "Quest",
         "last_location": "Prison Escape",
         "status_description": "",
@@ -318,13 +342,13 @@
         "online_since": null,
         "friend_id": "usr_94fc3b9c-52d2-421c-b63f-e5f8345b48b5",
         "friend_note": "B\u201a dogs\u201a dragons\u201a horses",
-        "note_checked_at": 1761880016.8284721
+        "note_checked_at": 1768255309.991887
     },
     "Chibug": {
         "online": false,
-        "last_update": "2025-11-01 01:43:46",
+        "last_update": "2025-12-21 00:02:19",
         "last_platform": "standalonewindows",
-        "last_location": "CyberLove Okinawa \u02f8\u02f8\u02f8 \u6c96\u7e04",
+        "last_location": "Furry Hideout",
         "status_description": "",
         "last_avatar_name": null,
         "notify": true,
@@ -409,7 +433,7 @@
         "online_since": null,
         "friend_id": "usr_f1e61782-d3a2-4cd6-a5d3-905b3a838839",
         "friend_note": "avatar swaps",
-        "note_checked_at": 1761944989.322848
+        "note_checked_at": 1766267653.881997
     },
     "Roxx02": {
         "online": false,
@@ -424,11 +448,11 @@
         "online_since": null,
         "friend_id": "usr_0cb84446-3f6d-4d69-a51a-b8c3df12255a",
         "friend_note": "f 17",
-        "note_checked_at": 1761964502.176734
+        "note_checked_at": 1768311076.273532
     },
     "angelicantonio": {
         "online": false,
-        "last_update": "2025-11-01 05:59:36",
+        "last_update": "2026-01-08 20:10:06",
         "last_platform": "standalonewindows",
         "last_location": "private",
         "status_description": "",
@@ -439,7 +463,7 @@
         "online_since": null,
         "friend_id": "usr_e50909b6-aa73-45be-90b8-da9719512889",
         "friend_note": "great singing\u201a fr\u2024 of beluga",
-        "note_checked_at": 1761964987.596823
+        "note_checked_at": 1767895139.260426
     },
     "23_lin": {
         "online": false,
@@ -458,9 +482,9 @@
     },
     "Cat_Aly": {
         "online": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-02-14 15:32:48",
         "last_platform": "standalonewindows",
-        "last_location": "M4L1C3",
+        "last_location": "The Black Cat",
         "status_description": "",
         "last_avatar_name": null,
         "notify": true,
@@ -488,14 +512,14 @@
         "online_since": null,
         "friend_id": "usr_e5c7c2e0-58e8-40b4-8449-c929b7dac800",
         "friend_note": "ireland",
-        "note_checked_at": 1762536020.863828
+        "note_checked_at": 1771065765.4361868
     },
     "Kayleewolfyy": {
         "online": false,
-        "last_update": "2025-10-31 16:06:53",
+        "last_update": "2026-01-13 01:27:26",
         "notify": true,
         "last_platform": "Quest",
-        "last_location": "Would You Rather?",
+        "last_location": "A Simple Fishing World",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [
@@ -567,20 +591,37 @@
                 "other_friends": [
                     "Cat_Aly"
                 ]
+            },
+            {
+                "datetime": "2025-12-09 23:34:05",
+                "location": "Starlight Home",
+                "location_type": "friends+",
+                "duration": "00:00:00",
+                "other_friends": []
+            },
+            {
+                "datetime": "2025-12-10 00:35:25",
+                "location": "Starlight Home",
+                "location_type": "friends+",
+                "duration": "00:23:20",
+                "other_friends": [
+                    "M00NSABER\u10e6",
+                    "z0mb13cat"
+                ]
             }
         ],
         "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_b420ea9a-ec29-4af5-abbb-18be21615493",
         "friend_note": "dutch\u201a friend of cat\u201a tag\u201a brokeup w bf",
-        "note_checked_at": 1761905267.190866
+        "note_checked_at": 1768250174.751657
     },
     "Kade `~`": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 09:29:45",
+        "last_update": "2026-01-12 07:17:12",
         "last_platform": "standalonewindows",
-        "last_location": "offline",
+        "last_location": "Ludo",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -588,15 +629,15 @@
         "online_since": null,
         "friend_id": "usr_12291a2a-3e06-4806-918e-0cc9f5c5f014",
         "friend_note": "",
-        "note_checked_at": 1761889981.850806
+        "note_checked_at": 1768170387.350091
     },
     "Minx_ZA": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "standalonewindows",
-        "last_location": "Just B Club 4\u20240",
-        "status_description": "",
+        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
+        "status_description": "5 dolla sucky sucky",
         "last_avatar_name": null,
         "meet_history": [
             {
@@ -614,33 +655,33 @@
                 "other_friends": []
             }
         ],
-        "current_location": "wrld_3c231334-2f20-442f-924c-a504d9f98543:08016~group(grp_a53437fb-2c46-444a-9ad2-84e8009bb2d1)~groupAccessType(public)~region(us)",
+        "current_location": "private",
         "online_since": null,
         "friend_id": "usr_5355169d-f4bc-4494-aa14-11a5836f65e2",
         "friend_note": "",
-        "note_checked_at": 1762536515.35362
+        "note_checked_at": 1771065760.481614
     },
     "TaiVEVO": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-10-30 15:20:44",
+        "last_update": "2026-02-14 21:28:12",
         "last_platform": "standalonewindows",
-        "last_location": "Salacia's Basement",
-        "status_description": "",
+        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
+        "status_description": "I be profen",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "offline",
+        "current_location": "private",
         "online_since": null,
         "friend_id": "usr_ce569d04-05a1-4f72-80b2-5ec860fe958a",
         "friend_note": "",
-        "note_checked_at": 1761815947.0312479
+        "note_checked_at": 1771065826.9380648
     },
     "D\u03a3L\u01ac\u039b": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-28 18:13:57",
+        "last_update": "2026-01-13 04:17:43",
         "last_platform": "standalonewindows",
-        "last_location": "Popcorn Palace",
+        "last_location": "Dreams Bus",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [
@@ -693,29 +734,29 @@
         "online_since": null,
         "friend_id": "usr_2b033869-580e-404a-bbff-53d26e571eba",
         "friend_note": "",
-        "note_checked_at": 1761667552.5916412
+        "note_checked_at": 1768260385.3207622
     },
     "ChromaCee": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:37:16",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
         "last_location": "private",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "private",
+        "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_2c33af43-aabb-496d-a416-30a7dde07e16",
         "friend_note": "mehabeket",
-        "note_checked_at": 1762536021.062491
+        "note_checked_at": 1771065760.671131
     },
     "l Mistress l": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 18:41:54",
+        "last_update": "2025-12-01 14:15:22",
         "last_platform": "standalonewindows",
-        "last_location": "The Black Cat",
+        "last_location": "Midnight Rooftop",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -723,12 +764,12 @@
         "online_since": null,
         "friend_id": "usr_87732a1f-5d7c-4356-aab3-849c0aede76b",
         "friend_note": "",
-        "note_checked_at": 1761928853.946195
+        "note_checked_at": 1768280735.18028
     },
     "\uff2e\uff4f\uff52\uff4f\u30ce\u30ed": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-01 01:47:50",
+        "last_update": "2026-01-11 06:11:22",
         "last_platform": "standalonewindows",
         "last_location": "Public Toilet",
         "status_description": "",
@@ -738,15 +779,15 @@
         "online_since": null,
         "friend_id": "usr_1b042095-d3df-4ec6-b72a-2faf8b59ee4d",
         "friend_note": "friend of xxdesixx\u201a M religion\u201a alcohol",
-        "note_checked_at": 1761928976.725719
+        "note_checked_at": 1768104074.538752
     },
     "Rhapsody Rose": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-02-14 19:44:26",
         "last_platform": "standalonewindows",
-        "last_location": "Just B Club 4\u20240",
-        "status_description": "working",
+        "last_location": "Sky High Apartment",
+        "status_description": "taking lovense donations \u227a3",
         "last_avatar_name": null,
         "meet_history": [
             {
@@ -782,7 +823,7 @@
         "online_since": null,
         "friend_id": "usr_de7f253b-a9be-4f91-baab-23f4bf8a8a08",
         "friend_note": "",
-        "note_checked_at": 1762536021.243832
+        "note_checked_at": 1771065760.875487
     },
     "sadgirlsarah": {
         "online": false,
@@ -797,14 +838,14 @@
         "online_since": null,
         "friend_id": "usr_6ccab00e-b1e7-4ea6-afe3-e5e10265b64b",
         "friend_note": "",
-        "note_checked_at": 1762536025.086411
+        "note_checked_at": 1768331495.4617758
     },
     "mirenee": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 21:11:23",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
-        "last_location": "Drinking Night",
+        "last_location": "Murder 4",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -812,29 +853,29 @@
         "online_since": null,
         "friend_id": "usr_5b708f49-1aec-490a-ba0b-5412ac10311e",
         "friend_note": "drinking night\u201a 24",
-        "note_checked_at": 1762536088.16402
+        "note_checked_at": 1771065761.050356
     },
     "Roykos_ISR": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 20:56:13",
+        "last_update": "2026-02-14 21:28:12",
         "last_platform": "standalonewindows",
-        "last_location": "A Simple Fishing World",
-        "status_description": "8-Ball is life \u01c3",
+        "last_location": "Endless hug \u2044 \u6c38\u9060\u306e\u62b1\u64c1",
+        "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "private",
+        "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_543b4cdb-0eb5-4f65-9453-f4f24b60743e",
         "friend_note": "",
-        "note_checked_at": 1762541835.357898
+        "note_checked_at": 1771096505.419633
     },
     "senakashiwasaki": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:31:55",
+        "last_update": "2026-01-12 15:33:26",
         "last_platform": "standalonewindows",
-        "last_location": "traveling",
+        "last_location": "A Simple Fishing World",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -842,14 +883,14 @@
         "online_since": null,
         "friend_id": "usr_731efe37-4637-473d-ad59-e0c89703af95",
         "friend_note": "crashed on cuddl",
-        "note_checked_at": 1762547152.096513
+        "note_checked_at": 1768194609.1342971
     },
     "Foxxy\uff04": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 02:18:44",
+        "last_update": "2026-02-14 19:44:26",
         "last_platform": "Quest",
-        "last_location": "Dragons Tempel",
+        "last_location": "Popcorn Palace",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -857,7 +898,7 @@
         "online_since": null,
         "friend_id": "usr_ad7f33dd-026f-4f78-9c10-5a9f81ea9592",
         "friend_note": "",
-        "note_checked_at": 1761841608.183889
+        "note_checked_at": 1771065761.229346
     },
     "\u0f12 Witchcraft \u0f12": {
         "online": false,
@@ -890,39 +931,39 @@
         "note_checked_at": 1761944381.294386
     },
     "ooo_loren_ooo": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
-        "last_platform": "Quest",
-        "last_location": "The Coffee Shop",
-        "status_description": "Sleeping",
+        "last_update": "2026-02-14 12:42:45",
+        "last_platform": "standalonewindows",
+        "last_location": "Popcorn Palace",
+        "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "private",
+        "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_30828eb0-83e1-4859-978f-e3583dd6fe80",
         "friend_note": "friend of chickmook\u201a chronic fatigue",
-        "note_checked_at": 1762536021.438401
+        "note_checked_at": 1768321708.0909069
     },
     "xbluedemonx": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
-        "last_platform": "Quest",
+        "last_update": "2026-01-09 00:28:49",
+        "last_platform": "standalonewindows",
         "last_location": "offline",
-        "status_description": "existing",
+        "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "private",
+        "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_4f582f50-604e-49a3-b588-8fedec651a7f",
         "friend_note": "23\u201a Aly\u201a 2001-09-16",
-        "note_checked_at": 1762551437.7115679
+        "note_checked_at": 1767910542.560172
     },
     "Xavier856": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2025-12-15 03:19:30",
         "last_platform": "standalonewindows",
         "last_location": "Cuddle me\u01c3",
         "status_description": "",
@@ -932,7 +973,7 @@
         "online_since": null,
         "friend_id": "usr_470afa3c-5052-4484-956a-d8ed15261c66",
         "friend_note": "",
-        "note_checked_at": 1762536021.648522
+        "note_checked_at": 1765756614.868341
     },
     "KristineBug": {
         "online": false,
@@ -952,9 +993,9 @@
     "M\u03c3x\u10e7N\u03c3x\u10e7": {
         "online": false,
         "notify": true,
-        "last_update": "2025-10-30 18:24:45",
+        "last_update": "2026-01-13 16:53:47",
         "last_platform": "standalonewindows",
-        "last_location": "A Simple Fishing World",
+        "last_location": "Backrooms\u02f8 Level 1 \uff08Alpha\uff09",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [
@@ -977,7 +1018,7 @@
         "online_since": null,
         "friend_id": "usr_911602e1-7cfd-493d-aaae-11bba4260089",
         "friend_note": "waterpark 202504 rooftop 202509\u201a teaches nurses",
-        "note_checked_at": 1761835278.7289941
+        "note_checked_at": 1768316028.948433
     },
     "\u0f12FwGhxst\u0f12": {
         "online": false,
@@ -1010,39 +1051,39 @@
         "note_checked_at": null
     },
     "Solid_Scythe10": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-01-03 06:19:42",
         "last_platform": "standalonewindows",
-        "last_location": "Moonlit Lodge",
-        "status_description": "Dumb puppy\u201a pet me\u01c3 High asf~",
-        "last_avatar_name": null,
-        "meet_history": [],
-        "current_location": "wrld_a5a668dc-6147-4b23-8619-2ed6979f9928:30520~group(grp_c9874924-68d6-4b3f-9b44-49272cc9c35e)~groupAccessType(plus)~ageGate~region(us)",
-        "online_since": null,
-        "friend_id": "usr_465e5e13-8385-44e9-af8c-98c651dbb85c",
-        "friend_note": "",
-        "note_checked_at": 1762542380.83599
-    },
-    "binniesplushy": {
-        "online": true,
-        "notify": false,
-        "last_update": "2025-11-07 19:20:26",
-        "last_platform": "standalonewindows",
-        "last_location": "offline",
+        "last_location": "The Sauna",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "private",
+        "current_location": "offline",
+        "online_since": null,
+        "friend_id": "usr_465e5e13-8385-44e9-af8c-98c651dbb85c",
+        "friend_note": "",
+        "note_checked_at": 1767399371.502367
+    },
+    "binniesplushy": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-13 11:27:42",
+        "last_platform": "standalonewindows",
+        "last_location": "Just B Club 4\u20240",
+        "status_description": "",
+        "last_avatar_name": null,
+        "meet_history": [],
+        "current_location": "offline",
         "online_since": null,
         "friend_id": "usr_84edeec0-e695-4eea-90b0-c735cd0fdece",
         "friend_note": "half turkish",
-        "note_checked_at": 1762536088.459141
+        "note_checked_at": 1768296161.069717
     },
     "\u0f3a \u0105\u0196\u10e7\u0199\u0131\u0196\u0196\u0105\u0267 \u0f3b": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 21:10:22",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "standalonewindows",
         "last_location": "offline",
         "status_description": "1314xxx0",
@@ -1052,7 +1093,7 @@
         "online_since": null,
         "friend_id": "usr_165118c1-c709-46bb-a1bc-6ab4a476e03b",
         "friend_note": "M\u201a french?",
-        "note_checked_at": 1762536021.849225
+        "note_checked_at": 1771076030.448638
     },
     "\u0158\u00d6\u1e62\u0112\u0181\u00dc\u0145\u0143\u0176": {
         "online": false,
@@ -1077,12 +1118,12 @@
         "online_since": null,
         "friend_id": "usr_fbbb1478-411d-4fc4-ae60-a3d76b6bda65",
         "friend_note": "M\u201a korn avatar world\u201a karaoke",
-        "note_checked_at": 1762536025.270359
+        "note_checked_at": 1771065763.637046
     },
     "bxr_gabbie": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 20:47:07",
+        "last_update": "2025-12-23 18:15:45",
         "last_platform": "Quest",
         "last_location": "Cuddle me\u01c3",
         "status_description": "",
@@ -1092,42 +1133,42 @@
         "online_since": null,
         "friend_id": "usr_2e6550b7-a74a-48e4-9a65-726d1c4ed719",
         "friend_note": "kid\u201a lithuania",
-        "note_checked_at": 1762536088.644874
+        "note_checked_at": 1768057603.383928
     },
     "\u02da\u029a puppidove \u025e\u02da": {
-        "online": true,
-        "notify": false,
-        "last_update": "2025-11-07 23:36:16",
-        "last_platform": "Quest",
-        "last_location": "Drinking Night",
-        "status_description": "Tweaking",
-        "last_avatar_name": null,
-        "meet_history": [],
-        "current_location": "wrld_4a65ba53-d8df-40a7-b67d-30c63bff0e95:03477~group(grp_c7cde9ab-825b-488c-a091-e3473f73da6c)~groupAccessType(public)~ageGate~region(us)",
-        "online_since": null,
-        "friend_id": "usr_3b6d4ca9-a4bc-4326-8701-e17122023493",
-        "friend_note": "Rude",
-        "note_checked_at": 1762551437.8886359
-    },
-    "crytopic": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 03:38:16",
+        "last_update": "2025-11-30 04:23:06",
         "last_platform": "Quest",
-        "last_location": "offline",
+        "last_location": "VRCTris\u01c3 \uff08Tetris\uff09",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "current_location": "offline",
         "online_since": null,
+        "friend_id": "usr_3b6d4ca9-a4bc-4326-8701-e17122023493",
+        "friend_note": "Rude",
+        "note_checked_at": 1768260510.300286
+    },
+    "crytopic": {
+        "online": true,
+        "notify": false,
+        "last_update": "2026-02-14 18:24:55",
+        "last_platform": "standalonewindows",
+        "last_location": "VHS Store",
+        "status_description": "Beware my husband barks \u227a3",
+        "last_avatar_name": null,
+        "meet_history": [],
+        "current_location": "private",
+        "online_since": null,
         "friend_id": "usr_d536d132-3148-47ea-8d7c-daf2c49fda29",
         "friend_note": "",
-        "note_checked_at": 1761864972.952371
+        "note_checked_at": 1771086358.165754
     },
     "\u3010\uff22\uff21\uff39\uff22\uff25\uff21\uff32\u3011": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-01 15:03:40",
         "last_platform": "standalonewindows",
         "last_location": "Popcorn Palace",
         "status_description": "",
@@ -1137,15 +1178,15 @@
         "online_since": null,
         "friend_id": "usr_57bd4538-7962-4fc1-89de-2f7c69291d29",
         "friend_note": "B\u201a promised world hop",
-        "note_checked_at": 1762536022.4233332
+        "note_checked_at": 1767247194.959404
     },
     "Piano Duuuude": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-10-30 11:04:57",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "standalonewindows",
-        "last_location": "Just B Club 4\u20240",
-        "status_description": "",
+        "last_location": "The Black Cat",
+        "status_description": "Check out my YT\u02f8 Piano Duuuude",
         "last_avatar_name": null,
         "meet_history": [
             {
@@ -1158,18 +1199,18 @@
                 ]
             }
         ],
-        "current_location": "offline",
+        "current_location": "wrld_4cf554b4-430c-4f8f-b53e-1f294eed230b:55186~group(grp_73821299-38ed-4a14-b0c6-8f7acd1fc290)~groupAccessType(public)~ageGate~region(us)",
         "online_since": null,
         "friend_id": "usr_87387794-8110-4751-97e4-76dfbb2192dd",
         "friend_note": "piano",
-        "note_checked_at": 1761809900.913291
+        "note_checked_at": 1771077119.636854
     },
     "Sinductiv": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2025-11-15 10:57:06",
         "last_platform": "Quest",
-        "last_location": "Cyber Bar",
+        "last_location": "The Midnight Bar",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -1177,12 +1218,12 @@
         "online_since": null,
         "friend_id": "usr_28fe0cc0-5c82-4d98-b8da-07bfe062fe88",
         "friend_note": "M friend of dollescentvamp",
-        "note_checked_at": 1762537486.129947
+        "note_checked_at": 1771065763.986272
     },
     "xxdesixx": {
         "online": false,
         "notify": true,
-        "last_update": "2025-10-31 20:11:32",
+        "last_update": "2025-12-02 21:00:58",
         "last_platform": "standalonewindows",
         "last_location": "The Midnight Bar",
         "status_description": "",
@@ -1263,30 +1304,30 @@
         "online_since": null,
         "friend_id": "usr_228c2eb4-11dd-4c87-a006-a19bbd51c1a4",
         "friend_note": "B\u201a pool\u201a church\u201a 25\u201a bl\u201a kind\u201a age",
-        "note_checked_at": 1761924387.223747
+        "note_checked_at": 1771076273.018013
     },
     "\u2024Tsunade\u2024": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 23:44:24",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "standalonewindows",
-        "last_location": "5ka \u041f\u044f\u0442\u0451\u0440\u043e\u0447\u043a\u0430 Russian",
+        "last_location": "Prismic's Avatar Search",
         "status_description": "\u2024tsunadepastelplushies",
         "last_avatar_name": null,
         "meet_history": [],
-        "current_location": "private",
+        "current_location": "wrld_57514404-7f4e-4aee-a50a-57f55d3084bf:64007~hidden(usr_809d9b81-7ec5-4019-8f2e-246d67c76741)~region(eu)",
         "online_since": null,
         "friend_id": "usr_3f01ec2b-6bd0-4a0a-a4d5-cd3f2e8ec8c6",
         "friend_note": "IL guy\u201a talks a lot\u2024 femboy",
-        "note_checked_at": 1762551438.10087
+        "note_checked_at": 1771086358.342761
     },
     "jaha837": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-11-07 20:47:07",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "standalonewindows",
-        "last_location": "Just B Club 4\u20240",
-        "status_description": "",
+        "last_location": "FISH\u01c3 \uff3bOpen Beta\uff3d",
+        "status_description": "suck my big toe",
         "last_avatar_name": null,
         "meet_history": [
             {
@@ -1318,16 +1359,16 @@
                 ]
             }
         ],
-        "current_location": "offline",
+        "current_location": "wrld_9b56a749-8a71-4843-ba1e-96ec9e422dd4:00338~group(grp_e4eb4901-85c5-4632-ba27-52e9dfacabcd)~groupAccessType(public)~ageGate~region(us)",
         "online_since": null,
         "friend_id": "usr_34a722c0-64aa-4dcd-ac78-903f3a3af094",
         "friend_note": "finland\u201a chronic condition",
-        "note_checked_at": 1762536089.205996
+        "note_checked_at": 1771065761.5772002
     },
     "sTrawbrrys": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2025-11-20 18:56:47",
         "last_platform": "standalonewindows",
         "last_location": "\u3042\u306e\u6642\u3001\u30dc\u30af\u3089\u306f",
         "status_description": "",
@@ -1337,14 +1378,14 @@
         "online_since": null,
         "friend_id": "usr_68d74f67-03f7-4f39-97fd-9d483ec283d6",
         "friend_note": "Monica\u201a rus? rooftop",
-        "note_checked_at": 1762541288.759891
+        "note_checked_at": 1763653342.3633192
     },
     "_just_Ash_": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:45:24",
+        "last_update": "2025-12-30 00:28:23",
         "last_platform": "standalonewindows",
-        "last_location": "Just B Club 4\u20240",
+        "last_location": "The Amber Tower",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [
@@ -1360,12 +1401,12 @@
         "online_since": null,
         "friend_id": "usr_700644e1-b17a-4095-af24-25004083fee6",
         "friend_note": "",
-        "note_checked_at": 1762546728.437649
+        "note_checked_at": 1767043381.157161
     },
     "HEP-": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2025-12-08 02:12:15",
         "last_platform": "standalonewindows",
         "last_location": "offline",
         "status_description": "",
@@ -1375,14 +1416,14 @@
         "online_since": null,
         "friend_id": "usr_27b5628a-7a22-41c9-a653-cfcc2211e69d",
         "friend_note": "photoshoot w mistress",
-        "note_checked_at": 1762536022.6202712
+        "note_checked_at": 1765147412.635596
     },
     "\u300bREECES\u300a": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 08:08:11",
-        "last_platform": "Quest",
-        "last_location": "Drum Hero v0\u202424\u2024x",
+        "last_update": "2026-02-14 12:42:45",
+        "last_platform": "ios",
+        "last_location": "Mez's Avatar World",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -1390,12 +1431,12 @@
         "online_since": null,
         "friend_id": "usr_4018832c-3a6c-4efc-870b-25cafd56418f",
         "friend_note": "black cat\u201a friend of luvtterfly",
-        "note_checked_at": 1761455030.640573
+        "note_checked_at": 1771065761.758881
     },
     "SuchaSoftie": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-03 08:48:38",
+        "last_update": "2026-01-10 17:05:41",
         "last_platform": "standalonewindows",
         "last_location": "offline",
         "status_description": "",
@@ -1405,12 +1446,12 @@
         "online_since": null,
         "friend_id": "usr_ca180a2c-1b11-4d62-9ff4-75a82a95b36c",
         "friend_note": "",
-        "note_checked_at": null
+        "note_checked_at": 1768037372.379287
     },
     "Luvv_Duckyy": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-20 11:26:01",
+        "last_update": "2026-01-12 09:55:09",
         "last_platform": "Quest",
         "last_location": "offline",
         "status_description": "",
@@ -1420,14 +1461,14 @@
         "online_since": null,
         "friend_id": "usr_9e4afe70-f1f9-45a1-9404-d41961d03533",
         "friend_note": "",
-        "note_checked_at": 1760943565.0501928
+        "note_checked_at": 1768195698.997719
     },
     "Nivanie": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-02-14 14:11:19",
         "last_platform": "standalonewindows",
-        "last_location": "offline",
+        "last_location": "After Glow",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -1435,12 +1476,12 @@
         "online_since": null,
         "friend_id": "usr_67aa23d6-e36c-4822-9584-0a580e77e1d7",
         "friend_note": "pool\u201a avatar swap",
-        "note_checked_at": 1762536089.3810601
+        "note_checked_at": 1771065827.110198
     },
     "Azilis MaJiKs": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 12:22:58",
+        "last_update": "2025-12-29 06:12:46",
         "last_platform": "standalonewindows",
         "last_location": "\u3068\u3082\u3042\u304b\u308a - Tomoakari",
         "status_description": "",
@@ -1450,7 +1491,7 @@
         "online_since": null,
         "friend_id": "usr_e01ce4ff-2e6a-46d7-9145-af56115c91b9",
         "friend_note": "nice guy\u201a adult",
-        "note_checked_at": 1761458953.185876
+        "note_checked_at": 1766976249.5189052
     },
     "SgtTackleberry": {
         "online": false,
@@ -1470,9 +1511,9 @@
     "Kashyo": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
-        "last_location": "Cozy Lounge",
+        "last_location": "Drinking Night",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
@@ -1480,37 +1521,37 @@
         "online_since": null,
         "friend_id": "usr_c25e9e4a-eac7-46a4-8b06-df1b297d733e",
         "friend_note": "",
-        "note_checked_at": 1762547637.1201432
+        "note_checked_at": 1771065761.965268
     },
     "BLIZZY11": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 13:51:04",
+        "last_update": "2026-01-11 02:55:41",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Padded Room",
+        "last_location": "Prismic's Avatar Search",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_75073865-3f8e-4e4a-9aa7-f493ddd46e71",
         "friend_note": "",
-        "note_checked_at": 1761815764.64908
+        "note_checked_at": 1768082975.59303
     },
     "Cece\u2024Xx": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 16:06:53",
+        "last_update": "2026-01-12 20:12:22",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Just B Club 4\u20240",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_f4a5cf92-337b-4e8b-af6a-071b0e82e09a",
         "friend_note": "blk cat\u201a jamaican",
-        "note_checked_at": 1761889982.28876
+        "note_checked_at": 1768220036.2879
     },
     "N_e_k_o": {
         "online": false,
@@ -1545,38 +1586,38 @@
     "Your_local_weirdo2028 9eec": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 05:08:57",
+        "last_update": "2026-01-13 07:20:43",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "The Black Cat",
+        "last_location": "1's Optimized Box",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_579f1955-be69-44bb-99e8-79ea83859eec",
         "friend_note": "",
-        "note_checked_at": 1761869987.186817
+        "note_checked_at": 1768260758.327544
     },
     "\uff26\uff52\uff49\uff53\uff4b\uff59\uff24\uff49\uff4e\uff47\uff4f\uff19\uff10\uff19": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 21:09:22",
+        "last_update": "2026-01-12 01:33:51",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "De5t1ny_vr B-Day",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_a60b4a89-64d4-43e2-a1be-1d48525b3c78",
         "friend_note": "karaoke via z",
-        "note_checked_at": 1762541289.0092669
+        "note_checked_at": 1768174250.128619
     },
     "Donnie9000": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-15 21:46:28",
-        "last_platform": "Quest",
+        "last_update": "2025-12-31 08:46:22",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "Just B Club 4\u20240",
         "status_description": "",
@@ -1585,15 +1626,15 @@
         "online_since": null,
         "friend_id": "usr_ee9d3a7f-6e30-4626-b1a7-b6598c4aca24",
         "friend_note": "",
-        "note_checked_at": 1760553625.769449
+        "note_checked_at": 1767158873.31083
     },
     "- golden -": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-13 08:29:06",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Smashed - Party \uff06 Drinking Games Hub",
+        "last_location": "The Sauna",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [
@@ -1608,67 +1649,67 @@
         "online_since": null,
         "friend_id": "usr_97004f5b-2623-4d42-8be0-e72c82b716fa",
         "friend_note": "b\u201a beach party",
-        "note_checked_at": 1762536022.845808
+        "note_checked_at": 1768280734.4280052
     },
     "Siniiq": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 23:46:39",
-        "last_platform": "ios",
+        "last_update": "2026-01-10 08:42:24",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "The Black Cat",
+        "last_location": "VRtebrae",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_8dddd3da-6e60-4a08-869a-68deb30de4ae",
         "friend_note": "",
-        "note_checked_at": 1761510975.152086
+        "note_checked_at": 1768016589.690677
     },
     "TheCrazyOtaku": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-01-12 04:35:07",
         "last_platform": "Quest",
-        "current_location": "private",
-        "last_location": "The Midnight Bar",
-        "status_description": "making drinks",
+        "current_location": "offline",
+        "last_location": "Prismic's Avatar Search",
+        "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_310ebac3-5646-4069-83eb-aa28ae06534d",
         "friend_note": "",
-        "note_checked_at": 1762536211.592503
+        "note_checked_at": 1768174250.306462
     },
     "Dollescentvamp": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 07:53:00",
+        "last_update": "2026-01-13 09:50:39",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "Cosmos - \u30b3\u30b9\u30e2\u30b9\u306b\u5165\u308b",
+        "last_location": "Just B Club 4\u20240",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_dd670444-1200-4c35-8ece-eb8e3754ea64",
         "friend_note": "23? swollowed fly\u201a beach\u201a parquor",
-        "note_checked_at": 1761885030.475222
+        "note_checked_at": 1768280734.612025
     },
     "ThatOminousOwl": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 07:52:00",
+        "last_update": "2026-01-12 07:09:07",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Popcorn Palace",
+        "last_location": "Prompt or Die\u01c3",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_0eba485e-a5fa-400f-93ce-4cba5c7d98af",
         "friend_note": "",
-        "note_checked_at": 1761885030.669384
+        "note_checked_at": 1768189290.7734149
     },
     "SeeStarBrave": {
         "online": false,
@@ -1688,22 +1729,22 @@
     "meowtor": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-22 09:15:24",
+        "last_update": "2026-01-12 07:09:07",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Madness Manor",
+        "last_location": "The Black Cat",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_de3b44d9-8223-4c53-affc-26c4832c70ae",
         "friend_note": "",
-        "note_checked_at": 1761099652.241845
+        "note_checked_at": 1768190079.924591
     },
     "Leathrix": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-12 12:59:27",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -1713,22 +1754,22 @@
         "online_since": null,
         "friend_id": "usr_2e8fe083-026c-4ba4-9f32-9b2bfc476f2c",
         "friend_note": "",
-        "note_checked_at": 1762536023.020422
+        "note_checked_at": 1768210616.819563
     },
     "Kiwi06": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 09:37:19",
-        "last_platform": "standalonewindows",
+        "last_update": "2026-01-13 18:27:26",
+        "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "No Time Two Talk",
+        "last_location": "Karaoke Melody Lounge",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_17ffc41a-60dd-4d97-beb3-63aebd067a2f",
         "friend_note": "karaoke",
-        "note_checked_at": 1761799752.059276
+        "note_checked_at": 1768311076.085767
     },
     "\u0b68\u0b67 S\u0336l\u0336e\u0336e\u0336p\u0336\u0b68\u0b67": {
         "online": false,
@@ -1751,27 +1792,27 @@
         "online_since": null,
         "friend_id": "usr_990fd530-fe0d-4e06-8573-de896b86d301",
         "friend_note": "photoshoot w mistress",
-        "note_checked_at": 1761342692.332354
+        "note_checked_at": 1767935848.244147
     },
     "Kthepro2": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 08:26:54",
+        "last_update": "2026-01-13 12:54:17",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "\u6625\u7a7a\u306e\u4f11\u606f\u5730 -BloomingSky Rest-",
+        "last_location": "Sunset Bar - DVC",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_e8b8ffbb-03b3-4087-97e7-9f146f30e719",
         "friend_note": "met him with knottsky and pinko",
-        "note_checked_at": 1761805129.813684
+        "note_checked_at": 1768265710.708239
     },
     "s0Lo\u2024": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-01 05:59:36",
+        "last_update": "2026-01-13 10:03:08",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -1781,27 +1822,27 @@
         "online_since": null,
         "friend_id": "usr_497ae1f3-f67f-4596-9c91-bbca49489055",
         "friend_note": "",
-        "note_checked_at": 1761965594.3469188
+        "note_checked_at": 1768270725.518912
     },
     "Camelott": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-29 10:03:28",
+        "last_update": "2026-01-12 14:12:54",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Zombie Survival",
+        "last_location": "House Party",
         "status_description": "",
         "last_avatar_name": null,
         "meet_history": [],
         "online_since": null,
         "friend_id": "usr_96e51462-d8d2-4b04-914b-ea4481c4554a",
         "friend_note": "",
-        "note_checked_at": 1761713044.8981938
+        "note_checked_at": 1768184641.287323
     },
     "chickmook": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 21:09:22",
+        "last_update": "2026-01-12 22:35:12",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
@@ -1811,7 +1852,7 @@
         "online_since": null,
         "friend_id": "usr_d604ca48-0428-4971-ad6d-e3bf0e431b3f",
         "friend_note": "il",
-        "note_checked_at": 1762536680.429015
+        "note_checked_at": 1768245767.908711
     },
     "XXx_Nugget_xXX": {
         "online": false,
@@ -1826,27 +1867,27 @@
         "online_since": null,
         "friend_id": "usr_88016046-becd-4de4-a2e1-2473e6561540",
         "friend_note": "",
-        "note_checked_at": 1761805130.4888692
+        "note_checked_at": 1768001550.3685708
     },
     "Luvtterfly": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 18:53:02",
+        "last_update": "2026-01-13 21:10:31",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "\u82b1\u306e\u5c4b\uff08Flower Shop\uff09",
+        "last_location": "TubaGuy and Sakura Ivory's Uma And Hoyo Avi World",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_e3ad54ab-5645-4579-89d4-dc015fc76c7a",
         "friend_note": "black cat\u201a anti israel",
-        "note_checked_at": 1761929280.214297
+        "note_checked_at": 1768327387.8593228
     },
     "~L\u0285\u03c5\u03bdi\u03b1~": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-29 18:20:58",
+        "last_update": "2025-11-11 21:15:42",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "Just B Club 4\u20240",
@@ -1856,12 +1897,12 @@
         "meet_history": [],
         "friend_id": "usr_e34c769f-7425-4c80-800a-5b55014394ea",
         "friend_note": "pool party",
-        "note_checked_at": 1761749114.762933
+        "note_checked_at": 1762881234.097271
     },
     "\u0299\u1d00\u0299\u028f\u1d04\u1d0f\u1d04\u1d0f": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2025-12-16 03:16:17",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -1871,12 +1912,12 @@
         "meet_history": [],
         "friend_id": "usr_790f58e9-0236-4eaa-b4b4-a06fdb1dcb09",
         "friend_note": "",
-        "note_checked_at": 1762536023.209196
+        "note_checked_at": 1767576124.9018729
     },
     "\u2661Katens\u2661": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-01 04:33:59",
+        "last_update": "2026-01-11 21:18:08",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -1886,22 +1927,22 @@
         "meet_history": [],
         "friend_id": "usr_ec2c06d7-2ec4-40eb-a9a7-71bc91eaf3be",
         "friend_note": "trans",
-        "note_checked_at": 1761954289.456198
+        "note_checked_at": 1768144959.342747
     },
     "Palalizerd": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-01-12 01:50:02",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "VR Chess",
+        "last_location": "The Black Cat",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_5d8f24c5-85e6-4d51-b5d7-80ee060079f6",
         "friend_note": "",
-        "note_checked_at": 1762546667.321236
+        "note_checked_at": 1768169175.334452
     },
     "ZoSue18 a570": {
         "online": false,
@@ -1921,17 +1962,17 @@
     "LustfulSuccubus": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 13:50:29",
+        "last_update": "2026-01-07 10:13:27",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "traveling",
+        "last_location": "Drinking Night",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_284a757d-1fbf-4c75-9450-e9f5d4a22fcf",
         "friend_note": "",
-        "note_checked_at": 1761890529.378836
+        "note_checked_at": 1767753192.762828
     },
     "\uff3a\uff55\uff4c\uff41": {
         "online": false,
@@ -1954,7 +1995,7 @@
         ],
         "friend_id": "usr_9019790a-a4ce-457b-9e49-48cbcee48b18",
         "friend_note": "",
-        "note_checked_at": 1762536025.4505138
+        "note_checked_at": 1768321829.227233
     },
     "\u0dc6DoeBoi\u0dc6": {
         "online": false,
@@ -1972,13 +2013,13 @@
         "note_checked_at": 1759627974.3121731
     },
     "Fewiix": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-01-12 04:23:00",
         "last_platform": "standalonewindows",
-        "current_location": "wrld_a0ea27f8-f530-44f9-8461-4c343ddabf17:48926~group(grp_2c0fe8ed-32de-4813-afdc-dc0d279e3206)~groupAccessType(public)~ageGate~region(eu)",
-        "last_location": "Karaoke in Sync\u01c3",
-        "status_description": "licking batteries",
+        "current_location": "offline",
+        "last_location": "Monster slayer V1\u20240",
+        "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [
@@ -1992,27 +2033,27 @@
         ],
         "friend_id": "usr_7a11610f-683d-4d31-9340-059faeb87d8a",
         "friend_note": "world creator",
-        "note_checked_at": 1762551438.309779
+        "note_checked_at": 1768180234.782332
     },
     "Goldie Glocks": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 06:48:09",
+        "last_update": "2026-01-11 07:12:45",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "The Black Cat",
+        "last_location": "TF2's Upward\u01c3",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_07f6f381-4faf-4c4d-a199-f97268c6ff3d",
         "friend_note": "",
-        "note_checked_at": 1761784949.6591208
+        "note_checked_at": 1768103035.366386
     },
     "Excelynne": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:37:24",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "Just B Club 4\u20240",
@@ -2022,13 +2063,13 @@
         "meet_history": [],
         "friend_id": "usr_9115ced0-5f68-4e76-bb63-1531be5c6bf4",
         "friend_note": "voice activated avatar",
-        "note_checked_at": 1762536089.5584881
+        "note_checked_at": 1771065762.143285
     },
     "B\u00e4mbi": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 12:22:58",
-        "last_platform": "standalonewindows",
+        "last_update": "2026-01-03 06:28:50",
+        "last_platform": "ios",
         "current_location": "offline",
         "last_location": "",
         "status_description": "",
@@ -2037,12 +2078,12 @@
         "meet_history": [],
         "friend_id": "usr_7df0db60-1342-4fc1-9433-247ef6aaac8b",
         "friend_note": "",
-        "note_checked_at": 1761463907.770198
+        "note_checked_at": 1767414288.457328
     },
     "TiloFirewolf": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-12 21:54:40",
+        "last_update": "2025-12-23 05:20:37",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2052,15 +2093,15 @@
         "meet_history": [],
         "friend_id": "usr_f6949a35-d26e-4752-922b-923ef4ed4960",
         "friend_note": "",
-        "note_checked_at": 1760290569.732068
+        "note_checked_at": 1766454721.380523
     },
     "CrystalJelly": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 01:15:50",
+        "last_update": "2026-01-13 02:48:05",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "The Black Cat",
+        "last_location": "Banned From Reality",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -2078,16 +2119,25 @@
                 "location_type": "group",
                 "duration": "00:01:01",
                 "other_friends": []
+            },
+            {
+                "datetime": "2025-12-08 00:42:29",
+                "location": "Karaoke in Sync\u01c3",
+                "location_type": "group",
+                "duration": "00:27:25",
+                "other_friends": [
+                    "Jambi33"
+                ]
             }
         ],
         "friend_id": "usr_ab0242c2-86fe-42dc-85ae-d36edc7d2eed",
         "friend_note": "karaoke via z",
-        "note_checked_at": 1761774431.881498
+        "note_checked_at": 1768255310.3502662
     },
     "Zuzaria": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 12:29:32",
+        "last_update": "2026-01-11 22:58:50",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2097,14 +2147,14 @@
         "meet_history": [],
         "friend_id": "usr_ec872c82-d6fe-49a6-97f6-7cda527a4124",
         "friend_note": "",
-        "note_checked_at": 1761800115.294281
+        "note_checked_at": 1768153773.941409
     },
     "\u039aimiko": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 20:47:07",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
-        "current_location": "private",
+        "current_location": "offline",
         "last_location": "",
         "status_description": "",
         "last_avatar_name": null,
@@ -2112,15 +2162,15 @@
         "meet_history": [],
         "friend_id": "usr_70344d23-69e3-48a1-8f68-3a6da80847dd",
         "friend_note": "",
-        "note_checked_at": 1762536023.394869
+        "note_checked_at": 1768326174.9359128
     },
     "Cyber_K1tty": {
         "online": false,
         "notify": true,
-        "last_update": "2025-11-07 20:47:07",
+        "last_update": "2026-01-13 11:20:38",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Absence",
+        "last_location": "Endless hug \u2044 \u6c38\u9060\u306e\u62b1\u64c1",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -2135,57 +2185,57 @@
         ],
         "friend_id": "usr_9b2e5d6e-25dd-4ee9-9c00-da8528601eb2",
         "friend_note": "IL f",
-        "note_checked_at": 1762536023.576771
+        "note_checked_at": 1768290722.3297338
     },
     "_Ratz_": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-28 04:16:31",
+        "last_update": "2026-01-13 11:20:38",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Avatar Testing Chamber",
+        "last_location": "SlashCo VR",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_919f68fd-1b3f-49af-9a87-48279dee4172",
         "friend_note": "B hottub",
-        "note_checked_at": 1761617549.509506
+        "note_checked_at": 1768290578.532605
     },
     "Nixi_Oodle": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-02 01:26:12",
+        "last_update": "2025-11-18 23:25:53",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "\u4f5c\u8005\u304c\u30e2\u30ce\u6271\u3044\u3055\u308c\u305f\u304f\u3066\u4f5c\u3063\u305f\u30ef\u30fc\u30eb\u30c9",
+        "last_location": "MMD K-POP",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_335fb530-8ff8-436a-a3d3-31d7a76d82b2",
         "friend_note": "M showed me coaster",
-        "note_checked_at": null
+        "note_checked_at": 1763492098.846688
     },
     "Yaaritmonti e5f2": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-10-29 03:54:42",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "Quest",
-        "current_location": "offline",
-        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
+        "current_location": "wrld_15f7034a-b074-4812-bfcb-317eaa2741de:05043~hidden(usr_3cf7448a-286f-4f59-821e-ff0d68819937)~region(eu)",
+        "last_location": "Melon \uff06 Chill Suika Game",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_40e9939e-e78b-4771-9a79-49a69e71e5f2",
         "friend_note": "",
-        "note_checked_at": 1761677503.7261171
+        "note_checked_at": 1771092158.398932
     },
     "LunaBeWeird 21ed": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-13 07:04:32",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
@@ -2195,7 +2245,7 @@
         "meet_history": [],
         "friend_id": "usr_94d7175e-3402-4310-b2c6-3dccd2aa21ed",
         "friend_note": "omagle13",
-        "note_checked_at": 1762536023.7660549
+        "note_checked_at": 1768270725.88204
     },
     "28-Shiloh Raine 8804": {
         "online": false,
@@ -2215,37 +2265,37 @@
     "Ch3rryP": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-11 15:52:00",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Test Pilots",
+        "last_location": "Karaoke in Sync\u01c3",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_e6ec039f-d431-48a6-aa05-3812df8a48d5",
         "friend_note": "karaoke\u201a painting",
-        "note_checked_at": 1762536023.95445
+        "note_checked_at": 1768133782.5153248
     },
     "sadchaotic": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-10-31 08:01:07",
+        "last_update": "2026-02-14 20:09:42",
         "last_platform": "standalonewindows",
-        "current_location": "offline",
-        "last_location": "A Simple Fishing World",
-        "status_description": "",
+        "current_location": "private",
+        "last_location": "1's Optimized Box",
+        "status_description": "come join \u227a3",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_405499b6-b39f-4ff8-8688-ba63d2f7a6d1",
         "friend_note": "",
-        "note_checked_at": 1761874760.3741891
+        "note_checked_at": 1771065827.270762
     },
     "Momiji \u7d05\u8449": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-27 15:20:06",
+        "last_update": "2026-01-06 20:06:40",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2255,15 +2305,15 @@
         "meet_history": [],
         "friend_id": "usr_4597519e-49de-4a66-bc49-2a11d11ce9f6",
         "friend_note": "",
-        "note_checked_at": 1761566679.3029902
+        "note_checked_at": 1767708855.059424
     },
     "Soul_Snatcher_": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 03:38:16",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Just B Club 4\u20240",
+        "last_location": "VR Poker",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -2280,16 +2330,16 @@
         ],
         "friend_id": "usr_7fe89c35-0f4f-4c4f-9757-25293c8e29f0",
         "friend_note": "",
-        "note_checked_at": 1761840637.2483451
+        "note_checked_at": 1771065762.5045571
     },
     "Madre Monstere": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-02-14 15:32:48",
         "last_platform": "standalonewindows",
-        "current_location": "wrld_c16e4dee-d149-4116-adbc-16bc30b664b0:38706~hidden(usr_e57a45cd-e88e-4b5f-bc8d-f9c28aa86647)~region(use)",
-        "last_location": "Idle Home",
-        "status_description": "Spooky",
+        "current_location": "wrld_4a64b637-195f-475c-99bc-9d51e7aa52bc:12660~group(grp_6457a93d-3ba7-4ab4-af44-5a89a32e11af)~groupAccessType(public)~region(us)",
+        "last_location": "Idle Mining",
+        "status_description": "OwO",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [
@@ -2303,27 +2353,27 @@
         ],
         "friend_id": "usr_ca7d1560-c3b4-4948-b564-95b4d3ff77c9",
         "friend_note": "rooftop\u201a friend of moxy\u201a m\u201a 11m health issues",
-        "note_checked_at": 1762536089.7284238
+        "note_checked_at": 1771065762.6826901
     },
     "hammer2_4": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 22:56:37",
+        "last_update": "2026-02-14 21:25:10",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "YTS 2\u20241 - YouTube Search\u201a Subtitles\u201a Quest",
+        "last_location": "The Black Cat",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "meet_history": [],
         "friend_id": "usr_08e66e04-3dd1-413b-8f00-add844356cab",
         "friend_note": "",
-        "note_checked_at": 1761935262.4558039
+        "note_checked_at": 1771091067.823307
     },
     "Squishy0fish": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 14:12:20",
+        "last_update": "2026-01-13 04:17:43",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "Sunset Bar - DVC",
@@ -2333,12 +2383,12 @@
         "meet_history": [],
         "friend_id": "usr_25f337a0-42be-4362-8c18-f43ad6c5a7d3",
         "friend_note": "broken phone\u201a tree world",
-        "note_checked_at": 1761825735.0914319
+        "note_checked_at": 1768260508.9614909
     },
     "__Aria_": {
         "online": false,
         "notify": true,
-        "last_update": "2025-10-26 05:20:02",
+        "last_update": "2026-01-04 23:10:22",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2348,12 +2398,12 @@
         "meet_history": [],
         "friend_id": "usr_eb7c5ef2-01eb-48c2-96ac-4952ec10c080",
         "friend_note": "tree house\u201a pool\u201a red\u201a discord",
-        "note_checked_at": 1761443970.4375172
+        "note_checked_at": 1767545924.5155818
     },
     "Sara Neko": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-25 03:31:37",
+        "last_update": "2025-12-30 03:25:38",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2363,12 +2413,12 @@
         "meet_history": [],
         "friend_id": "usr_600284de-39c9-4e79-ab59-f9c7ac789b36",
         "friend_note": "avatar world\u201a sounds young",
-        "note_checked_at": 1761341783.381151
+        "note_checked_at": 1767057635.614113
     },
     "Peacock Lover": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 08:09:12",
+        "last_update": "2026-01-07 10:13:27",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2378,7 +2428,7 @@
         "friend_id": "usr_0b28e08e-276d-44c5-a223-f4507d2986b0",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761448865.150957
+        "note_checked_at": 1767768292.79925
     },
     "Toothbrush_ d4b7": {
         "online": false,
@@ -2411,12 +2461,12 @@
         "note_checked_at": null
     },
     "Timeholemaster": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:17:46",
+        "last_update": "2026-01-04 23:05:20",
         "last_platform": "standalonewindows",
-        "current_location": "wrld_99bdc4c6-b80c-49f3-aae0-5d67017d8340:00584~group(grp_f7f7fa2b-d43c-4ddf-ac5e-93093a1e5f63)~groupAccessType(plus)~region(eu)",
-        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
+        "current_location": "offline",
+        "last_location": "Cute Avatar Search Opti Fast \uff5c Avi Roulette",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -2455,7 +2505,7 @@
                 ]
             }
         ],
-        "note_checked_at": 1762546667.523626
+        "note_checked_at": 1767546531.444164
     },
     "Zaylan09 9b57": {
         "online": false,
@@ -2473,13 +2523,13 @@
         "note_checked_at": null
     },
     "natalia-08": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-01-13 09:50:39",
         "last_platform": "Quest",
-        "current_location": "private",
-        "last_location": "1's Optimized Box",
-        "status_description": "\u2024",
+        "current_location": "offline",
+        "last_location": "YTS 2\u20241 - YouTube Search\u201a Subtitles\u201a Quest",
+        "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_879b5515-7b99-4ea3-b1c9-831367aa653d",
@@ -2535,27 +2585,27 @@
                 "other_friends": []
             }
         ],
-        "note_checked_at": 1762551438.4771461
+        "note_checked_at": 1768281401.4487958
     },
     "Dragonwolf12345": {
         "online": false,
         "notify": false,
-        "last_update": null,
-        "last_platform": "",
+        "last_update": "2026-01-13 16:52:46",
+        "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Popcorn Palace",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_4b9a82fb-436f-4c2f-b746-b557a260ed28",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1768280734.817039
     },
     "Ernismeister": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 23:46:39",
+        "last_update": "2026-01-11 01:31:05",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "Midnight Rooftop",
@@ -2565,7 +2615,7 @@
         "friend_id": "usr_ca203526-2772-4c90-b846-ce4b20e38032",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761509761.621691
+        "note_checked_at": 1768072883.2543502
     },
     "~ golden ~": {
         "online": false,
@@ -2600,7 +2650,7 @@
     "SleeepyGoblinzZ": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 20:47:07",
+        "last_update": "2026-01-10 01:31:29",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -2610,27 +2660,27 @@
         "friend_id": "usr_fba16c20-f3c4-48a5-bd67-d2e807c7e3ec",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762537364.155303
+        "note_checked_at": 1767996599.795149
     },
     "YoRa\u3053": {
         "online": false,
         "notify": false,
-        "last_update": null,
-        "last_platform": "",
+        "last_update": "2025-12-19 00:06:46",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Arab Alpha",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_a14831ae-1208-4abf-816c-4d06a55485b2",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1766095546.13641
     },
     "TheQueenBzee": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 02:35:23",
+        "last_update": "2025-11-23 07:34:51",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "Popcorn Palace",
@@ -2640,43 +2690,43 @@
         "friend_id": "usr_eb4db589-bfeb-4993-b459-d02aad07afba",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761774735.180736
+        "note_checked_at": 1763871338.804745
     },
     "Seytiri": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-21 23:24:24",
+        "last_update": "2026-02-14 19:44:26",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "The Black Cat",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_d4f41214-6d58-42cf-91a3-8bee62a9e9ec",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761069267.167806
+        "note_checked_at": 1771076030.6242251
     },
     "Yinny da37": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-09 12:24:12",
+        "last_update": "2025-12-29 01:57:55",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "No Time Two Talk",
+        "last_location": "Trash Compactor",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_264206a1-43e4-46a0-bc56-17943db8da37",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1760000944.5234601
+        "note_checked_at": 1766961142.9390929
     },
     "MEOW22 6d11": {
         "online": false,
         "notify": false,
-        "last_update": null,
-        "last_platform": "",
+        "last_update": "2025-12-28 23:15:52",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
         "status_description": "",
@@ -2685,7 +2735,7 @@
         "friend_id": "usr_911ed501-387b-454b-b949-65b43ddd6d11",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1766956188.834269
     },
     "dylan\u2024good\u20241998 77a9": {
         "online": false,
@@ -2705,23 +2755,23 @@
     "HeyImStef": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 23:08:47",
+        "last_update": "2026-01-10 03:03:09",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Club Italia Big Island",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_759a2db2-83c2-4970-9b0b-a4f1a594452e",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761935141.226311
+        "note_checked_at": 1768002641.119746
     },
     "AerialFlame7125": {
         "online": false,
         "notify": false,
-        "last_update": null,
-        "last_platform": "",
+        "last_update": "2025-12-14 01:45:54",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
         "status_description": "",
@@ -2730,37 +2780,37 @@
         "friend_id": "usr_6df815bd-905d-4360-b4ca-3aab0d3f2775",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1765664966.147119
     },
     "CrazyCuban85": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-13 05:48:22",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Popcorn Palace",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_c7163813-13a0-4b12-be16-10bb6cbff0a8",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762536024.133837
+        "note_checked_at": 1768260509.1290638
     },
     "greyishcosmos": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
-        "last_platform": "Quest",
+        "last_update": "2026-01-13 12:47:13",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "MOBIUS",
+        "last_location": "VRCDB Avatar Search \uff0b GPT-4o",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_55613bc3-a772-48fc-a212-636c5ee510cf",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762536024.377585
+        "note_checked_at": 1768300992.392556
     },
     "Entangla": {
         "online": false,
@@ -2780,25 +2830,25 @@
     "Zaheria": {
         "online": false,
         "notify": false,
-        "last_update": null,
-        "last_platform": "",
+        "last_update": "2026-01-04 14:49:09",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Furry Hideout",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_3141ac94-53a9-4050-9235-f505199da8ab",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1767525513.699357
     },
     "Spirit_37": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-01-04 23:05:20",
         "last_platform": "standalonewindows",
-        "current_location": "wrld_99bdc4c6-b80c-49f3-aae0-5d67017d8340:00584~group(grp_f7f7fa2b-d43c-4ddf-ac5e-93093a1e5f63)~groupAccessType(plus)~region(eu)",
-        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
+        "current_location": "offline",
+        "last_location": "Cute Avatar Search Opti Fast \uff5c Avi Roulette",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -2837,14 +2887,14 @@
                 ]
             }
         ],
-        "note_checked_at": 1762546667.7152169
+        "note_checked_at": 1767530284.5547972
     },
     "DarknessOfSeren": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 21:00:16",
+        "last_update": "2026-01-11 23:00:52",
         "last_platform": "Quest",
-        "current_location": "private",
+        "current_location": "offline",
         "last_location": "",
         "status_description": "",
         "last_avatar_name": null,
@@ -2852,13 +2902,13 @@
         "friend_id": "usr_54badb1a-6895-4a94-8843-991056edc9f4",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762542078.1992052
+        "note_checked_at": 1768138733.296292
     },
     "~Bruni~": {
         "online": false,
         "notify": false,
-        "last_update": null,
-        "last_platform": "",
+        "last_update": "2025-12-22 15:24:58",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
         "status_description": "",
@@ -2867,7 +2917,7 @@
         "friend_id": "usr_769ff60a-8ad8-4b1e-b2c5-34f7d8445a28",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1766409353.606088
     },
     "mochi wisp": {
         "online": false,
@@ -2887,8 +2937,8 @@
     "Tetra-Time": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-28 11:00:55",
-        "last_platform": "standalonewindows",
+        "last_update": "2026-01-13 21:16:48",
+        "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
         "status_description": "",
@@ -2897,13 +2947,13 @@
         "friend_id": "usr_936f29b9-2980-412a-b500-5ecccd90bf9e",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761632151.973995
+        "note_checked_at": 1768331495.279357
     },
     "juliuz": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
-        "last_platform": "Quest",
+        "last_update": "2026-01-11 01:31:05",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
         "status_description": "",
@@ -2912,37 +2962,37 @@
         "friend_id": "usr_d78bcc42-f214-4408-8084-a035e2cf06be",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762546970.485161
+        "note_checked_at": 1768077656.392396
     },
     "NovaSB": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-28 00:03:47",
+        "last_update": "2026-01-05 06:14:12",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Popcorn Palace",
+        "last_location": "Club Neon",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_7e682609-3f7d-4a4d-aace-6c37f6aeeb68",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761602507.384423
+        "note_checked_at": 1767576427.880131
     },
     "Lilith_sm": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-26 22:37:15",
+        "last_update": "2026-01-11 01:50:17",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "Pac-man",
+        "last_location": "Dandy's World Lobby",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_91637ced-ca5b-47b2-b862-085cb2d721a1",
         "friend_note": "35 married\u201a sings\u201a draws",
         "meet_history": [],
-        "note_checked_at": 1761509761.8014898
+        "note_checked_at": 1768062737.3159528
     },
     "Harloe123": {
         "online": false,
@@ -3017,12 +3067,12 @@
         "friend_id": "usr_8df4852b-80ff-4b86-abe9-acdaa987daeb",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761836836.201407
+        "note_checked_at": 1771096505.589277
     },
     "~Natali-Chan~": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-13 08:29:06",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
@@ -3032,22 +3082,22 @@
         "friend_id": "usr_e6e7ff32-9a49-417e-8e05-a9fa0ab16e93",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762536024.556761
+        "note_checked_at": 1768270726.048734
     },
     "Kittenpurrr": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-20 15:15:09",
-        "last_platform": "Quest",
+        "last_update": "2026-01-06 07:47:15",
+        "last_platform": "ios",
         "current_location": "offline",
-        "last_location": "Just B Club 4\u20240",
+        "last_location": "YTS 2\u20241 - YouTube Search\u201a Subtitles\u201a Quest",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_99c176b1-45cd-48b9-9756-bedd0359e471",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1760943565.244155
+        "note_checked_at": 1767678193.40561
     },
     "YukiKna": {
         "online": false,
@@ -3065,13 +3115,13 @@
         "note_checked_at": null
     },
     "teylur": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-01-03 04:49:02",
         "last_platform": "standalonewindows",
-        "current_location": "wrld_99bdc4c6-b80c-49f3-aae0-5d67017d8340:00584~group(grp_f7f7fa2b-d43c-4ddf-ac5e-93093a1e5f63)~groupAccessType(plus)~region(eu)",
-        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
-        "status_description": "\u02f8B",
+        "current_location": "offline",
+        "last_location": "Cute Avatar Search Opti Fast \uff5c Avi Roulette",
+        "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_1bf4a17d-b90e-487e-8a8a-e9982cb30c56",
@@ -3109,27 +3159,27 @@
                 ]
             }
         ],
-        "note_checked_at": 1762551438.6575758
+        "note_checked_at": 1767399371.8785431
     },
     "\u02d9\u00b7 \u02daWaffle\u02da \u00b7\u02d9": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-02-14 21:14:03",
         "last_platform": "standalonewindows",
-        "current_location": "offline",
-        "last_location": "",
-        "status_description": "",
+        "current_location": "wrld_bc647b75-363d-40ed-ac02-c576098a1efc:45532~group(grp_edc5452b-5d2e-424f-9366-333a912ed31a)~groupAccessType(public)~region(us)",
+        "last_location": "Idle Cube",
+        "status_description": "Living Peacfully",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_37c3be59-74b0-4f0f-b65c-e069fe0d4471",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762536024.734221
+        "note_checked_at": 1771065827.487683
     },
     "--Stein--": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 12:29:32",
+        "last_update": "2026-02-14 18:24:55",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "Drinking Night",
@@ -3139,12 +3189,12 @@
         "friend_id": "usr_932692d8-08ce-4c0c-8a79-4d717364f562",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761805130.294264
+        "note_checked_at": 1771081103.0188448
     },
     "Zoe Pendragon": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-17 01:53:51",
+        "last_update": "2025-12-22 03:55:18",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
@@ -3154,7 +3204,7 @@
         "friend_id": "usr_5153b715-474e-4aea-bc27-d77ac0b2a379",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1760649608.405874
+        "note_checked_at": 1766363566.763297
     },
     "Pigodya f0ec": {
         "online": false,
@@ -3174,7 +3224,7 @@
     "~MooniEXE~": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-01 06:07:44",
+        "last_update": "2025-12-19 21:05:46",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -3184,22 +3234,22 @@
         "friend_id": "usr_e07b77fa-e424-4f9d-b3c2-1e9b7835d8c2",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761955076.896501
+        "note_checked_at": 1766165950.6276
     },
     "net\uff20nel": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-10-31 16:06:53",
+        "last_update": "2026-02-14 21:30:13",
         "last_platform": "standalonewindows",
-        "current_location": "offline",
-        "last_location": "A Simple Fishing World",
+        "current_location": "private",
+        "last_location": "The Pool Parlor \uff5c 8 Ball Pool",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_3c0f7e22-7b11-4c8a-8f90-07d4e325df47",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1761910764.643063
+        "note_checked_at": 1771065762.852077
     },
     "Astrofisicist 949f": {
         "online": false,
@@ -3219,7 +3269,7 @@
     "_moonah_": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-13 11:48:30",
+        "last_update": "2026-01-13 12:43:10",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
@@ -3229,22 +3279,22 @@
         "friend_id": "usr_1c812c0e-9143-4342-82b4-65b68c4f0156",
         "friend_note": "transparent body\u201a B",
         "meet_history": [],
-        "note_checked_at": 1760341387.977632
+        "note_checked_at": 1768296100.4257522
     },
     "\u0f3aApollo\u0f3b": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-01-13 15:30:14",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "",
+        "last_location": "Prismic's Avatar Search",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_e8b0dbba-564b-47df-b7af-cd8833ae8162",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": 1762536024.9080021
+        "note_checked_at": 1768307214.889876
     },
     "xKarlitax": {
         "online": false,
@@ -3264,17 +3314,17 @@
     "AliJujubes": {
         "online": false,
         "notify": false,
-        "last_update": "2025-09-30 04:25:05",
+        "last_update": "2025-11-08 02:44:39",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Serenity Cove",
+        "last_location": "A Simple Fishing World",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_1fe2c96c-300b-45c1-ba3d-686951e9f020",
         "friend_note": "",
         "meet_history": [],
-        "note_checked_at": null
+        "note_checked_at": 1762556636.3592079
     },
     "Nomad2077": {
         "online": false,
@@ -3316,7 +3366,7 @@
     "ashyyy568": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 06:48:09",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "Cards Against Humanity",
@@ -3357,12 +3407,12 @@
                 ]
             }
         ],
-        "note_checked_at": 1761794921.384702
+        "note_checked_at": 1771065763.025135
     },
     "TheNuggetLord": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-30 11:04:57",
+        "last_update": "2026-01-10 11:28:30",
         "last_platform": "Quest",
         "current_location": "offline",
         "last_location": "",
@@ -3387,7 +3437,7 @@
         "friend_id": "usr_8fcfbf3f-1958-466c-9ad0-7be348b6f935",
         "friend_note": "f fr of desi",
         "meet_history": [],
-        "note_checked_at": 1761949517.870205
+        "note_checked_at": 1768270726.222949
     },
     "apohu": {
         "online": false,
@@ -3435,13 +3485,13 @@
         "note_checked_at": null
     },
     "zun\u0131": {
-        "online": false,
+        "online": true,
         "notify": false,
-        "last_update": "2025-10-30 18:09:35",
-        "last_platform": "ios",
-        "current_location": "offline",
-        "last_location": "",
-        "status_description": "",
+        "last_update": "2026-02-14 21:14:03",
+        "last_platform": "standalonewindows",
+        "current_location": "private",
+        "last_location": "1's Optimized Box",
+        "status_description": "hmu dominant women",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_8df4852b-80ff-4b86-abe9-acdaa987daeb",
@@ -3489,8 +3539,8 @@
     "sugarplum_98": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
-        "last_platform": "Quest",
+        "last_update": "2026-01-13 14:12:46",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "Just B Club 4\u20240",
         "status_description": "",
@@ -3528,15 +3578,15 @@
                 "other_friends": []
             }
         ],
-        "note_checked_at": 1762541289.3722281
+        "note_checked_at": 1768306064.0724401
     },
     "PokeKidLin": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 03:51:27",
-        "last_platform": "ios",
+        "last_update": "2025-12-01 02:35:25",
+        "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Prismic's Avatar Search",
+        "last_location": "Dreamlite Drive-In",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -3555,18 +3605,18 @@
                 ]
             }
         ],
-        "note_checked_at": 1761875245.230571
+        "note_checked_at": 1764544554.737113
     },
     "Minty Moo": {
-        "online": true,
+        "online": false,
         "notify": true,
-        "last_update": "2025-11-07 23:42:21",
+        "last_update": "2025-11-08 00:00:32",
         "last_platform": "standalonewindows",
-        "current_location": "private",
+        "current_location": "offline",
         "last_location": "Osk's Painting World",
-        "status_description": "dancing",
+        "status_description": "",
         "last_avatar_name": null,
-        "online_since": "2025-11-07 23:39:20",
+        "online_since": null,
         "friend_id": "usr_3b2ba175-64c1-492f-8744-ff7f31a6ac90",
         "friend_note": "B\u201a avi swap\u201a",
         "meet_history": [
@@ -3583,7 +3633,7 @@
     "turtlefstpump": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-01 03:13:25",
+        "last_update": "2025-11-19 19:21:33",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "The Black Cat",
@@ -3601,31 +3651,31 @@
                 "other_friends": []
             }
         ],
-        "note_checked_at": 1761949518.0541708
+        "note_checked_at": 1763557437.466492
     },
     "Druid Requiem": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-29 21:17:11",
+        "last_update": "2025-11-08 05:23:44",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "The Midnight Bar",
+        "last_location": "Dont Breath",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_28bbb1cf-2f0e-4bc4-bbbf-5d5eb1e45c41",
         "friend_note": "friend of xxdesixx\u201a craw\u201a boxer\u201a 34",
         "meet_history": [],
-        "note_checked_at": 1761749419.211492
+        "note_checked_at": 1771065764.162865
     },
     "pinkiepunkie": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "Quest",
-        "current_location": "wrld_e896ad87-eab4-4ed2-8952-cbc2fd594504:50715~group(grp_482832b3-d80e-4e52-8191-cfcc2d13be2b)~groupAccessType(public)~ageGate~region(us)",
-        "last_location": "Featherland",
-        "status_description": "18\uff0b rave\u01c3",
+        "current_location": "offline",
+        "last_location": "YTS 2\u20241 - YouTube Search\u201a Subtitles\u201a Quest",
+        "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_459ac864-7cac-471f-a841-e1c894a57c9b",
@@ -3662,9 +3712,43 @@
                 "other_friends": [
                     "_B1NX_"
                 ]
+            },
+            {
+                "datetime": "2025-11-15 22:16:29",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:19:16",
+                "other_friends": [
+                    "LNTSHADXW",
+                    "_B1NX_"
+                ]
+            },
+            {
+                "datetime": "2025-11-15 23:37:05",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:16:15",
+                "other_friends": [
+                    "LNTSHADXW",
+                    "_B1NX_"
+                ]
+            },
+            {
+                "datetime": "2025-11-15 23:57:24",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:04:04",
+                "other_friends": []
+            },
+            {
+                "datetime": "2025-12-07 23:29:59",
+                "location": "Popcorn Palace",
+                "location_type": "friends+",
+                "duration": "00:10:08",
+                "other_friends": []
             }
         ],
-        "note_checked_at": 1762536089.9201128
+        "note_checked_at": 1771065763.2288818
     },
     "Sir_Iceland": {
         "online": false,
@@ -3699,7 +3783,7 @@
     "Sarawr grr": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 19:20:26",
+        "last_update": "2026-02-14 12:42:45",
         "last_platform": "standalonewindows",
         "current_location": "offline",
         "last_location": "",
@@ -3712,18 +3796,18 @@
         "meet_history": []
     },
     "_B1NX_": {
-        "online": true,
+        "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-01-13 21:10:31",
         "last_platform": "Quest",
-        "current_location": "wrld_e896ad87-eab4-4ed2-8952-cbc2fd594504:50715~group(grp_482832b3-d80e-4e52-8191-cfcc2d13be2b)~groupAccessType(public)~ageGate~region(us)",
-        "last_location": "Featherland",
-        "status_description": "shadxw is my gomez \u227a3",
+        "current_location": "offline",
+        "last_location": "Small Live House - VCC",
+        "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_d3fc8ba2-d151-4967-90f9-cc4f67852891",
-        "friend_note": "fr of pinky and soul snatcher\u201a 19f",
-        "note_checked_at": 1762541289.551011,
+        "friend_note": "fr of pinky and soul snatcher\u201a 19f\u2024 gf of lntshadxw",
+        "note_checked_at": 1768307032.923164,
         "meet_history": [
             {
                 "datetime": "2025-10-25 23:15:36",
@@ -3733,16 +3817,36 @@
                 "other_friends": [
                     "pinkiepunkie"
                 ]
+            },
+            {
+                "datetime": "2025-11-15 22:24:37",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:11:08",
+                "other_friends": [
+                    "LNTSHADXW",
+                    "pinkiepunkie"
+                ]
+            },
+            {
+                "datetime": "2025-11-15 23:37:05",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:19:17",
+                "other_friends": [
+                    "LNTSHADXW",
+                    "pinkiepunkie"
+                ]
             }
         ]
     },
     "Simp4vapes02": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-01 05:59:36",
+        "last_update": "2026-01-13 16:52:46",
         "last_platform": "Quest",
         "current_location": "offline",
-        "last_location": "YTS 2\u20241 - YouTube Search\u201a Subtitles\u201a Quest",
+        "last_location": "Popcorn Palace",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -3754,11 +3858,11 @@
     "\u300a\u300aR0\u00a74\u0181\u00dcNN\u0176\u300b\u300b": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 20:47:07",
+        "last_update": "2026-02-14 19:44:26",
         "last_platform": "Quest",
         "current_location": "private",
         "last_location": "Popcorn Palace",
-        "status_description": "Living life",
+        "status_description": "I'll get better soon\u2024",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_fbbb1478-411d-4fc4-ae60-a3d76b6bda65",
@@ -3769,10 +3873,10 @@
     "\u1d22\u1d1c\u029f\u1d00\u00a9": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 23:36:16",
+        "last_update": "2026-01-13 21:10:31",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Just B Club 4\u20240",
+        "last_location": "Adopt A Furry \u01c3",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
@@ -3784,16 +3888,16 @@
     "-_-N\u00eb\u00f8-_-": {
         "online": true,
         "notify": false,
-        "last_update": "2025-11-07 21:04:19",
+        "last_update": "2026-02-14 18:24:55",
         "last_platform": "standalonewindows",
-        "current_location": "wrld_94bfb85e-e75b-4810-96b6-84ed0ad7003e:91338~group(grp_b022729f-7c1e-47e2-8359-d3b7732c8dee)~groupAccessType(public)~region(us)",
-        "last_location": "Drink N Drive Fully Optimized",
+        "current_location": "wrld_3c231334-2f20-442f-924c-a504d9f98543:93470~group(grp_b022729f-7c1e-47e2-8359-d3b7732c8dee)~groupAccessType(public)~region(us)",
+        "last_location": "Just B Club 4\u20240",
         "status_description": "Content Creating God",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_4a312307-da2d-49cb-8e18-dbff26d497f9",
         "friend_note": "fr of jaha\u201a M B vip jungle",
-        "note_checked_at": 1762536025.6540139,
+        "note_checked_at": 1771065763.8212,
         "meet_history": [
             {
                 "datetime": "2025-10-27 21:06:24",
@@ -3807,31 +3911,410 @@
     "\u0f12 H E X X E D \u0f12": {
         "online": false,
         "notify": false,
-        "last_update": "2025-10-31 06:29:28",
+        "last_update": "2025-11-11 09:03:36",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "'Among Us' game",
+        "last_location": "Midnight Rooftop",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_58b37fa8-13f4-4a1c-a482-a7525363be86",
         "friend_note": "rooftop f ny photographer\u201a hexx\u2024x \u201a 25",
-        "note_checked_at": 1761860747.209745,
+        "note_checked_at": 1762840945.128907,
         "meet_history": []
     },
     "Doobys": {
         "online": false,
         "notify": false,
-        "last_update": "2025-11-07 22:16:44",
+        "last_update": "2026-02-14 19:44:26",
         "last_platform": "standalonewindows",
         "current_location": "offline",
-        "last_location": "Just B Club 4\u20240",
+        "last_location": "Games n Frames",
         "status_description": "",
         "last_avatar_name": null,
         "online_since": null,
         "friend_id": "usr_c81d695a-3529-47ab-aef8-647a7334dd2b",
         "friend_note": "B f drinks",
-        "note_checked_at": 1762536027.309982,
+        "note_checked_at": 1771065827.7383811,
+        "meet_history": []
+    },
+    "\u00b0Millie\u00b0\uff61\uff9f": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-13 07:04:32",
+        "last_platform": "standalonewindows",
+        "current_location": "offline",
+        "last_location": "Popcorn Palace",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_8fcfbf3f-1958-466c-9ad0-7be348b6f935",
+        "friend_note": "f fr of desi",
+        "note_checked_at": 1762556574.687187,
+        "meet_history": [
+            {
+                "datetime": "2025-12-07 23:23:54",
+                "location": "Just B Club 4\u20240",
+                "location_type": "group",
+                "duration": "00:05:04",
+                "other_friends": []
+            }
+        ]
+    },
+    "Denahii": {
+        "online": true,
+        "notify": false,
+        "last_update": "2026-02-14 19:44:26",
+        "last_platform": "ios",
+        "current_location": "wrld_b92b44e1-bd57-4100-9d49-c6eaee90c7de:35283~hidden(usr_425b5037-b83a-439c-b816-fe874004a625)~region(us)",
+        "last_location": "Glimmer Glade",
+        "status_description": "zzzzz",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_425b5037-b83a-439c-b816-fe874004a625",
+        "friend_note": "",
+        "note_checked_at": 1771065827.9416242,
+        "meet_history": []
+    },
+    "ASinfulWoman": {
+        "online": false,
+        "notify": false,
+        "last_update": "2025-12-10 10:27:33",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "Drinking Night",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_284a757d-1fbf-4c75-9450-e9f5d4a22fcf",
+        "friend_note": "",
+        "note_checked_at": 1762583099.1481102,
+        "meet_history": []
+    },
+    "Sinbolic": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-02-14 19:49:30",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "Optimized FBT Club",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_28fe0cc0-5c82-4d98-b8da-07bfe062fe88",
+        "friend_note": "M friend of dollescentvamp",
+        "note_checked_at": 1763197027.365706,
+        "meet_history": []
+    },
+    "Groovy Cryptid": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-02-14 12:42:45",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "Audience Anarchy",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_28bbb1cf-2f0e-4bc4-bbbf-5d5eb1e45c41",
+        "friend_note": "friend of xxdesixx\u201a craw\u201a boxer\u201a 34",
+        "note_checked_at": 1763202326.2709062,
+        "meet_history": []
+    },
+    "LNTSHADXW": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-02-14 12:42:45",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "VR Poker",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_198f591f-7489-4dee-8db4-974d1464e6b2",
+        "friend_note": "",
+        "note_checked_at": 1768312166.105192,
+        "meet_history": [
+            {
+                "datetime": "2025-11-15 22:35:45",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:00:00",
+                "other_friends": [
+                    "_B1NX_",
+                    "pinkiepunkie"
+                ]
+            },
+            {
+                "datetime": "2025-11-15 23:37:05",
+                "location": "Cliffside Universe Bar",
+                "location_type": "group",
+                "duration": "00:19:17",
+                "other_friends": [
+                    "_B1NX_",
+                    "pinkiepunkie"
+                ]
+            }
+        ]
+    },
+    "\uff2a \uff35 \uff2e \uff29\u00a5": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-09 07:34:36",
+        "last_platform": "standalonewindows",
+        "current_location": "offline",
+        "last_location": "Prismic's Avatar Search",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_990fd530-fe0d-4e06-8573-de896b86d301",
+        "friend_note": "photoshoot w mistress",
+        "note_checked_at": 1764038508.105799,
+        "meet_history": []
+    },
+    "\u029aprincesspuppi\u025e": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-13 07:04:32",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "Prison Escape",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_3b6d4ca9-a4bc-4326-8701-e17122023493",
+        "friend_note": "Rude",
+        "note_checked_at": 1764474467.323127,
+        "meet_history": []
+    },
+    "xxdecayxx": {
+        "online": true,
+        "notify": false,
+        "last_update": "2026-02-14 21:17:06",
+        "last_platform": "standalonewindows",
+        "current_location": "private",
+        "last_location": "Virtual Tabletop RPG Zone",
+        "status_description": "Mew \u02f83",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_228c2eb4-11dd-4c87-a006-a19bbd51c1a4",
+        "friend_note": "B\u201a pool\u201a church\u201a 25\u201a bl\u201a kind\u201a age",
+        "note_checked_at": 1764702059.139178,
+        "meet_history": []
+    },
+    "\u0141\u00e2d\u00ff M\u012fstr\u00ea\u00a7\u00a7": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-13 14:26:54",
+        "last_platform": "standalonewindows",
+        "current_location": "offline",
+        "last_location": "Optimized FBT Club",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_87732a1f-5d7c-4356-aab3-849c0aede76b",
+        "friend_note": "",
+        "note_checked_at": 1764997260.6466508,
+        "meet_history": []
+    },
+    "Froggy_Is_Late6": {
+        "online": false,
+        "notify": false,
+        "last_update": "2025-12-21 11:03:22",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "Popcorn Palace",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_238fbc09-d82a-4b35-ad4d-ad6d914d73b1",
+        "friend_note": "f karaoke\u201a fr of jambi33",
+        "note_checked_at": 1766293610.799259,
+        "meet_history": []
+    },
+    "Tmamma dd57": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-13 07:04:32",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_cccdc36d-1e6c-4f8f-82e9-0adc85e3dd57",
+        "friend_note": "f karaoke with jambi",
+        "note_checked_at": 1768266620.464587,
+        "meet_history": []
+    },
+    "z0mb13cat": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-11 04:28:24",
+        "last_platform": "ios",
+        "current_location": "offline",
+        "last_location": "Just B Club 4\u20240",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_5ac3ae69-a920-4cde-8149-2cdf5037f1f3",
+        "friend_note": "f 21 fr of cataly",
+        "note_checked_at": 1768098262.1862242,
+        "meet_history": [
+            {
+                "datetime": "2025-12-10 00:35:25",
+                "location": "Starlight Home",
+                "location_type": "friends+",
+                "duration": "00:05:05",
+                "other_friends": [
+                    "Kayleewolfyy"
+                ]
+            }
+        ]
+    },
+    "M00NSABER\u10e6": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-05 17:34:35",
+        "last_platform": "standalonewindows",
+        "current_location": "offline",
+        "last_location": "Idle Home",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_85d2c3f0-3b04-4c91-b2c2-c7c4eaffbe97",
+        "friend_note": "m friend of cat aly\u201a kaylee",
+        "note_checked_at": 1767616524.1139321,
+        "meet_history": [
+            {
+                "datetime": "2025-12-10 00:41:31",
+                "location": "Starlight Home",
+                "location_type": "friends+",
+                "duration": "00:17:14",
+                "other_friends": [
+                    "Kayleewolfyy"
+                ]
+            }
+        ]
+    },
+    "Bicci": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-10 22:39:54",
+        "last_platform": "Quest",
+        "current_location": "offline",
+        "last_location": "Cuddle me\u01c3",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_2e6550b7-a74a-48e4-9a65-726d1c4ed719",
+        "friend_note": "kid\u201a lithuania",
+        "note_checked_at": 1766506545.930699,
+        "meet_history": []
+    },
+    "\u01ac\u042fYP\u01acI\u20b5\u04e8\u041f": {
+        "online": false,
+        "notify": false,
+        "last_update": "2025-12-27 06:19:49",
+        "last_platform": "standalonewindows",
+        "current_location": "offline",
+        "last_location": "Midnight Rooftop",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_2b033869-580e-404a-bbff-53d26e571eba",
+        "friend_note": "",
+        "note_checked_at": 1766789792.775054,
+        "meet_history": []
+    },
+    "\u0432\u03b1\u0432\u0443\u0192\u03b1\u03c9\u03b7": {
+        "online": false,
+        "notify": false,
+        "last_update": "2026-01-05 06:10:08",
+        "last_platform": "standalonewindows",
+        "current_location": "offline",
+        "last_location": "",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_790f58e9-0236-4eaa-b4b4-a06fdb1dcb09",
+        "friend_note": "",
+        "note_checked_at": 1766967673.80829,
+        "meet_history": []
+    },
+    "o0o_loren_o0o": {
+        "online": true,
+        "notify": false,
+        "last_update": "2026-02-14 19:44:26",
+        "last_platform": "standalonewindows",
+        "current_location": "wrld_8f5f8ded-0efc-4620-bfef-babf75b2ee26:58956~hidden(usr_30828eb0-83e1-4859-978f-e3583dd6fe80)~region(eu)",
+        "last_location": "Safe and sound",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_30828eb0-83e1-4859-978f-e3583dd6fe80",
+        "friend_note": "friend of chickmook\u201a chronic fatigue",
+        "note_checked_at": 1771065765.601367,
+        "meet_history": []
+    },
+    "BumbleKitty": {
+        "online": false,
+        "notify": false,
+        "last_update": null,
+        "last_platform": "",
+        "current_location": "offline",
+        "last_location": "",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_70344d23-69e3-48a1-8f68-3a6da80847dd",
+        "friend_note": "",
+        "note_checked_at": 1771065765.7685819,
+        "meet_history": []
+    },
+    "SadMomSarah": {
+        "online": false,
+        "notify": false,
+        "last_update": null,
+        "last_platform": "",
+        "current_location": "offline",
+        "last_location": "",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_6ccab00e-b1e7-4ea6-afe3-e5e10265b64b",
+        "friend_note": "",
+        "note_checked_at": 1771065765.927696,
+        "meet_history": []
+    },
+    "Cursed_Shadxw_": {
+        "online": false,
+        "notify": false,
+        "last_update": null,
+        "last_platform": "",
+        "current_location": "offline",
+        "last_location": "",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_198f591f-7489-4dee-8db4-974d1464e6b2",
+        "friend_note": "",
+        "note_checked_at": 1771065766.0967429,
+        "meet_history": []
+    },
+    "\u0f12 \u1d21\u026a\u1d1b\u1d04\u029c\u028f \u0f12": {
+        "online": true,
+        "notify": false,
+        "last_update": "2026-02-14 19:48:29",
+        "last_platform": "Quest",
+        "current_location": "private",
+        "last_location": "",
+        "status_description": "",
+        "last_avatar_name": null,
+        "online_since": null,
+        "friend_id": "usr_7ae5a52c-ed9e-47c2-aefb-c386dc3393d0",
+        "friend_note": "B",
+        "note_checked_at": 1771091310.11498,
         "meet_history": []
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_scan_at": "2025-11-07T21:35:16.440866+00:00",
+  "last_scan_at": "2026-02-14T19:13:03.618905+00:00",
   "avatars": {
     "avtr_4091a88c-5261-4cad-8b67-d5457081521c": {
       "id": "avtr_4091a88c-5261-4cad-8b67-d5457081521c",
@@ -28,7 +28,8 @@
       ],
       "features": {
         "notes": "cat style, basic",
-        "rank": "2"
+        "rank": "2",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_8eb255d4-23bf-4b08-857a-2ee43ae85ab3": {
@@ -56,7 +57,8 @@
         }
       ],
       "features": {
-        "notes": "alien"
+        "notes": "alien",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_81c1df96-10b5-4bd3-be45-9fac9dfa99ec": {
@@ -86,7 +88,8 @@
       "features": {
         "notes": "knife in head",
         "VRCFT": "y",
-        "quest": "y"
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_e6a9d8cd-d7aa-4eda-8ae1-f03ed5417df4": {
@@ -115,7 +118,8 @@
       ],
       "features": {
         "VRCFT": "Y",
-        "notes": "cow theme, amongus, bubble gun, like counter"
+        "notes": "cow theme, amongus, bubble gun, like counter",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_706facc2-d077-48be-9b9b-6134804d2a10": {
@@ -144,7 +148,8 @@
       ],
       "features": {
         "natural": "y",
-        "notes": "Glowsticks"
+        "notes": "Glowsticks",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_993e7013-7fdb-4d0f-9dff-25fd9ef53498": {
@@ -173,7 +178,8 @@
       ],
       "features": {
         "notes": "nice, ft, public",
-        "VRCFT": "y"
+        "VRCFT": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_92829103-5d00-46b4-b896-4fb29f941644": {
@@ -220,19 +226,24 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "notes": "Slime follower, transparent body, bones",
-        "gender": "f"
+        "gender": "f",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_25adacf7-18c1-42a1-865e-03defd30d084": {
@@ -263,7 +274,8 @@
         "notes": "human/furry, self fun, pulldown",
         "gender": "f",
         "natural": "y",
-        "fun": "sps, toy, pp"
+        "fun": "sps, toy, pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_34429dc7-03ff-49aa-a29c-e1fdd1f2e41c": {
@@ -302,7 +314,9 @@
         "fun": "",
         "fly": "",
         "world_drop": "",
-        "notes": "vape"
+        "notes": "vape",
+        "add_date": "2025-08-29",
+        "seek": "myleidy "
       }
     },
     "avtr_58f579ae-220a-4a67-9b91-c98eaf5c4227": {
@@ -333,7 +347,11 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "shark theme",
+        "gender": "f",
+        "quest": "y"
+      }
     },
     "avtr_894c39b4-85c9-4ccf-86f6-460be21b6dbc": {
       "id": "avtr_894c39b4-85c9-4ccf-86f6-460be21b6dbc",
@@ -364,7 +382,8 @@
         "notes": "Crocodile, light",
         "natural": "y",
         "fun": "sps, pp, rockit",
-        "world_drop": "light"
+        "world_drop": "light",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_b4e77439-983f-43c5-b3ba-3ffb21f9ad07": {
@@ -392,7 +411,8 @@
         }
       ],
       "features": {
-        "notes": "mushroom hat; dps; crow"
+        "notes": "mushroom hat; dps; crow",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_83bcdeae-1b64-4f29-bc42-fc3743d789df": {
@@ -424,7 +444,8 @@
       ],
       "features": {
         "notes": "transparent gel",
-        "natural": "y"
+        "natural": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_81762ffc-3013-484f-a324-b29f2dbf9a7c": {
@@ -441,19 +462,24 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "notes": "furry bee, light",
-        "gender": "furry f"
+        "gender": "furry f",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_80d6ac58-4f41-4b5f-9835-5bd7654d6df7": {
@@ -520,7 +546,8 @@
       ],
       "features": {
         "notes": "furry, wing control puppet",
-        "gender": "m furry"
+        "gender": "m furry",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_cf1284af-6c07-45f7-b901-d6a4d7e48960": {
@@ -537,20 +564,25 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "natural": "y",
         "fun": "sps, dil",
-        "notes": "wings, human/furry, transparent body"
+        "notes": "wings, human/furry, transparent body",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_47f87b8c-4e64-4a24-9e62-4469f3af430f": {
@@ -577,7 +609,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple robot",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_b9df9b73-43cb-41dc-85f7-625d07f55724": {
       "id": "avtr_b9df9b73-43cb-41dc-85f7-625d07f55724",
@@ -606,7 +641,8 @@
       "features": {
         "notes": "Golfer throw balls",
         "natural": "y",
-        "fun": "y"
+        "fun": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_cb183db0-5e2e-4d8c-99b9-561352615b7f": {
@@ -639,7 +675,8 @@
       "features": {
         "notes": "simple",
         "natural": "y",
-        "fun": "sps, pp, "
+        "fun": "sps, pp, ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_01a9cf5c-6b47-46d5-ba39-59ee8857c96e": {
@@ -702,7 +739,8 @@
       "features": {
         "notes": "blonde",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_15d5f14d-ebc1-4415-8a1e-d11ad12e2bfe": {
@@ -733,7 +771,8 @@
         "notes": "pretty",
         "natural": "y",
         "fun": "sps",
-        "world_drop": "graves"
+        "world_drop": "graves",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_6191ade7-c00d-4f91-8218-cce250d2362e": {
@@ -766,7 +805,8 @@
         }
       ],
       "features": {
-        "notes": "belly mouth tongue"
+        "notes": "belly mouth tongue",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_af856de4-267a-401a-805a-5b13d8dda4c5": {
@@ -799,7 +839,8 @@
       ],
       "features": {
         "natural": "y",
-        "notes": "Short dress, realistic, nd"
+        "notes": "Short dress, realistic, nd",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_ff18a9f2-00c4-4842-99cb-f4d38794d221": {
@@ -821,20 +862,25 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "notes": "Speech bubble, devil",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_e258ac70-4874-4fa5-8b42-1fbeda8f6241": {
@@ -865,7 +911,8 @@
         "notes": "dancer, markers",
         "rank": "9",
         "natural": "y",
-        "fun": "dps"
+        "fun": "dps",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_7771b51a-0c2f-4bdd-add2-63c3b0c15bc3": {
@@ -896,7 +943,8 @@
         "notes": "chains, ghost pet",
         "gender": "m",
         "natural": "y",
-        "fun": "pp"
+        "fun": "pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_3dd0f99e-5ea7-4ba5-b016-ada788585615": {
@@ -923,7 +971,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "dae speech, music tail",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_b103028a-6497-43da-a87b-6422ab5cff38": {
       "id": "avtr_b103028a-6497-43da-a87b-6422ab5cff38",
@@ -984,7 +1035,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "vending machine ",
+        "quest": "n",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_b6490df4-0bc7-4f8a-b889-4010fa46d1e5": {
       "id": "avtr_b6490df4-0bc7-4f8a-b889-4010fa46d1e5",
@@ -1013,7 +1068,8 @@
       "features": {
         "notes": "suit",
         "gender": "m",
-        "VRCFT": "y"
+        "VRCFT": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_42cc74ae-108c-41c5-86b1-a77e4bd0d12a": {
@@ -1042,7 +1098,9 @@
       ],
       "features": {
         "VRCFT": "Y",
-        "notes": "summer stuff"
+        "notes": "summer stuff",
+        "add_date": "2025-08-29",
+        "seek": "aria"
       }
     },
     "avtr_d93c11dc-cf34-4085-b05a-5e2a30f573d7": {
@@ -1074,7 +1132,8 @@
       ],
       "features": {
         "VRCFT": "Y",
-        "notes": "nud"
+        "notes": "nud",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_6a2e58f6-998e-4837-90d8-da7431e891c1": {
@@ -1105,7 +1164,8 @@
         }
       ],
       "features": {
-        "notes": "need"
+        "notes": "need",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_303fcea0-fd59-4bd2-a711-dcff17da7e8d": {
@@ -1140,7 +1200,8 @@
         "notes": "simple",
         "gender": "m",
         "natural": "y",
-        "fun": "pp"
+        "fun": "pp",
+        "rank": "0"
       }
     },
     "avtr_a6b383e0-3b7e-4b8a-9ade-5abceaaf4eae": {
@@ -1177,7 +1238,8 @@
         "notes": "devil, knife",
         "gender": "m",
         "natural": "y",
-        "fun": "sps, pp"
+        "fun": "sps, pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_ecf2fbdd-c55f-463a-bc7d-5901c82a1bd7": {
@@ -1205,7 +1267,9 @@
         }
       ],
       "features": {
-        "notes": "Rides"
+        "notes": "Rides",
+        "world_drop": "coaster",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_4a2bc830-e5a1-49c0-8364-ac633e878750": {
@@ -1232,7 +1296,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ride",
+        "world_drop": "tower",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_8624b0e5-c65b-4606-ac54-925e8b7953e5": {
       "id": "avtr_8624b0e5-c65b-4606-ac54-925e8b7953e5",
@@ -1258,7 +1326,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "space shuttle",
+        "gender": "m",
+        "world_drop": "shuttle",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_e0295ba0-e4db-4fd6-a663-13a1b518af29": {
       "id": "avtr_e0295ba0-e4db-4fd6-a663-13a1b518af29",
@@ -1288,7 +1361,8 @@
         "notes": "cyber girl",
         "quest": "no",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_71f05a11-6bcc-45aa-a8ab-0fc54cada064": {
@@ -1315,7 +1389,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "baby yoda",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_f08aec9a-38a2-401e-869a-c2f0fe64d80a": {
       "id": "avtr_f08aec9a-38a2-401e-869a-c2f0fe64d80a",
@@ -1343,7 +1420,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "magic lens",
+        "rank": "10",
+        "gender": "m",
+        "add_date": "2025-08-29",
+        "seek": "kuro"
+      }
     },
     "avtr_ad6460f6-95d3-4dd0-9d31-e42b32c368d7": {
       "id": "avtr_ad6460f6-95d3-4dd0-9d31-e42b32c368d7",
@@ -1369,7 +1452,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "magic, card",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_1f1bfddb-b831-4f1d-b1e5-9d70c6b47c34": {
       "id": "avtr_1f1bfddb-b831-4f1d-b1e5-9d70c6b47c34",
@@ -1395,7 +1481,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "crazy world distort ",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_8ef9d925-319d-4af1-9c7b-f4e7fe5a7deb": {
       "id": "avtr_8ef9d925-319d-4af1-9c7b-f4e7fe5a7deb",
@@ -1424,7 +1513,8 @@
       "features": {
         "notes": "wings, mech arm, weapons",
         "natural": "y",
-        "fun": "sps, toy, pp"
+        "fun": "sps, toy, pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_4aa633d5-11d1-4fa5-9b35-5e930d0d19b4": {
@@ -1452,7 +1542,8 @@
         }
       ],
       "features": {
-        "notes": "Cleavage"
+        "notes": "Cleavage",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_48abfa85-d432-425b-b0ba-928a4fb77e66": {
@@ -1487,9 +1578,10 @@
         }
       ],
       "features": {
-        "notes": "lava transparent body ",
+        "notes": "lava transparent body",
         "natural": "y",
-        "fun": "dps"
+        "fun": "dps",
+        "rank": "0"
       }
     },
     "avtr_9268de58-48bb-41b5-b1fb-1b900bce28db": {
@@ -1516,7 +1608,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "seat",
+        "seat": "1",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_9a6a135c-4ccc-4d88-bba1-eb9b84454e7e": {
       "id": "avtr_9a6a135c-4ccc-4d88-bba1-eb9b84454e7e",
@@ -1532,17 +1628,27 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "devil wolf",
+        "gender": "f",
+        "natural": "y",
+        "fun": "sps, pp",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_4233861e-be03-472a-8f77-55b2fc72a16b": {
       "id": "avtr_4233861e-be03-472a-8f77-55b2fc72a16b",
@@ -1604,7 +1710,8 @@
       ],
       "features": {
         "notes": "invisible, marker",
-        "natural": "y"
+        "natural": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_e8632b36-11bb-4301-8e36-732c76c2f003": {
@@ -1634,7 +1741,8 @@
       "features": {
         "notes": "bunny male",
         "gender": "m",
-        "quest": "y"
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_43344ec4-bcf5-4803-8b42-66196ebe73f5": {
@@ -1665,7 +1773,8 @@
         "notes": "stars, music, dances, big gun, light",
         "gender": "furry",
         "fly": "y",
-        "world_drop": "black holes"
+        "world_drop": "black holes",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_276ff635-0dea-4a83-b974-69fc2ded66d0": {
@@ -1695,7 +1804,8 @@
       "features": {
         "gender": "f",
         "world_drop": "castle world",
-        "notes": "castle world drop, many powers"
+        "notes": "castle world drop, many powers",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_8a1696dd-fc8f-4991-a0e0-5914692e20e5": {
@@ -1725,7 +1835,8 @@
       "features": {
         "notes": "goth, hearts, transparent body, sword ",
         "natural": "y",
-        "fun": "dps, pp"
+        "fun": "dps, pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_f93de9df-3993-4819-b401-dc43013b2bca": {
@@ -1752,7 +1863,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "flying, poop",
+        "gender": "pigeon ",
+        "quest": "y",
+        "fly": "y",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_7fc01561-f7e1-4bce-ae4f-fbb28ca6c7ba": {
       "id": "avtr_7fc01561-f7e1-4bce-ae4f-fbb28ca6c7ba",
@@ -1785,7 +1902,8 @@
         "notes": "bunny plushie",
         "VRCFT": "y",
         "natural": "y",
-        "fun": "sps pcs lms pp"
+        "fun": "sps pcs lms pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_a69971b5-7b0b-4ffc-98ce-71feb088eff9": {
@@ -1812,7 +1930,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "dances",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_7c48678c-f5bb-4a5d-b4b2-fa82cb5844f8": {
       "id": "avtr_7c48678c-f5bb-4a5d-b4b2-fa82cb5844f8",
@@ -1838,7 +1959,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "tree",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_01943098-506e-4007-a129-9bb3aecef8d7": {
       "id": "avtr_01943098-506e-4007-a129-9bb3aecef8d7",
@@ -1865,8 +1989,9 @@
         }
       ],
       "features": {
-        "notes": "helicopter, many weapons, air strike",
-        "gender": "f"
+        "notes": "helicopter, many weapons, air strike, zombie",
+        "gender": "f",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_8925a3da-cc80-4d66-974e-f0de45a76fd1": {
@@ -1893,7 +2018,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "dance",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_08064c64-f8fe-4d67-8c89-c3520996cf1b": {
       "id": "avtr_08064c64-f8fe-4d67-8c89-c3520996cf1b",
@@ -1915,20 +2043,25 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "notes": "blk gold",
         "natural": "y",
-        "fun": "sps, pcs, pp"
+        "fun": "sps, pcs, pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_90a912ce-4a6f-4191-9eed-c78bde447490": {
@@ -1955,7 +2088,14 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "flying crow",
+        "gender": "crow",
+        "quest": "n",
+        "fly": "y",
+        "world_drop": "nest",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_723c6987-4a5b-472b-bfa5-9feb249ce8bc": {
       "id": "avtr_723c6987-4a5b-472b-bfa5-9feb249ce8bc",
@@ -1982,7 +2122,9 @@
         }
       ],
       "features": {
-        "notes": "attack"
+        "notes": "attack",
+        "gender": "tiger ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_2ecce6c2-8e27-4d2a-bdff-bbe87a7170f0": {
@@ -2010,7 +2152,8 @@
         }
       ],
       "features": {
-        "notes": "simple, kitty plush, invisible "
+        "notes": "simple, kitty plush, invisible ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_48895ad5-7fe8-4294-a834-ed2641401ead": {
@@ -2042,7 +2185,8 @@
         "rank": "9",
         "gender": "m",
         "natural": "y",
-        "fun": "sps, pp"
+        "fun": "sps, pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_3bf67d65-8734-42f9-8ae4-239569e435b7": {
@@ -2069,7 +2213,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "chimp in dress",
+        "gender": "chimp",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_e90a882d-cbd2-48cd-9840-da1c624cd1b1": {
       "id": "avtr_e90a882d-cbd2-48cd-9840-da1c624cd1b1",
@@ -2095,7 +2243,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_2baf7f8e-ea6f-4ec6-ae42-35d148664cb0": {
       "id": "avtr_2baf7f8e-ea6f-4ec6-ae42-35d148664cb0",
@@ -2126,7 +2277,8 @@
       "features": {
         "notes": "furry",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_cbe13f9b-cdb4-4c2a-aa2b-bf7e0bcc3d00": {
@@ -2155,7 +2307,8 @@
       ],
       "features": {
         "notes": "light sabre",
-        "rank": "7"
+        "rank": "7",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_e47d94c6-6afe-4fbf-b815-61af666bf503": {
@@ -2184,7 +2337,9 @@
       ],
       "features": {
         "world_drop": "mushrooms",
-        "notes": "mushroom hat, veil, world drop"
+        "notes": "mushroom hat, veil, world drop",
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_b4d1cdac-4fc9-4b69-94f9-b2ca4ce6d11e": {
@@ -2212,7 +2367,8 @@
         }
       ],
       "features": {
-        "notes": "transparent, gummy bear pet"
+        "notes": "transparent, gummy bear pet",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_f1075184-fdea-4215-803a-047086430a6e": {
@@ -2240,7 +2396,8 @@
         }
       ],
       "features": {
-        "notes": "stars, simple "
+        "notes": "stars, simple ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_e3fd4ac3-512f-4edd-8037-e47d7dadc842": {
@@ -2279,7 +2436,8 @@
       ],
       "features": {
         "notes": "Bee v1",
-        "world_drop": "snow globe"
+        "world_drop": "snow globe",
+        "rank": "9"
       }
     },
     "avtr_c13b120c-6924-4fb8-acb6-9b88bf60900a": {
@@ -2308,7 +2466,9 @@
       ],
       "features": {
         "world_drop": "Dog house",
-        "notes": "dog house"
+        "notes": "dog house",
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_23898d24-69b7-4abb-82fd-3130f1e15e4e": {
@@ -2402,7 +2562,8 @@
       ],
       "features": {
         "gender": "f",
-        "notes": "basic"
+        "notes": "basic",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_894bee71-0ec9-4e25-b943-737615d76272": {
@@ -2431,7 +2592,8 @@
       ],
       "features": {
         "gender": "f",
-        "notes": "wings, portal"
+        "notes": "wings, portal",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_495b4223-d9be-4865-b9e5-7fb88c98def2": {
@@ -2459,7 +2621,8 @@
         }
       ],
       "features": {
-        "notes": "angel, amongus follower "
+        "notes": "angel, amongus follower ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_3708ce1e-adb5-4c52-8d24-6e54bb23826d": {
@@ -2487,7 +2650,8 @@
         }
       ],
       "features": {
-        "notes": "amongus follower,  simple "
+        "notes": "amongus follower,  simple ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_26cfd857-e56f-4016-a4f7-53983a6feebd": {
@@ -2515,7 +2679,8 @@
         }
       ],
       "features": {
-        "notes": "transparent body, whale pet"
+        "notes": "transparent body, whale pet",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_214d071a-ce2c-4e75-ab5e-064cb17545e5": {
@@ -2544,7 +2709,8 @@
       ],
       "features": {
         "world_drop": "cat bed",
-        "notes": "cat theme"
+        "notes": "cat theme",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_6b3e9056-cd2d-44c4-9269-953348d014a5": {
@@ -2574,7 +2740,8 @@
       "features": {
         "natural": "y",
         "fun": "dps",
-        "notes": "transparent body, hammer"
+        "notes": "transparent body, hammer",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_2e441c8d-9251-4d64-a948-4e4bf89fc21b": {
@@ -2601,7 +2768,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "hacks, light, teleport, fly",
+        "seat": "3",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_01723075-ae15-4091-b9c0-8c700954561a": {
       "id": "avtr_01723075-ae15-4091-b9c0-8c700954561a",
@@ -2630,7 +2801,8 @@
       "features": {
         "natural": "y",
         "fun": "sps",
-        "notes": "good outfits"
+        "notes": "good outfits",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_0ae42e03-5e03-442a-b5f3-20ebe9a42d28": {
@@ -2659,7 +2831,8 @@
       ],
       "features": {
         "VRCFT": "yes",
-        "notes": "ft"
+        "notes": "ft",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_cfe2598e-fb14-412c-a25d-0513ac6130e2": {
@@ -2691,7 +2864,9 @@
         "gender": "m",
         "quest": "no",
         "natural": "y",
-        "fun": "pp"
+        "fun": "pp",
+        "add_date": "2025-08-29",
+        "seek": "kinKLI"
       }
     },
     "avtr_f0645dc8-911e-4f40-abc1-93f9347efe3d": {
@@ -2724,7 +2899,8 @@
       "features": {
         "natural": "y",
         "fun": "sps",
-        "notes": "furry"
+        "notes": "furry",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_fe5810bb-8459-4ec4-9c5a-af5909811a70": {
@@ -2751,7 +2927,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "rc plane",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_398b70bc-a263-4325-9662-8d892a3f4a3a": {
       "id": "avtr_398b70bc-a263-4325-9662-8d892a3f4a3a",
@@ -2780,7 +2959,8 @@
       "features": {
         "gender": "f",
         "world_drop": "sunrise",
-        "notes": "Mermaid"
+        "notes": "Mermaid",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_f9f15ffc-5191-41a3-9e1e-c6fa99080669": {
@@ -2811,7 +2991,15 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "gun, simple",
+        "rank": "4",
+        "gender": "m",
+        "quest": "y",
+        "natural": "y",
+        "fun": "pp",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_3fac8810-f24e-41af-9db4-d022e0119622": {
       "id": "avtr_3fac8810-f24e-41af-9db4-d022e0119622",
@@ -2841,7 +3029,8 @@
         "notes": "towel, megaphone ",
         "VRCFT": "y",
         "natural": "y",
-        "fun": "pcs, sps"
+        "fun": "pcs, sps",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_ac3b8b8f-c26f-49ba-85f4-a16d552e3512": {
@@ -2871,7 +3060,8 @@
       "features": {
         "notes": "adult, sword,",
         "gender": "m",
-        "VRCFT": "y"
+        "VRCFT": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_f0c31540-96eb-404d-b683-77a976c85d39": {
@@ -2900,7 +3090,8 @@
       ],
       "features": {
         "notes": "skateboard",
-        "gender": "m"
+        "gender": "m",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_1227536d-d577-46b6-9db6-329ba84e7676": {
@@ -2931,7 +3122,8 @@
         "notes": "ak47",
         "gender": "m",
         "natural": "y",
-        "fun": "pp"
+        "fun": "pp",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_18c2ddd9-9715-4305-b30b-274fb195fa9b": {
@@ -2960,7 +3152,8 @@
       ],
       "features": {
         "notes": "wolfish",
-        "natural": "y"
+        "natural": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_7e791e50-1a77-4e72-8a0b-22ea97bd281a": {
@@ -2996,7 +3189,8 @@
       "features": {
         "notes": "simple, marker",
         "gender": "m",
-        "fun": "dps"
+        "fun": "dps",
+        "rank": "0"
       }
     },
     "avtr_f726cf54-8f6f-4ade-9b56-9de48536c4da": {
@@ -3028,7 +3222,8 @@
       "features": {
         "notes": "cage",
         "gender": "f",
-        "world_drop": "cage"
+        "world_drop": "cage",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_ac320d1e-d98d-48d9-aa8c-8ffbbcb941d4": {
@@ -3045,19 +3240,25 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "notes": "japanese blond guy",
-        "gender": "m"
+        "gender": "m",
+        "add_date": "2025-08-29",
+        "seek": "Emberlyn no pub"
       }
     },
     "avtr_72ed4e23-a56b-4d4e-b897-838e84d370ce": {
@@ -3085,7 +3286,8 @@
         }
       ],
       "features": {
-        "notes": "basic, among us pet"
+        "notes": "basic, among us pet",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_75bd9281-4ab8-43f6-9f7b-fc723a118e16": {
@@ -3113,7 +3315,8 @@
         }
       ],
       "features": {
-        "notes": "big"
+        "notes": "big",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_28d70384-b381-4bf8-ad50-16563afc5314": {
@@ -3140,7 +3343,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "hacks",
+        "seat": "3",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_fbdb8552-57b0-4091-8d53-4ef1e2a197a7": {
       "id": "avtr_fbdb8552-57b0-4091-8d53-4ef1e2a197a7",
@@ -3166,7 +3373,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent ghost",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_ff162509-579c-4b5e-939a-2dc881beb990": {
       "id": "avtr_ff162509-579c-4b5e-939a-2dc881beb990",
@@ -3198,7 +3408,8 @@
         "gender": "f",
         "natural": "y",
         "fun": "sps, pp, dil",
-        "notes": "pull clothes"
+        "notes": "pull clothes",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_0d32ee45-6ea4-46e3-9381-3e0b46b858ce": {
@@ -3228,7 +3439,9 @@
       "features": {
         "notes": "grown up",
         "gender": "m",
-        "quest": "yes"
+        "quest": "yes",
+        "add_date": "2025-08-29",
+        "seek": "luci is cute <3"
       }
     },
     "avtr_7d8000ef-7716-4ab5-ab87-8ee2fdcb5c98": {
@@ -3261,7 +3474,8 @@
       "features": {
         "natural": "y",
         "fun": "pp",
-        "notes": "cowgirl, fire, clones "
+        "notes": "cowgirl, fire, clones ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_505b9586-721c-46b9-9077-9bd8c5f2c8db": {
@@ -3288,7 +3502,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ride",
+        "quest": "y",
+        "world_drop": "roller coaster",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_79c34204-5c05-4c56-82c7-386d4f045f79": {
       "id": "avtr_79c34204-5c05-4c56-82c7-386d4f045f79",
@@ -3314,7 +3533,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ride",
+        "world_drop": "ride",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_547eabd8-10cc-4407-90ff-cc8757a20890": {
       "id": "avtr_547eabd8-10cc-4407-90ff-cc8757a20890",
@@ -3340,7 +3563,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "teleport",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_2882d4fb-ecf9-4a41-8a07-1b7ccef5a3cd": {
       "id": "avtr_2882d4fb-ecf9-4a41-8a07-1b7ccef5a3cd",
@@ -3372,7 +3598,8 @@
       ],
       "features": {
         "world_drop": "spaceship",
-        "notes": "transparent, world drop"
+        "notes": "transparent, world drop",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_61ce09d6-4e5f-4842-8f63-d552466eb01c": {
@@ -3401,7 +3628,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "neverhood",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_a7951de4-b982-4f44-a51f-37305ccf3cf4": {
       "id": "avtr_a7951de4-b982-4f44-a51f-37305ccf3cf4",
@@ -3435,7 +3665,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "plush with seat",
+        "gender": "dragon",
+        "seat": "1",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_c12fb8c1-f9dd-448f-a633-2b4c5398c992": {
       "id": "avtr_c12fb8c1-f9dd-448f-a633-2b4c5398c992",
@@ -3464,7 +3699,8 @@
         }
       ],
       "features": {
-        "notes": "dragon"
+        "notes": "dragon",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_c5b313cb-4aa4-43b0-b7fc-4d29064cc934": {
@@ -3491,7 +3727,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "devil,  dragon, sword, wings",
+        "rank": "7",
+        "gender": "m",
+        "quest": "y",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_1226bd0f-a742-4a46-9d01-7a35bfabb227": {
       "id": "avtr_1226bd0f-a742-4a46-9d01-7a35bfabb227",
@@ -3523,7 +3765,8 @@
         "natural": "n",
         "fun": "n",
         "notes": "default,  dragon follower",
-        "rank": "9"
+        "rank": "9",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_2ecb5a13-becc-4bb4-b1f2-3e47408341ca": {
@@ -3554,7 +3797,8 @@
         }
       ],
       "features": {
-        "notes": "simple, mouth mouse"
+        "notes": "simple, mouth mouse",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_009dee7e-a435-4119-96e6-45df6b158414": {
@@ -3582,7 +3826,8 @@
         }
       ],
       "features": {
-        "notes": "zelda, parasol"
+        "notes": "zelda, parasol",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_7120fec2-cb38-44c3-8f17-409de200c4d2": {
@@ -3610,7 +3855,8 @@
         }
       ],
       "features": {
-        "notes": "many accessories, telekinesis, dizzy injection"
+        "notes": "many accessories, telekinesis, dizzy injection",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_b4ab0288-b528-46f9-bde3-81b6e657a5a1": {
@@ -3643,7 +3889,10 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cartoon",
+        "rank": "0"
+      }
     },
     "avtr_1f4bde7f-524b-4a0e-a950-3c9b76a2efc9": {
       "id": "avtr_1f4bde7f-524b-4a0e-a950-3c9b76a2efc9",
@@ -3669,7 +3918,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "guns, car, dancers",
+        "rank": "8",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_df58a06b-f8a9-4072-a84a-31c48604dbbc": {
       "id": "avtr_df58a06b-f8a9-4072-a84a-31c48604dbbc",
@@ -3695,7 +3948,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "shader debugs, color filters",
+        "quest": "n",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_012eca37-6ba7-4aeb-9c7e-e5d520245d23": {
       "id": "avtr_012eca37-6ba7-4aeb-9c7e-e5d520245d23",
@@ -3722,7 +3979,8 @@
         }
       ],
       "features": {
-        "notes": "black hole"
+        "notes": "black hole",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_0e158bce-664f-439a-a7c7-19ddcf90e92c": {
@@ -3754,7 +4012,8 @@
       ],
       "features": {
         "fun": "sps",
-        "notes": "standard"
+        "notes": "standard",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_8f7d7a23-d1b9-4e09-9bfb-4a2e20054769": {
@@ -3783,7 +4042,9 @@
       ],
       "features": {
         "notes": "zelda",
-        "rank": "8"
+        "rank": "8",
+        "add_date": "2025-08-29",
+        "seek": "sry"
       }
     },
     "avtr_496cbd6e-09b8-4f78-90fa-e8dd36216fc0": {
@@ -3812,7 +4073,8 @@
       ],
       "features": {
         "notes": "transparent body.",
-        "gender": "f"
+        "gender": "f",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_0527cdf9-b626-4a4e-a3cc-83702d9aa54f": {
@@ -3843,7 +4105,8 @@
       ],
       "features": {
         "notes": "golden toga",
-        "gender": "m"
+        "gender": "m",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_593c5508-22d4-453c-a541-20169751864c": {
@@ -3874,7 +4137,8 @@
         "gender": "m",
         "natural": "y",
         "notes": "male avi",
-        "rank": "9"
+        "rank": "9",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_af95d01b-ea17-41a2-897c-b2d0d08d6ac6": {
@@ -3904,7 +4168,8 @@
       "features": {
         "natural": "y",
         "fun": "y",
-        "notes": "tattoos"
+        "notes": "tattoos",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_d1f51256-ba49-46c2-8b2c-cdc39596eef9": {
@@ -3933,7 +4198,9 @@
       ],
       "features": {
         "world_drop": "globe",
-        "notes": "bee"
+        "notes": "bee",
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_de820487-063e-45b3-85bb-76b1fbf1c93d": {
@@ -3966,7 +4233,8 @@
         "fly": "dash",
         "notes": "map, light, fly dash, teleport",
         "rank": "10",
-        "seat": "1"
+        "seat": "1",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_52ae6ee2-a000-4452-85d6-59f2ee4f129b": {
@@ -3993,7 +4261,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ride",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_9892cb02-b573-4ed7-a29f-c1acdc2ba05e": {
       "id": "avtr_9892cb02-b573-4ed7-a29f-c1acdc2ba05e",
@@ -4019,7 +4290,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "horse with seats",
+        "gender": "horse",
+        "seat": "6",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_8fe585d7-c74c-42e0-a695-8c3ce4c8d1cc": {
       "id": "avtr_8fe585d7-c74c-42e0-a695-8c3ce4c8d1cc",
@@ -4045,7 +4321,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ride",
+        "quest": "n",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_79e0c8b3-4f3e-43e7-bda9-da1fcc79a833": {
       "id": "avtr_79e0c8b3-4f3e-43e7-bda9-da1fcc79a833",
@@ -4071,7 +4351,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "seat",
+        "gender": "fox",
+        "seat": "1",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_85f33fde-00c2-4bd0-946e-6eedf0a8a59f": {
       "id": "avtr_85f33fde-00c2-4bd0-946e-6eedf0a8a59f",
@@ -4097,7 +4382,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "helicopter seats",
+        "fly": "y",
+        "seat": "4",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_38a5b3dd-76fc-4b7c-90ad-07c25df8c063": {
       "id": "avtr_38a5b3dd-76fc-4b7c-90ad-07c25df8c063",
@@ -4124,7 +4414,8 @@
         }
       ],
       "features": {
-        "notes": "simple"
+        "notes": "simple",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_1234d058-793b-4c27-93b4-427603e38d30": {
@@ -4156,7 +4447,8 @@
         }
       ],
       "features": {
-        "notes": "simple, flower theme"
+        "notes": "simple, flower theme",
+        "rank": "0"
       }
     },
     "avtr_a1607059-6787-4262-8452-fb0bcad81c11": {
@@ -4185,7 +4477,8 @@
       ],
       "features": {
         "notes": "spider girl, 6 legs",
-        "gender": "f"
+        "gender": "f",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_2f4a615b-db4a-49c4-ad64-a9ff8cc48b71": {
@@ -4248,7 +4541,9 @@
       "features": {
         "gender": "f",
         "VRCFT": "y",
-        "notes": "ft, light"
+        "notes": "ft, light",
+        "add_date": "2025-08-29",
+        "seek": "marq v2"
       }
     },
     "avtr_46b7ab6c-1ed8-4fd1-87f0-a8ec1bcbd8a5": {
@@ -4308,7 +4603,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "transparent ",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_b5de2d28-e303-49c3-89c6-8c53ee030b73": {
       "id": "avtr_b5de2d28-e303-49c3-89c6-8c53ee030b73",
@@ -4334,7 +4632,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "tonato can",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_ab60df7f-9e57-4da0-9ebd-fb174b132001": {
       "id": "avtr_ab60df7f-9e57-4da0-9ebd-fb174b132001",
@@ -4362,7 +4663,8 @@
       ],
       "features": {
         "notes": "phrases",
-        "gender": "m"
+        "gender": "m",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_32407b48-f8cb-4797-8b3f-266a71781fe0": {
@@ -4389,7 +4691,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "small ",
+        "quest": "y",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_476d1fc5-ec64-4bbd-af74-f72310cbdc33": {
       "id": "avtr_476d1fc5-ec64-4bbd-af74-f72310cbdc33",
@@ -4421,7 +4727,9 @@
         "natural": "n",
         "fun": "n",
         "notes": "marker",
-        "want": ""
+        "want": "",
+        "add_date": "2025-08-29",
+        "seek": "solstace"
       }
     },
     "avtr_9023739b-10ce-4713-85aa-ffe6042b4f9d": {
@@ -4453,7 +4761,8 @@
         }
       ],
       "features": {
-        "notes": "simple, net dress"
+        "notes": "simple, net dress",
+        "rank": "0"
       }
     },
     "avtr_8671ffb1-24d5-4146-b386-0965835d0dd8": {
@@ -4480,7 +4789,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "lens",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_ccbff878-d409-48a2-aa38-9bbaf05af0fa": {
       "id": "avtr_ccbff878-d409-48a2-aa38-9bbaf05af0fa",
@@ -4506,7 +4818,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "big robot",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_4adf05fe-2f67-43f7-8fbd-ae7cf879e9ae": {
       "id": "avtr_4adf05fe-2f67-43f7-8fbd-ae7cf879e9ae",
@@ -4538,7 +4853,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "snake pet, swords, small head",
+        "rank": "3",
+        "gender": "m",
+        "quest": "y",
+        "natural": "y",
+        "fun": "pp",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_8931574f-fc3b-4466-b21a-2f8f5849d5e7": {
       "id": "avtr_8931574f-fc3b-4466-b21a-2f8f5849d5e7",
@@ -4567,7 +4890,8 @@
       "features": {
         "notes": "simple",
         "gender": "m",
-        "quest": "y"
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_c951f4bb-0937-4a36-a032-c7a4c7312e85": {
@@ -4601,7 +4925,8 @@
         "fun": "-",
         "fly": "Y",
         "world_drop": "-",
-        "notes": "Flying Tiget/Cat"
+        "notes": "Flying Tiget/Cat",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_1b32c4a7-67c0-4759-8baa-d41048c10ce6": {
@@ -4633,7 +4958,8 @@
         }
       ],
       "features": {
-        "notes": "cowboy"
+        "notes": "cowboy",
+        "rank": "0"
       }
     },
     "avtr_02fd60e4-ef1a-4671-8da0-dfaaea1006ce": {
@@ -4660,7 +4986,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "hud, xray",
+        "gender": "m",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_4f409f85-5779-414a-9198-9d3d9e0e9803": {
       "id": "avtr_4f409f85-5779-414a-9198-9d3d9e0e9803",
@@ -4688,7 +5018,8 @@
       ],
       "features": {
         "notes": "hud, effects",
-        "gender": "m"
+        "gender": "m",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_4270f6ad-4694-424c-9fd4-02881cc275a7": {
@@ -4720,7 +5051,8 @@
         }
       ],
       "features": {
-        "notes": "just motions"
+        "notes": "just motions",
+        "rank": "0"
       }
     },
     "avtr_24b4bb1f-045f-4163-a434-2cca51f00df9": {
@@ -4750,7 +5082,9 @@
       "features": {
         "want": "",
         "notes": "dr. gun, sonic screwdriver, dog robot",
-        "gender": "m"
+        "gender": "m",
+        "add_date": "2025-08-29",
+        "seek": "antisocial_011 bw animation"
       }
     },
     "avtr_318b62b5-10f2-4cd0-ba11-86b16e1245e9": {
@@ -4779,7 +5113,9 @@
       ],
       "features": {
         "world_drop": "bed, pole, cage",
-        "notes": "dancer pole, bed"
+        "notes": "dancer pole, bed",
+        "add_date": "2025-08-29",
+        "seek": "try it lol"
       }
     },
     "avtr_53dca881-a328-409c-aa0c-1935afacc3c3": {
@@ -4809,7 +5145,9 @@
         }
       ],
       "features": {
-        "notes": "chainsaw"
+        "notes": "chainsaw",
+        "add_date": "2025-08-29",
+        "seek": "cuddlebug"
       }
     },
     "avtr_2bd8b502-3cb3-4c02-9848-4cec6b2671dd": {
@@ -4839,7 +5177,8 @@
       "features": {
         "natural": "y",
         "fun": "dps",
-        "notes": "angel bunny"
+        "notes": "angel bunny",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_124f94ff-72c5-4ef3-9d81-834b85b4693e": {
@@ -4872,7 +5211,8 @@
       ],
       "features": {
         "natural": "y",
-        "notes": "like alice"
+        "notes": "like alice",
+        "rank": "0"
       }
     },
     "avtr_73fc939e-5412-450e-9597-a180a9ca7206": {
@@ -4901,7 +5241,8 @@
       ],
       "features": {
         "gender": "F",
-        "notes": "Full body"
+        "notes": "Full body",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_d0a91466-84f0-4a9f-86a2-0f24572932b9": {
@@ -4928,7 +5269,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "dance",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_8220f6b6-9b7f-4585-ad18-1d8497f18dc5": {
       "id": "avtr_8220f6b6-9b7f-4585-ad18-1d8497f18dc5",
@@ -4960,7 +5304,8 @@
         "gender": "m",
         "natural": "y",
         "fun": "dps",
-        "notes": "muscles, pony tail, dragon follower"
+        "notes": "muscles, pony tail, dragon follower",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_564bcc9b-7021-4f84-8e2b-edbdef772c6a": {
@@ -4990,7 +5335,8 @@
       "features": {
         "natural": "y",
         "fun": "dps",
-        "notes": "poses"
+        "notes": "poses",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_516c060c-278d-4493-9b0d-f798a2153514": {
@@ -5050,7 +5396,8 @@
         }
       ],
       "features": {
-        "notes": "angel"
+        "notes": "angel",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_5246b4dc-2c2d-41f7-8ba9-eb52a1256f8c": {
@@ -5080,7 +5427,8 @@
       "features": {
         "natural": "y",
         "fun": "y",
-        "notes": "full figure"
+        "notes": "full figure",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_8b32f0b2-8bf1-4ae2-866a-79c4b6d113e1": {
@@ -5108,7 +5456,8 @@
         }
       ],
       "features": {
-        "notes": "elemental bow"
+        "notes": "elemental bow",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_209179c0-a885-49a3-84b4-3dd2a1d56e63": {
@@ -5140,7 +5489,8 @@
         }
       ],
       "features": {
-        "notes": "nothing special"
+        "notes": "nothing special",
+        "rank": "0"
       }
     },
     "avtr_b89ced25-2541-440b-a15c-886805a2f437": {
@@ -5168,7 +5518,8 @@
         }
       ],
       "features": {
-        "notes": "weapons, sticklights, night vision"
+        "notes": "weapons, sticklights, night vision",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_f4401fde-e57e-4b5e-8e65-9169fdd74e8d": {
@@ -5200,7 +5551,8 @@
       "features": {
         "gender": "f",
         "VRCFT": "y",
-        "notes": "metal pipes, "
+        "notes": "metal pipes, ",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_9be63d8e-24a0-44d3-bb86-b7840ae7f969": {
@@ -5232,7 +5584,8 @@
         }
       ],
       "features": {
-        "notes": "transparent body"
+        "notes": "transparent body",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_97afaf97-0ab4-4d9b-8aa0-b1871c15d259": {
@@ -5264,7 +5617,8 @@
         }
       ],
       "features": {
-        "notes": "Nothing special"
+        "notes": "Nothing special",
+        "rank": "0"
       }
     },
     "avtr_b62f71e7-1f31-4f94-adfd-8599d8a02bc6": {
@@ -5297,7 +5651,8 @@
       "features": {
         "gender": "f",
         "natural": "y",
-        "notes": "whip, wings"
+        "notes": "whip, wings",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_dc868882-77af-44fd-a7b7-731a535b7a87": {
@@ -5328,7 +5683,8 @@
         "gender": "M",
         "VRCFT": "Y",
         "notes": "Default",
-        "rank": "10"
+        "rank": "10",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_62cd1727-6c84-4724-b378-d9d129ff8a66": {
@@ -5392,7 +5748,8 @@
         "gender": "f",
         "VRCFT": "y",
         "natural": "y",
-        "notes": "ft"
+        "notes": "ft",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_8f113a32-7544-4ee4-9cb1-d9235f589fa8": {
@@ -5421,7 +5778,8 @@
       ],
       "features": {
         "VRCFT": "Y",
-        "notes": "ft, axe"
+        "notes": "ft, axe",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_50256878-2847-4f19-9b68-16c83e9ef755": {
@@ -5462,7 +5820,8 @@
         "VRCFT": "y",
         "fly": "y",
         "notes": "flying",
-        "rank": "9"
+        "rank": "9",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_ba192639-3dc5-45b3-96e3-462c943e0360": {
@@ -5494,7 +5853,9 @@
         "VRCFT": "Y",
         "fun": "-",
         "world_drop": "-",
-        "notes": "Default"
+        "notes": "Default",
+        "quest": "y",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_c948d326-d048-4d7e-bb4d-bb82bab6f97a": {
@@ -5532,7 +5893,8 @@
       ],
       "features": {
         "gender": "tiger",
-        "notes": "ft"
+        "notes": "ft",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_62435b57-2fbe-4b62-9b25-f958a34f5625": {
@@ -5549,19 +5911,24 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-29T14:37:50.244582+00:00",
-      "last_seen_in_favorites_at": "2025-08-30T21:00:34.656053+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-12-06T20:26:01.638345+00:00",
+      "removed_at": "2025-12-06T20:26:01.638345+00:00",
       "history": [
         {
           "at": "2025-08-29T14:37:50.244582+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-12-06T20:26:01.638345+00:00",
+          "action": "removed"
         }
       ],
       "features": {
         "natural": "y",
-        "notes": "poi balls, light, clothes"
+        "notes": "poi balls, light, clothes",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_1fd00093-3161-46a3-9683-95e39a9c42a6": {
@@ -5634,7 +6001,8 @@
         }
       ],
       "features": {
-        "notes": "cow style"
+        "notes": "cow style",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_d9d2fa8f-90be-4258-9316-8c03538f7568": {
@@ -5662,7 +6030,8 @@
         }
       ],
       "features": {
-        "notes": "mickey"
+        "notes": "mickey",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_ca05263f-b010-4eea-bc53-f22a5deb584f": {
@@ -5690,7 +6059,8 @@
         }
       ],
       "features": {
-        "notes": "giant"
+        "notes": "giant",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_50cd8cc5-c778-4c6a-ac87-3a85b1bc68e6": {
@@ -5722,7 +6092,9 @@
         }
       ],
       "features": {
-        "notes": "Simple"
+        "notes": "Simple",
+        "rank": "0",
+        "seek": "hanka"
       }
     },
     "avtr_580042dd-92a3-469f-b4f1-da7ad2fd3c9d": {
@@ -5750,7 +6122,8 @@
         }
       ],
       "features": {
-        "notes": "mirror"
+        "notes": "mirror",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_b6f22f82-c023-4144-9871-ad20f137d46c": {
@@ -5778,7 +6151,8 @@
         }
       ],
       "features": {
-        "notes": "simple"
+        "notes": "simple",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_a7c9eac9-810f-4c33-b2e5-8dd523e2d747": {
@@ -5806,7 +6180,8 @@
         }
       ],
       "features": {
-        "notes": "Simple"
+        "notes": "Simple",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_f9314873-ad15-4c9d-b2ed-77afdce9d5af": {
@@ -5834,7 +6209,8 @@
         }
       ],
       "features": {
-        "notes": "Giant"
+        "notes": "Giant",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_60acfbac-054c-4600-bc40-141f35cb2b1a": {
@@ -5866,7 +6242,8 @@
         }
       ],
       "features": {
-        "notes": "garbage head"
+        "notes": "garbage head",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_071ed1e5-626c-458c-8de4-80b3cc9a5902": {
@@ -5894,7 +6271,8 @@
         }
       ],
       "features": {
-        "notes": "giant"
+        "notes": "giant",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_59d2fdd0-fd56-4587-9a7b-2876d98e7688": {
@@ -5922,7 +6300,8 @@
         }
       ],
       "features": {
-        "notes": "giant"
+        "notes": "giant",
+        "add_date": "2025-08-29"
       }
     },
     "avtr_b49eb486-3f73-4fe1-a031-ba80079f542d": {
@@ -5949,7 +6328,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "clones, dolls",
+        "add_date": "2025-08-29",
+        "seek": "silver"
+      }
     },
     "avtr_d3ad605f-cc75-43c4-95f9-20e11e902bcf": {
       "id": "avtr_d3ad605f-cc75-43c4-95f9-20e11e902bcf",
@@ -5977,7 +6360,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "teddy",
+        "add_date": "2025-08-29"
+      }
     },
     "avtr_bc619300-b0f3-42de-aafc-47f48ae6c0c9": {
       "id": "avtr_bc619300-b0f3-42de-aafc-47f48ae6c0c9",
@@ -6011,7 +6397,9 @@
       ],
       "features": {
         "gender": "M",
-        "notes": "Default"
+        "notes": "Default",
+        "rank": "10",
+        "add_date": "2025-08-30"
       }
     },
     "avtr_dc48b863-a526-457c-9717-de0c4c3241e7": {
@@ -6045,7 +6433,9 @@
         "VRCFT": "y",
         "natural": "y",
         "fun": "sps",
-        "notes": "Default, revolver"
+        "notes": "Default, revolver",
+        "quest": "n",
+        "add_date": "2025-08-30"
       }
     },
     "avtr_b09bd797-1fa9-4f24-ac6f-6dfeb6fa24cc": {
@@ -6073,7 +6463,8 @@
         }
       ],
       "features": {
-        "notes": "spider dress"
+        "notes": "spider dress",
+        "add_date": "2025-08-30"
       }
     },
     "avtr_01a5e0d3-3463-4e3d-ba52-fe2f9b9c448a": {
@@ -6141,7 +6532,8 @@
       "features": {
         "natural": "y",
         "fun": "sps",
-        "notes": "nice"
+        "notes": "nice",
+        "add_date": "2025-08-30"
       }
     },
     "avtr_a5fcfb30-966e-4832-957e-806f87be523a": {
@@ -6170,7 +6562,8 @@
       ],
       "features": {
         "fun": "dps",
-        "notes": "big hands"
+        "notes": "big hands",
+        "add_date": "2025-08-30"
       }
     },
     "avtr_72fe8a0a-9019-4924-9574-5693029f0837": {
@@ -6197,7 +6590,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "couch",
+        "add_date": "2025-08-30"
+      }
     },
     "avtr_5d83963f-7ac1-41cb-9de5-80e59e076be8": {
       "id": "avtr_5d83963f-7ac1-41cb-9de5-80e59e076be8",
@@ -6223,7 +6619,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "seats",
+        "quest": "y",
+        "seat": "3",
+        "add_date": "2025-08-30"
+      }
     },
     "avtr_18b0040b-1615-456b-8740-c8290f5951c6": {
       "id": "avtr_18b0040b-1615-456b-8740-c8290f5951c6",
@@ -6249,7 +6650,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "legos",
+        "quest": "y",
+        "add_date": "2025-08-31"
+      }
     },
     "avtr_2bac8b36-9bf7-438e-b4a2-4190e9acec5e": {
       "id": "avtr_2bac8b36-9bf7-438e-b4a2-4190e9acec5e",
@@ -6271,14 +6676,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-08-31T20:00:23.598323+00:00",
-      "last_seen_in_favorites_at": "2025-08-31T20:00:23.598323+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-12-06T20:26:01.638345+00:00",
+      "removed_at": "2025-12-06T20:26:01.638345+00:00",
       "history": [
         {
           "at": "2025-08-31T20:00:23.598323+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-12-06T20:26:01.638345+00:00",
+          "action": "removed"
         }
       ],
       "features": {
@@ -6286,7 +6695,9 @@
         "VRCFT": "yes",
         "Quest": "yes",
         "notes": "stunning, realistic",
-        "rank": "10"
+        "rank": "10",
+        "add_date": "2025-08-31",
+        "seek": "something special "
       }
     },
     "avtr_8b2c2a24-7f9e-4e82-9651-1dd39d3d77e9": {
@@ -6319,7 +6730,8 @@
       "features": {
         "notes": "pull ribbon",
         "natural": "y",
-        "fun": "y"
+        "fun": "y",
+        "add_date": "2025-08-31"
       }
     },
     "avtr_5a95b094-3711-4be4-a93e-26ca85b195d1": {
@@ -6389,7 +6801,8 @@
         "rank": "8",
         "gender": "m",
         "natural": "y",
-        "fun": "dps"
+        "fun": "dps",
+        "add_date": "2025-09-01"
       }
     },
     "avtr_86d67503-6bbb-40fd-b6ac-c1cafd8dc796": {
@@ -6423,7 +6836,8 @@
       "features": {
         "notes": "simple",
         "gender": "f",
-        "VRCFT": "y"
+        "VRCFT": "y",
+        "rank": "0"
       }
     },
     "avtr_f6d35603-1e88-449e-860b-a43915643c7e": {
@@ -6440,18 +6854,23 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-09-05T10:01:13.540113+00:00",
-      "last_seen_in_favorites_at": "2025-09-05T10:01:13.540113+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-09-05T10:01:13.540113+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {
-        "notes": "disconnect effect prank"
+        "notes": "disconnect effect prank",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_a82280b5-7cb0-42fb-9a4d-8f31ea24f610": {
@@ -6488,7 +6907,8 @@
         "notes": "swords, assassin ",
         "gender": "m",
         "natural": "y",
-        "fun": "pp"
+        "fun": "pp",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_8ce4f21c-f7c6-494b-b46b-dada2930579c": {
@@ -6515,7 +6935,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "plays songs",
+        "gender": "m",
+        "quest": "y",
+        "add_date": "2025-09-05"
+      }
     },
     "avtr_a5e9e08f-f0a6-4652-aa00-add264fbb674": {
       "id": "avtr_a5e9e08f-f0a6-4652-aa00-add264fbb674",
@@ -6544,7 +6969,8 @@
         }
       ],
       "features": {
-        "notes": "shuriken"
+        "notes": "shuriken",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_e6b14a50-baa7-42a8-801f-657c76f0c379": {
@@ -6578,7 +7004,8 @@
         "notes": "lights, fly dash, gun, birthday cake, map ",
         "fun": "erp, dps",
         "fly": "dash",
-        "world_drop": "birthday cake"
+        "world_drop": "birthday cake",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_594363eb-c5a8-4cae-9271-5beb46171e3a": {
@@ -6609,7 +7036,13 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "furry, flashlight",
+        "rank": "2",
+        "gender": "furry",
+        "VRCFT": "y",
+        "add_date": "2025-09-05"
+      }
     },
     "avtr_15e7d4d2-d697-4fd0-9b24-94f4ec405b03": {
       "id": "avtr_15e7d4d2-d697-4fd0-9b24-94f4ec405b03",
@@ -6639,7 +7072,8 @@
         "notes": "stripes",
         "VRCFT": "y",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_b5d27e7a-12d5-4182-95f9-69cc28082434": {
@@ -6670,7 +7104,8 @@
         "notes": "horizon, chain",
         "gender": "f",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_8f3dda93-5000-48d9-be36-4f20cd82ab60": {
@@ -6701,7 +7136,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "large bunny ears",
+        "rank": "8",
+        "gender": "f",
+        "quest": "y",
+        "natural": "y",
+        "fun": "sps",
+        "add_date": "2025-09-05"
+      }
     },
     "avtr_2ce654ed-0bb2-4ea4-bdb0-c09635b07f47": {
       "id": "avtr_2ce654ed-0bb2-4ea4-bdb0-c09635b07f47",
@@ -6727,7 +7170,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "spiders girl",
+        "rank": "6",
+        "gender": "f",
+        "quest": "n",
+        "natural": "y",
+        "fun": "sps",
+        "add_date": "2025-09-05"
+      }
     },
     "avtr_ba3bc470-133f-4a34-9e09-af9007dd3030": {
       "id": "avtr_ba3bc470-133f-4a34-9e09-af9007dd3030",
@@ -6791,7 +7242,8 @@
         "notes": "blond, wings",
         "gender": "f",
         "natural": "y",
-        "fun": "dps"
+        "fun": "dps",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_307caf1b-515b-4069-8264-cd5f3ea2b9bc": {
@@ -6823,7 +7275,8 @@
         "rank": "7",
         "gender": "f",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_78414cc8-982d-4d28-a7f8-a3d23763b1b5": {
@@ -6850,7 +7303,14 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "Christmas clothes ",
+        "gender": "f",
+        "quest": "n",
+        "natural": "y",
+        "fun": "sps, pp",
+        "add_date": "2025-09-05"
+      }
     },
     "avtr_21613a48-33fd-4729-86cf-bab498736953": {
       "id": "avtr_21613a48-33fd-4729-86cf-bab498736953",
@@ -6883,7 +7343,8 @@
         "notes": "limb holders, cards, magic",
         "rank": "8",
         "gender": "f",
-        "VRCFT": "y"
+        "VRCFT": "y",
+        "add_date": "2025-09-05"
       }
     },
     "avtr_11bb4058-6e10-4814-af86-a4a83bcf3e0c": {
@@ -6917,7 +7378,8 @@
       "features": {
         "notes": "dash, fly, seats, dance",
         "fly": "y",
-        "seat": "y"
+        "seat": "y",
+        "add_date": "2025-09-06"
       }
     },
     "avtr_33d00624-f400-4e24-8078-7849bbb5e657": {
@@ -6948,7 +7410,8 @@
         "notes": "toe control, heartbeat",
         "VRCFT": "y",
         "natural": "y",
-        "fun": "sps"
+        "fun": "sps",
+        "add_date": "2025-09-11"
       }
     },
     "avtr_36c597ab-8fe5-45c8-a56b-010ee19b5796": {
@@ -6984,7 +7447,8 @@
         "gender": "m",
         "quest": "y",
         "natural": "y",
-        "fun": "pp"
+        "fun": "pp",
+        "add_date": "2025-09-11"
       }
     },
     "avtr_c0617525-9c29-4f56-9406-2e588e177b1c": {
@@ -7015,7 +7479,9 @@
         "notes": "default, wing puppet",
         "rank": "10",
         "gender": "m",
-        "VRCFT": "y"
+        "VRCFT": "y",
+        "quest": "y",
+        "add_date": "2025-09-11"
       }
     },
     "avtr_7f380f59-bb0d-465c-8709-388a49d8d486": {
@@ -7044,7 +7510,8 @@
       ],
       "features": {
         "notes": "asmr, world drops",
-        "world_drop": "cave"
+        "world_drop": "cave",
+        "add_date": "2025-09-11"
       }
     },
     "avtr_70f94e2f-e836-4b68-b7b2-4e10000872f7": {
@@ -7077,7 +7544,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cute, world drops",
+        "gender": "f",
+        "world_drop": "bean bag, lizard button",
+        "add_date": "2025-09-11"
+      }
     },
     "avtr_981c94d7-3147-437a-9e61-d8ff9ca4b3a3": {
       "id": "avtr_981c94d7-3147-437a-9e61-d8ff9ca4b3a3",
@@ -7106,7 +7578,8 @@
       "features": {
         "notes": "angel male",
         "gender": "m",
-        "quest": "y"
+        "quest": "y",
+        "add_date": "2025-09-12"
       }
     },
     "avtr_0c7a0f02-1943-4c14-98e2-124ab0d2040c": {
@@ -7138,7 +7611,8 @@
       "features": {
         "notes": "hud, love ring",
         "gender": "m",
-        "quest": "y"
+        "quest": "y",
+        "add_date": "2025-09-12"
       }
     },
     "avtr_5e34c53c-dd93-479a-a4aa-0c645b3e9b12": {
@@ -7170,11 +7644,12 @@
         }
       ],
       "features": {
-        "notes": "split tongue, ",
+        "notes": "split tongue, duplicate",
         "gender": "f",
-        "quest": "y",
+        "quest": "n",
         "natural": "y",
-        "fun": "sps, pcs, pp, dil"
+        "fun": "sps, pcs, pp, dil",
+        "add_date": "2025-09-12"
       }
     },
     "avtr_f579f2df-a282-43dd-ac5f-3235df055a11": {
@@ -7201,7 +7676,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "small ferris wheel ride",
+        "seat": "3",
+        "add_date": "2025-09-12"
+      }
     },
     "avtr_de813d76-5dd4-482a-80b3-9a55ff4de640": {
       "id": "avtr_de813d76-5dd4-482a-80b3-9a55ff4de640",
@@ -7227,7 +7706,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "rotating cups ride",
+        "seat": "3",
+        "add_date": "2025-09-12"
+      }
     },
     "avtr_60e0ae96-72d0-4f4a-8011-9c8da4a9e7cc": {
       "id": "avtr_60e0ae96-72d0-4f4a-8011-9c8da4a9e7cc",
@@ -7249,17 +7732,27 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-09-13T17:01:05.327162+00:00",
-      "last_seen_in_favorites_at": "2025-09-13T17:01:05.327162+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-09-13T17:01:05.327162+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "shibari ropes, marker",
+        "gender": "f",
+        "natural": "y",
+        "fun": "sps, pp",
+        "add_date": "2025-09-13"
+      }
     },
     "avtr_e25ad3ff-12d9-4c0d-982d-fdfb6cd434c8": {
       "id": "avtr_e25ad3ff-12d9-4c0d-982d-fdfb6cd434c8",
@@ -7291,7 +7784,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "vampire zombie gore",
+        "gender": "f",
+        "fun": "sps",
+        "world_drop": "gore world",
+        "add_date": "2025-09-14"
+      }
     },
     "avtr_53e3f3c4-302b-4773-a76b-f72f8d0e05c7": {
       "id": "avtr_53e3f3c4-302b-4773-a76b-f72f8d0e05c7",
@@ -7317,7 +7816,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ft avg, candi",
+        "rank": "5",
+        "gender": "f",
+        "VRCFT": "y",
+        "natural": "y",
+        "fun": "sps",
+        "add_date": "2025-09-16"
+      }
     },
     "avtr_6a8bc836-a3b9-4572-8def-e58278b96779": {
       "id": "avtr_6a8bc836-a3b9-4572-8def-e58278b96779",
@@ -7333,17 +7840,26 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-09-20T10:00:30.818040+00:00",
-      "last_seen_in_favorites_at": "2025-09-20T10:00:30.818040+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-09-20T10:00:30.818040+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "cowboy hat",
+        "gender": "f",
+        "natural": "y",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_c72c9ade-e348-49a7-9c58-dcd9cea0e749": {
       "id": "avtr_c72c9ade-e348-49a7-9c58-dcd9cea0e749",
@@ -7372,7 +7888,16 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "poses, dances",
+        "rank": "9",
+        "gender": "m",
+        "VRCFT": "y",
+        "quest": "n",
+        "natural": "y",
+        "fun": "pp",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_318152e2-b56a-4f38-bdb4-d980678b27db": {
       "id": "avtr_318152e2-b56a-4f38-bdb4-d980678b27db",
@@ -7402,7 +7927,9 @@
           "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_b8f4f70c-bd98-41cf-9c51-28b9ec4cc79f": {
       "id": "avtr_b8f4f70c-bd98-41cf-9c51-28b9ec4cc79f",
@@ -7428,7 +7955,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "full body, lazer eyes",
+        "gender": "f",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_8fc58d70-271f-4d17-8fcf-3f1be7c5a049": {
       "id": "avtr_8fc58d70-271f-4d17-8fcf-3f1be7c5a049",
@@ -7456,7 +7987,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "bunny outfit, clones",
+        "gender": "f",
+        "world_drop": "clone",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_289e184a-f403-4214-bc3a-2c714ccd8963": {
       "id": "avtr_289e184a-f403-4214-bc3a-2c714ccd8963",
@@ -7486,7 +8022,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "scythe",
+        "gender": "f",
+        "natural": "y",
+        "fun": "sps, pp",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_7fb147cb-b9d9-4a5a-92da-99149354feb8": {
       "id": "avtr_7fb147cb-b9d9-4a5a-92da-99149354feb8",
@@ -7512,7 +8054,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "net dress",
+        "gender": "f",
+        "natural": "y",
+        "fun": "dps",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_9c723d90-96fe-4c72-b215-f46b56230e94": {
       "id": "avtr_9c723d90-96fe-4c72-b215-f46b56230e94",
@@ -7541,7 +8089,14 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "split tongue, ",
+        "gender": "f",
+        "quest": "y",
+        "natural": "y",
+        "fun": "sps, pcs, pp, dil",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_01dca277-0824-4231-a66e-3b62eea41a5b": {
       "id": "avtr_01dca277-0824-4231-a66e-3b62eea41a5b",
@@ -7567,7 +8122,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "pastel skirt, laser pointer, kitty follower ",
+        "gender": "f",
+        "natural": "y",
+        "fun": "dps",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_a93120ed-ede8-4fda-8fec-6ba0c8744661": {
       "id": "avtr_a93120ed-ede8-4fda-8fec-6ba0c8744661",
@@ -7596,7 +8157,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "inflatable pool, water gun",
+        "gender": "f",
+        "world_drop": "water pool",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_27bb003c-5a6c-4b48-8d2c-175c68ea4ec4": {
       "id": "avtr_27bb003c-5a6c-4b48-8d2c-175c68ea4ec4",
@@ -7622,7 +8188,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "ball throwing, pointer, worm",
+        "gender": "m",
+        "add_date": "2025-09-20"
+      }
     },
     "avtr_a5ce5e1e-91ca-468d-bfab-1ecd1be777b3": {
       "id": "avtr_a5ce5e1e-91ca-468d-bfab-1ecd1be777b3",
@@ -7648,7 +8218,12 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "simple, night vision",
+        "gender": "f",
+        "add_date": "2025-09-21",
+        "seek": "kira"
+      }
     },
     "avtr_9da8f484-eb31-4143-b317-59240d3e735f": {
       "id": "avtr_9da8f484-eb31-4143-b317-59240d3e735f",
@@ -7677,7 +8252,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "sword",
+        "rank": "5",
+        "gender": "m",
+        "quest": "y",
+        "natural": "y",
+        "fun": "pp",
+        "add_date": "2025-09-21"
+      }
     },
     "avtr_08d9d51f-abdb-4664-b34e-703f43e5e041": {
       "id": "avtr_08d9d51f-abdb-4664-b34e-703f43e5e041",
@@ -7703,7 +8286,15 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "shark theme, light",
+        "gender": "f",
+        "VRCFT": "y",
+        "quest": "y",
+        "natural": "y",
+        "fun": "sps, pcs, lms, pp",
+        "add_date": "2025-09-21"
+      }
     },
     "avtr_47fc12a0-49f5-4085-83b5-99318b897c0e": {
       "id": "avtr_47fc12a0-49f5-4085-83b5-99318b897c0e",
@@ -7719,17 +8310,26 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-09-21T21:00:16.250790+00:00",
-      "last_seen_in_favorites_at": "2025-09-21T21:00:16.250790+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-09-21T21:00:16.250790+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "egyptian, light",
+        "gender": "f",
+        "VRCFT": "y",
+        "add_date": "2025-09-21"
+      }
     },
     "avtr_61d7761e-47fe-4c3c-815d-606dc8fc6b34": {
       "id": "avtr_61d7761e-47fe-4c3c-815d-606dc8fc6b34",
@@ -7755,7 +8355,13 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "small head, grab shirt",
+        "gender": "m",
+        "natural": "y",
+        "fun": "sps, lms, pp",
+        "add_date": "2025-09-21"
+      }
     },
     "avtr_ab2c3895-0c06-4765-9cee-4e7fe42541ad": {
       "id": "avtr_ab2c3895-0c06-4765-9cee-4e7fe42541ad",
@@ -7781,7 +8387,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "robot, hud,",
+        "rank": "5",
+        "add_date": "2025-09-22"
+      }
     },
     "avtr_42cec1e0-ef9f-408a-a868-ad1523443e17": {
       "id": "avtr_42cec1e0-ef9f-408a-a868-ad1523443e17",
@@ -7807,7 +8417,10 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "eject players",
+        "add_date": "2025-09-23"
+      }
     },
     "avtr_8b8aa630-5a9f-4ac7-b1cf-becc9f238b23": {
       "id": "avtr_8b8aa630-5a9f-4ac7-b1cf-becc9f238b23",
@@ -7833,7 +8446,11 @@
           "action": "added"
         }
       ],
-      "features": {}
+      "features": {
+        "notes": "throw ppl",
+        "seat": "1",
+        "add_date": "2025-09-23"
+      }
     },
     "avtr_7016ba1f-529e-4c87-99b8-0815b4451cca": {
       "id": "avtr_7016ba1f-529e-4c87-99b8-0815b4451cca",
@@ -8943,14 +9560,18 @@
       "platforms": [],
       "supports_pc": false,
       "supports_android": false,
-      "active": true,
+      "active": false,
       "first_added_at": "2025-10-25T20:14:33.455748+00:00",
-      "last_seen_in_favorites_at": "2025-10-25T20:14:33.455748+00:00",
-      "removed_at": null,
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": "2025-11-15T20:15:26.264964+00:00",
       "history": [
         {
           "at": "2025-10-25T20:14:33.455748+00:00",
           "action": "added"
+        },
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "removed"
         }
       ],
       "features": {}
@@ -8976,6 +9597,110 @@
       "history": [
         {
           "at": "2025-11-07T18:46:05.750241+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_2684c744-99df-4c75-bcf3-baa3ad9c1aa4": {
+      "id": "avtr_2684c744-99df-4c75-bcf3-baa3ad9c1aa4",
+      "name": "Birthday Cake Joe",
+      "authorId": "usr_8510abf2-8392-4c4f-946f-c9499dee47fc",
+      "authorName": "Devil Cookie",
+      "description": "Birthday Cake Joe",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_abd7ee7f-5e53-4361-b3ef-b734db54a12d/3/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_abd7ee7f-5e53-4361-b3ef-b734db54a12d/3/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 96,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-11-15T20:15:26.264964+00:00",
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_35f589e7-5acb-49c4-a901-46a64adf91d5": {
+      "id": "avtr_35f589e7-5acb-49c4-a901-46a64adf91d5",
+      "name": "Coils The Birthday Clown",
+      "authorId": "usr_4e95ab1b-41e6-4ce0-ac4a-29bae7b718f1",
+      "authorName": "TheBananaMan20",
+      "description": "The best entertainment at a partyǃ",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_8de117fd-f407-4f80-9145-bf4bd08f7aa7/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_8de117fd-f407-4f80-9145-bf4bd08f7aa7/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 7,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-11-15T20:15:26.264964+00:00",
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_4747a518-df6e-4413-b36a-0deea03f4895": {
+      "id": "avtr_4747a518-df6e-4413-b36a-0deea03f4895",
+      "name": "Happy Birthdayǃ",
+      "authorId": "usr_2ea0d2ae-599c-470e-8352-ad4b5628c61d",
+      "authorName": "Flin_",
+      "description": "Happy Birthdayǃ",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_eb228e4c-6c02-4969-8747-a415de17057e/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_eb228e4c-6c02-4969-8747-a415de17057e/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 4,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-11-15T20:15:26.264964+00:00",
+      "last_seen_in_favorites_at": "2025-11-15T20:15:26.264964+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-11-15T20:15:26.264964+00:00",
+          "action": "added"
+        }
+      ],
+      "features": {}
+    },
+    "avtr_d6f29579-1cf8-4def-8bbc-c288f3fec5df": {
+      "id": "avtr_d6f29579-1cf8-4def-8bbc-c288f3fec5df",
+      "name": "Public Xamira",
+      "authorId": "usr_9635281c-b8ad-440b-b867-dada44780190",
+      "authorName": "Nymphee",
+      "description": "Public Xamira",
+      "imageUrl": "https://api.vrchat.cloud/api/1/file/file_0606bf70-762a-4a70-9ccb-d6e9ba8685f4/1/file",
+      "thumbnailImageUrl": "https://api.vrchat.cloud/api/1/image/file_0606bf70-762a-4a70-9ccb-d6e9ba8685f4/1/256",
+      "releaseStatus": "public",
+      "tags": [],
+      "version": 6,
+      "platforms": [],
+      "supports_pc": false,
+      "supports_android": false,
+      "active": true,
+      "first_added_at": "2025-12-06T20:26:01.638345+00:00",
+      "last_seen_in_favorites_at": "2025-12-06T20:26:01.638345+00:00",
+      "removed_at": null,
+      "history": [
+        {
+          "at": "2025-12-06T20:26:01.638345+00:00",
           "action": "added"
         }
       ],
